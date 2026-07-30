@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Namrata Kedia | Certified Teacher Trainer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FAFAFA;
+      color: #2C3E50;
+      line-height: 1.7;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(10px);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #2C3E50;
+      text-decoration: none;
+    }
+    .nav-logo span { color: #E67E22; }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2C3E50;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: #E67E22; }
+
+    .nav-cta {
+      background: #E67E22 !important;
+      color: white !important;
+      padding: 10px 22px;
+      border-radius: 25px;
+    }
+    .nav-cta:hover {
+      background: #CA6F1E !important;
+      color: white !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .hamburger span {
+      width: 25px; height: 3px;
+      background: #2C3E50;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2C3E50 0%, #3D5166 50%, #2C3E50 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 60%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(230,126,34,0.2);
+      border: 1px solid rgba(230,126,34,0.5);
+      color: #F0A050;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    /* ===== HERO PHOTO ===== */
+    .hero-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #E67E22;
+      margin: 0 auto 25px;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+      box-shadow: 0 0 0 8px rgba(230,126,34,0.15),
+                  0 10px 40px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .hero-photo:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .hero-content h1 span { color: #E67E22; }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: #B8C6D4;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+    .hero-tagline strong {
+      color: #E67E22;
+      font-weight: 600;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #8FA5BC;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #E67E22;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(230,126,34,0.4);
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: #CA6F1E;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(230,126,34,0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 2px solid rgba(255,255,255,0.4);
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover {
+      border-color: #E67E22;
+      color: #E67E22;
+      transform: translateY(-2px);
+    }
+
+    /* ===== STATS ===== */
+    #stats {
+      background: white;
+      padding: 60px 20px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+    }
+
+    .stats-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-card {
+      padding: 30px 20px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #2C3E50, #3D5166);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 80px; height: 80px;
+      background: rgba(230,126,34,0.15);
+      border-radius: 50%;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #E67E22;
+      font-weight: 700;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #B8C6D4;
+      margin-top: 5px;
+      font-weight: 400;
+    }
+    .stat-sublabel {
+      font-size: 0.75rem;
+      color: #8FA5BC;
+      margin-top: 3px;
+    }
+
+    /* ===== SECTION BASE ===== */
+    section { padding: 80px 20px; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+    .section-tag {
+      display: inline-block;
+      background: rgba(230,126,34,0.1);
+      color: #E67E22;
+      padding: 6px 18px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: #2C3E50;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      color: #7F8C8D;
+      font-size: 1rem;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+    .divider {
+      width: 60px; height: 3px;
+      background: #E67E22;
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* ===== ABOUT ===== */
+    #about { background: #F8F9FA; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 50px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-image-box {
+      position: relative;
+    }
+
+    /* ===== ABOUT PHOTO ===== */
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .about-photo:hover {
+      transform: scale(1.02);
+    }
+
+    .cert-badge {
+      position: absolute;
+      bottom: -15px; right: -15px;
+      background: #E67E22;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(230,126,34,0.4);
+    }
+    .cert-badge span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .about-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #2C3E50;
+      margin-bottom: 15px;
+    }
+    .about-text p {
+      color: #5D6D7E;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 25px;
+    }
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 12px 15px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #2C3E50;
+      font-weight: 500;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .highlight-item i { color: #E67E22; font-size: 1rem; }
+
+    /* ===== WORKSHOPS ===== */
+    #workshops { background: white; }
+
+    .workshops-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .workshop-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #F0F0F0;
+      display: flex;
+      flex-direction: column;
+    }
+    .workshop-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #2C3E50, #3D5166);
+      padding: 28px 25px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-header::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 100px; height: 100px;
+      background: rgba(230,126,34,0.15);
+      border-radius: 50%;
+    }
+
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .card-header h3 {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+    .card-header p {
+      color: #B8C6D4;
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    .card-body { padding: 25px; flex: 1; }
+
+    .objective-box {
+      background: rgba(230,126,34,0.06);
+      border-left: 3px solid #E67E22;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+    }
+    .objective-box h4 {
+      color: #E67E22;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .objective-box p {
+      color: #5D6D7E;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .outcomes-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2C3E50;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .outcome-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      color: #5D6D7E;
+    }
+    .outcome-item::before {
+      content: '✦';
+      color: #E67E22;
+      font-size: 0.7rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .card-footer { padding: 0 25px 25px; }
+
+    .card-quote {
+      background: #F8F9FA;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-size: 0.82rem;
+      color: #7F8C8D;
+      font-style: italic;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .book-btn {
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, #E67E22, #CA6F1E);
+      color: white;
+      padding: 13px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(230,126,34,0.3);
+    }
+    .book-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(230,126,34,0.45);
+    }
+
+    /* ===== VIDEO GALLERY ===== */
+    #videos { background: #F8F9FA; }
+
+    .video-featured {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    }
+    .video-featured iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: block;
+      border: none;
+    }
+    .video-featured-label {
+      background: linear-gradient(135deg, #2C3E50, #3D5166);
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .video-featured-label i {
+      color: #E67E22;
+      font-size: 1.3rem;
+    }
+    .video-featured-label div h4 {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .video-featured-label div p {
+      color: #8FA5BC;
+      font-size: 0.8rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .video-card iframe {
+      width: 100%;
+      aspect-ratio: 9/16;
+      display: block;
+      border: none;
+    }
+    .video-label {
+      padding: 14px 16px;
+      background: white;
+    }
+    .video-label h4 {
+      font-size: 0.85rem;
+      color: #2C3E50;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .video-label span {
+      font-size: 0.75rem;
+      color: #95A5A6;
+    }
+
+    /* ===== TESTIMONIAL ===== */
+    #testimonials { background: white; }
+
+    .testimonial-video-wrapper {
+      max-width: 400px;
+      margin: 0 auto 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(230,126,34,0.2);
+      border: 3px solid rgba(230,126,34,0.3);
+      position: relative;
+    }
+    .testimonial-video-wrapper iframe {
+      width: 100%;
+      aspect-ratio: 9/16;
+      display: block;
+      border: none;
+    }
+
+    .testimonial-badge {
+      position: absolute;
+      top: 15px; left: 15px;
+      background: #E67E22;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+
+    .testimonial-caption {
+      text-align: center;
+      margin-top: 25px;
+      padding: 0 20px;
+    }
+    .testimonial-caption h3 {
+      font-family: 'Playfair Display', serif;
+      color: #2C3E50;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .testimonial-caption p {
+      color: #7F8C8D;
+      font-size: 0.9rem;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .stars {
+      color: #F39C12;
+      font-size: 1.4rem;
+      margin: 15px 0 5px;
+      letter-spacing: 3px;
+    }
+
+    .more-testimonials-note {
+      text-align: center;
+      margin: 30px auto 0;
+      padding: 20px 30px;
+      background: rgba(230,126,34,0.06);
+      border-radius: 15px;
+      max-width: 500px;
+    }
+    .more-testimonials-note p {
+      color: #7F8C8D;
+      font-size: 0.88rem;
+    }
+    .more-testimonials-note strong { color: #E67E22; }
+
+    /* ===== CERTIFICATES ===== */
+    #certificates { background: #F8F9FA; }
+
+    .cert-total-badge {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .cert-total-badge span {
+      display: inline-block;
+      background: linear-gradient(135deg, #E67E22, #CA6F1E);
+      color: white;
+      padding: 10px 28px;
+      border-radius: 25px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(230,126,34,0.3);
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+      gap: 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      background: white;
+      border: 1px solid #E8ECEE;
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .cert-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: #E67E22;
+      border-radius: 4px 0 0 4px;
+    }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-color: #E67E22;
+    }
+
+    .cert-icon-box {
+      width: 42px; height: 42px;
+      background: rgba(230,126,34,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .cert-icon-box i { color: #E67E22; font-size: 1.1rem; }
+
+    .cert-card h4 {
+      font-size: 0.88rem;
+      color: #2C3E50;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .cert-issuer { font-size: 0.75rem; color: #95A5A6; }
+    .cert-date {
+      font-size: 0.72rem;
+      color: #E67E22;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      background: linear-gradient(135deg, #2C3E50, #1A252F);
+      color: white;
+    }
+    #contact .section-header h2 { color: white; }
+    #contact .section-header p { color: #B8C6D4; }
+    #contact .section-tag {
+      background: rgba(230,126,34,0.2);
+      color: #F0A050;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 900px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: white;
+    }
+    .contact-info > p {
+      color: #B8C6D4;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+      padding: 15px 18px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s;
+    }
+    .contact-item:hover {
+      background: rgba(230,126,34,0.15);
+      border-color: rgba(230,126,34,0.4);
+      transform: translateX(5px);
+    }
+
+    .contact-icon {
+      width: 42px; height: 42px;
+      background: rgba(230,126,34,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E67E22;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text { font-size: 0.9rem; }
+    .contact-item-text small {
+      display: block;
+      color: #8FA5BC;
+      font-size: 0.75rem;
+    }
+
+    .contact-cta {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+    }
+    .contact-cta h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: white;
+    }
+    .contact-cta p {
+      color: #8FA5BC;
+      font-size: 0.88rem;
+      margin-bottom: 25px;
+    }
+
+    .tagline-final {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #8FA5BC;
+      font-size: 0.85rem;
+      line-height: 2;
+    }
+    .tagline-final strong { color: #E67E22; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1A252F;
+      text-align: center;
+      padding: 25px;
+      color: #5D6D7E;
+      font-size: 0.82rem;
+    }
+    footer span { color: #E67E22; }
+
+    /* ===== SCROLL TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px; right: 30px;
+      width: 46px; height: 46px;
+      background: #E67E22;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(230,126,34,0.4);
+      transition: all 0.3s;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .scroll-top:hover {
+      background: #CA6F1E;
+      transform: translateY(-3px);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(44,62,80,0.98);
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        z-index: 999;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { color: white; font-size: 1.2rem; }
+      .hamburger { display: flex; z-index: 1000; }
+      .stats-container { grid-template-columns: 1fr; gap: 12px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .about-highlights { grid-template-columns: 1fr; }
+      .workshops-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr 1fr; }
+      .cert-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .video-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .hero-photo { width: 120px; height: 120px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <a href="#hero" class="nav-logo">Namrata <span>Kedia</span></a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#workshops" onclick="closeMenu()">Workshops</a></li>
+      <li><a href="#videos" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#testimonials" onclick="closeMenu()">Testimonial</a></li>
+      <li><a href="#certificates" onclick="closeMenu()">Credentials</a></li>
+      <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Book a Workshop</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-content">
+
+      <div class="hero-badge">✦ CERTIFIED TEACHER TRAINER ✦</div>
+
+      <!-- YOUR PHOTO IS HERE -->
+      <img
+        src="namrata.jpg"
+        alt="Namrata Kedia - Certified Teacher Trainer"
+        class="hero-photo"
+      />
+
+      <h1>Hi, I'm <span>Namrata Kedia</span></h1>
+      <p class="hero-tagline">
+        I don't just train teachers —<br>
+        <strong>I TRANSFORM how they teach, communicate & lead.</strong>
+      </p>
+      <p class="hero-subtitle">
+        Empowering educators across India through high-impact workshops<br>
+        that create real change in real classrooms.
+      </p>
+      <div class="hero-buttons">
+        <a href="#workshops" class="btn-primary">🚀 Explore Workshops</a>
+        <a href="#contact" class="btn-secondary">📩 Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats">
+    <div class="stats-container">
+      <div class="stat-card fade-in">
+        <span class="stat-number">125+</span>
+        <div class="stat-label">Educators Impacted</div>
+        <div class="stat-sublabel">Real Teachers. Real Classrooms.</div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-number">3</span>
+        <div class="stat-label">Schools Reached</div>
+        <div class="stat-sublabel">And Growing...</div>
+      </div>
+      <div class="stat-card fade-in">
+        <span class="stat-number">3</span>
+        <div class="stat-label">Power Workshops</div>
+        <div class="stat-sublabel">Practical. Impactful. Transformative.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-header fade-in">
+      <span class="section-tag">Who Am I</span>
+      <h2>Meet Namrata Kedia</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid container fade-in">
+      <div class="about-image-box">
+
+        <!-- YOUR PHOTO IN ABOUT SECTION -->
+        <img
+          src="namrata.jpg"
+          alt="Namrata Kedia - Certified Teacher Trainer"
+          class="about-photo"
+        />
+
+        <div class="cert-badge">
+          <span>8+</span>
+          Certifications
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>Transforming Teachers.<br>Transforming Schools.</h3>
+        <p>
+          I'm Namrata Kedia — a <strong>Certified Teacher Trainer</strong> with a
+          passion for making every educator feel confident, equipped, and inspired.
+        </p>
+        <p>
+          I believe teachers are the backbone of every school — and when a
+          teacher grows, an entire classroom transforms. Through my workshops,
+          I have <strong>impacted 125+ teachers</strong> across 3 schools, helping them
+          master AI tools, communicate powerfully with parents, and handle
+          difficult situations like a true professional.
+        </p>
+        <p>
+          Certified by the <strong>Train-The-Trainer Academy by Velsoft</strong> with
+          8 specialized certifications — I bring both credibility and heart
+          to every session I deliver.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-certificate"></i>
+            8 Velsoft Certifications
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-users"></i>
+            125+ Educators Impacted
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-school"></i>
+            3 Schools Reached
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-heart"></i>
+            100% Practical Learning
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKSHOPS ===== -->
+  <section id="workshops">
+    <div class="section-header fade-in">
+      <span class="section-tag">What I Offer</span>
+      <h2>My 3 Power Workshops</h2>
+      <p>Each workshop is designed to create measurable, lasting impact in your school.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="workshops-grid">
+
+      <!-- WORKSHOP 1 -->
+      <div class="workshop-card fade-in">
+        <div class="card-header">
+          <span class="card-icon">🤖</span>
+          <h3>AI Tools for Teachers</h3>
+          <p>"Work Smarter. Teach Better. Save Time."</p>
+        </div>
+        <div class="card-body">
+          <div class="objective-box">
+            <h4>📌 Learning Objective</h4>
+            <p>To empower teachers with AI tools to save time, enhance creativity,
+            and personalize learning experiences for every student.</p>
+          </div>
+          <div class="outcomes-title">✅ After This Session, You Will:</div>
+          <div class="outcome-item">Use AI tools to create NEP-aligned lesson plans</div>
+          <div class="outcome-item">Write effective prompts using the RECIPE Method</div>
+          <div class="outcome-item">Design circulars, slides, posters & worksheets effortlessly</div>
+          <div class="outcome-item">Generate personalized report card comments</div>
+          <div class="outcome-item">Create mind maps & flashcards using NotebookLM</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-quote">💡 "1% Better Everyday 🚀"</div>
+          <a href="#contact" class="book-btn">📩 Book This Workshop</a>
+        </div>
+      </div>
+
+      <!-- WORKSHOP 2 -->
+      <div class="workshop-card fade-in">
+        <div class="card-header">
+          <span class="card-icon">🗣️</span>
+          <h3>Effective Communication with Parents</h3>
+          <p>"From Awkward to Confident in One Session"</p>
+        </div>
+        <div class="card-body">
+          <div class="objective-box">
+            <h4>📌 Learning Objective</h4>
+            <p>To equip teachers with communication skills that build trust,
+            resolve conflicts, and create strong teacher-parent partnerships.</p>
+          </div>
+          <div class="outcomes-title">✅ After This Workshop, You Will:</div>
+          <div class="outcome-item">Communicate confidently & empathetically with parents</div>
+          <div class="outcome-item">Handle difficult parent conversations with ease</div>
+          <div class="outcome-item">Apply counselling micro-skills in parent interactions</div>
+          <div class="outcome-item">Turn challenging parents into collaborative partners</div>
+          <div class="outcome-item">Build long-term trust-based parent relationships</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-quote">💡 "Communication is not just speaking — it's connecting."</div>
+          <a href="#contact" class="book-btn">📩 Book This Workshop</a>
+        </div>
+      </div>
+
+      <!-- WORKSHOP 3 -->
+      <div class="workshop-card fade-in">
+        <div class="card-header">
+          <span class="card-icon">😤</span>
+          <h3>Handling Angry Parents Like a Pro</h3>
+          <p>"Turn Conflict into Collaboration"</p>
+        </div>
+        <div class="card-body">
+          <div class="objective-box">
+            <h4>📌 Learning Objective</h4>
+            <p>Teachers will move from a place of fear, avoidance and reaction —
+            to a place of confidence, preparation and professional response when
+            facing any angry or difficult parent situation.</p>
+          </div>
+          <div class="outcomes-title">✅ After This Session, You Will:</div>
+          <div class="outcome-item">Approach every parent conversation with calm, confidence & clarity</div>
+          <div class="outcome-item">Replace fear & avoidance with preparation & professional response</div>
+          <div class="outcome-item">De-escalate anger and turn heated moments into productive dialogue</div>
+          <div class="outcome-item">Manage PTM meetings with structure, confidence and full control</div>
+          <div class="outcome-item">Stay ready, resilient and composed in every challenging parent situation</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-quote">💡 "You don't have to fear difficult parents — just use the right tools."</div>
+          <a href="#contact" class="book-btn">📩 Book This Workshop</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== VIDEO GALLERY ===== -->
+  <section id="videos">
+    <div class="section-header fade-in">
+      <span class="section-tag">See It In Action</span>
+      <h2>Workshop Highlights</h2>
+      <p>Real sessions. Real teachers. Real transformation.</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Featured Video -->
+    <div class="video-featured fade-in">
+      <iframe
+        src="https://www.youtube.com/embed/zkYniukidYw"
+        title="Namrata Kedia - AI Tools Workshop"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <div class="video-featured-label">
+        <i class="fas fa-play-circle"></i>
+        <div>
+          <h4>AI Tools for Teachers — Live Workshop Session</h4>
+          <p>Watch the full session in action</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shorts Grid -->
+    <div class="video-grid container">
+
+      <div class="video-card fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/b1aARnK4UQQ"
+          title="Workshop Highlight 1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="video-label">
+          <h4>Workshop Highlight</h4>
+          <span>🎬 Live Session Clip</span>
+        </div>
+      </div>
+
+      <div class="video-card fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/37EWdUmbFIU"
+          title="Workshop Highlight 2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="video-label">
+          <h4>Workshop Highlight</h4>
+          <span>🎬 Live Session Clip</span>
+        </div>
+      </div>
+
+      <div class="video-card fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/zn0vM3vgVKQ"
+          title="Workshop Short 1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="video-label">
+          <h4>Quick Insight</h4>
+          <span>⚡ Workshop Short</span>
+        </div>
+      </div>
+
+      <div class="video-card fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/oj66hDxFC_Y"
+          title="Workshop Short 2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="video-label">
+          <h4>Quick Insight</h4>
+          <span>⚡ Workshop Short</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section id="testimonials">
+    <div class="section-header fade-in">
+      <span class="section-tag">Real Voices</span>
+      <h2>What Teachers Say About Me</h2>
+      <p>Hear it directly from the educators who experienced the transformation.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="testimonial-video-wrapper fade-in">
+      <div class="testimonial-badge">⭐ Teacher Testimonial</div>
+      <iframe
+        src="https://www.youtube.com/embed/jFc2yUfcKy0"
+        title="Teacher Testimonial - Namrata Kedia"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="testimonial-caption fade-in">
+      <div class="stars">★★★★★</div>
+      <h3>"Real Impact. Real Words."</h3>
+      <p>
+        This teacher attended Namrata's workshop and shared her honest experience.
+        This is what transformation looks like — straight from the classroom.
+      </p>
+    </div>
+
+    <div class="more-testimonials-note fade-in">
+      <p>
+        🎯 <strong>125+ teachers impacted</strong> across 3 schools.<br>
+        More testimonials being collected — stay tuned! 🌟
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ===== CERTIFICATES ===== -->
+  <section id="certificates">
+    <div class="section-header fade-in">
+      <span class="section-tag">My Credentials</span>
+      <h2>Certified. Qualified. Trusted.</h2>
+      <p>8 specialized certifications — each achieved with a minimum 80% score.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="cert-total-badge fade-in">
+      <span>🏆 Train-The-Trainer Academy by Velsoft — 8 Certifications Completed</span>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Implementing AI in Your Workplace</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 2, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Advanced Skills for the Practical Trainer</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 8, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Developing a Training Needs Analysis</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 12, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Facilitation Skills</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 19, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Mastering Adult Learning Methods</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 22, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Measuring Training Results</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 23, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Survival Skills for the New Trainer</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 24, 2026</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+        <h4>Using Activities to Make Training Fun</h4>
+        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+        <div class="cert-date">📅 July 24, 2026</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-header fade-in">
+      <span class="section-tag">Let's Connect</span>
+      <h2>Ready to Impact Your School?</h2>
+      <p>Let's bring transformation to your teachers — one workshop at a time.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid container fade-in">
+      <div class="contact-info">
+        <h3>Let's Start a Conversation</h3>
+        <p>Whether you're a Principal, HOD, or School Coordinator —
+        I'm just one message away. Let's make your teachers unstoppable.</p>
+
+        <a href="mailto:1percentbettereducator@gmail.com" class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-item-text">
+            1percentbettereducator@gmail.com
+            <small>Email me anytime</small>
+          </div>
+        </a>
+
+        <a href="tel:+919022520611" class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-item-text">
+            +91 90225 20611
+            <small>Call or WhatsApp</small>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop%20for%20my%20school!"
+           target="_blank" class="contact-item">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="contact-item-text">
+            Chat on WhatsApp
+            <small>Quick response guaranteed ⚡</small>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/@1percentbettereducator"
+           target="_blank" class="contact-item">
+          <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+          <div class="contact-item-text">
+            Watch My Workshops on YouTube
+            <small>Subscribe for free tips 🎥</small>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="contact-cta">
+        <h4>Book a Workshop for<br>Your School Today</h4>
+        <p>
+          Bring AI tools, communication skills, and parent management
+          strategies directly to your teachers.<br><br>
+          Let's create real impact together. 🚀
+        </p>
+        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop%20for%20my%20school!"
+           target="_blank" class="btn-primary">
+          🚀 Book a Workshop Now
+        </a>
+      </div>
+    </div>
+
+    <div class="tagline-final container">
+      <strong>"Real Impact. Real Classrooms. Real Change."</strong><br>
+      — Namrata Kedia &nbsp;|&nbsp; 1% Better Educator
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      © 2025 <span>Namrata Kedia</span> | Certified Teacher Trainer |
+      Made with <span>❤️</span> for every educator who dares to grow.
+    </p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop"
+          onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Scroll Top Button
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTop');
+      btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+
+    // Fade In on Scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) el.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Mobile Menu
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+  </script>
+
+</body>
+</html>
