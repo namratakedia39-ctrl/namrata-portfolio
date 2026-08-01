@@ -132,7 +132,7 @@
       margin: 0 auto 25px;
       display: block;
       object-fit: cover;
-      object-position: top center;
+      object-position: center top;
       box-shadow: 0 0 0 8px rgba(230,126,34,0.15),
                   0 10px 40px rgba(0,0,0,0.3);
       transition: transform 0.3s;
@@ -323,7 +323,7 @@
       width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
-      object-position: top center;
+      object-position: center top;
       border-radius: 20px;
       display: block;
       box-shadow: 0 10px 40px rgba(0,0,0,0.15);
@@ -559,7 +559,7 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
       gap: 20px;
       max-width: 1100px;
       margin: 0 auto;
@@ -578,10 +578,14 @@
     }
     .video-card iframe {
       width: 100%;
-      aspect-ratio: 9/16;
+      aspect-ratio: 16/9;
       display: block;
       border: none;
     }
+    .video-card.shorts iframe {
+      aspect-ratio: 9/16;
+    }
+
     .video-label {
       padding: 14px 16px;
       background: white;
@@ -945,11 +949,12 @@
 
       <div class="hero-badge">✦ CERTIFIED TEACHER TRAINER ✦</div>
 
-      <!-- YOUR PHOTO IS HERE -->
+      <!-- PHOTO (will show if namrata.jpg exists in repo) -->
       <img
         src="namrata.jpg"
         alt="Namrata Kedia - Certified Teacher Trainer"
         class="hero-photo"
+        onerror="this.style.display='none'"
       />
 
       <h1>Hi, I'm <span>Namrata Kedia</span></h1>
@@ -999,11 +1004,12 @@
     <div class="about-grid container fade-in">
       <div class="about-image-box">
 
-        <!-- YOUR PHOTO IN ABOUT SECTION -->
+        <!-- PHOTO IN ABOUT (will show if exists) -->
         <img
           src="namrata.jpg"
           alt="Namrata Kedia - Certified Teacher Trainer"
           class="about-photo"
+          onerror="this.style.display='none'"
         />
 
         <div class="cert-badge">
@@ -1021,7 +1027,7 @@
           I believe teachers are the backbone of every school — and when a
           teacher grows, an entire classroom transforms. Through my workshops,
           I have <strong>impacted 125+ teachers</strong> across 3 schools, helping them
-          master AI tools, communicate powerfully with parents, and handle
+          master AI tools, communicate powerfully with parents and leaders, and handle
           difficult situations like a true professional.
         </p>
         <p>
@@ -1061,7 +1067,7 @@
     </div>
     <div class="workshops-grid">
 
-      <!-- WORKSHOP 1 -->
+      <!-- WORKSHOP 1 - AI TOOLS -->
       <div class="workshop-card fade-in">
         <div class="card-header">
           <span class="card-icon">🤖</span>
@@ -1087,33 +1093,38 @@
         </div>
       </div>
 
-      <!-- WORKSHOP 2 -->
+      <!-- WORKSHOP 2 - EFFECTIVE COMMUNICATION -->
       <div class="workshop-card fade-in">
         <div class="card-header">
           <span class="card-icon">🗣️</span>
-          <h3>Effective Communication with Parents</h3>
-          <p>"From Awkward to Confident in One Session"</p>
+          <h3>Effective Communication for Teachers & Leaders</h3>
+          <p>"From Good to Great Communicator"</p>
         </div>
         <div class="card-body">
           <div class="objective-box">
             <h4>📌 Learning Objective</h4>
-            <p>To equip teachers with communication skills that build trust,
-            resolve conflicts, and create strong teacher-parent partnerships.</p>
+            <p>To develop essential communication skills that empower teachers and leaders to connect,
+            influence, and lead with confidence in every interaction.</p>
           </div>
           <div class="outcomes-title">✅ After This Workshop, You Will:</div>
-          <div class="outcome-item">Communicate confidently & empathetically with parents</div>
-          <div class="outcome-item">Handle difficult parent conversations with ease</div>
-          <div class="outcome-item">Apply counselling micro-skills in parent interactions</div>
-          <div class="outcome-item">Turn challenging parents into collaborative partners</div>
-          <div class="outcome-item">Build long-term trust-based parent relationships</div>
+          <div class="outcome-item">Explain the 7-38-55 rule confidently</div>
+          <div class="outcome-item">Demonstrate confident open body language</div>
+          <div class="outcome-item">Apply volume, speed, tone & pause in class</div>
+          <div class="outcome-item">Replace 5 negative phrases immediately</div>
+          <div class="outcome-item">Respond — not react — in tough moments</div>
+          <div class="outcome-item">Use the 3+1 formula in parent meetings</div>
+          <div class="outcome-item">Give feedback using Sandwich Method</div>
+          <div class="outcome-item">Apply TRUST formula daily</div>
+          <div class="outcome-item">Construct open questions consistently</div>
+          <div class="outcome-item">Practice 1% better communication every day</div>
         </div>
         <div class="card-footer">
-          <div class="card-quote">💡 "Communication is not just speaking — it's connecting."</div>
+          <div class="card-quote">💡 "Great leaders are great communicators."</div>
           <a href="#contact" class="book-btn">📩 Book This Workshop</a>
         </div>
       </div>
 
-      <!-- WORKSHOP 3 -->
+      <!-- WORKSHOP 3 - HANDLING ANGRY PARENTS -->
       <div class="workshop-card fade-in">
         <div class="card-header">
           <span class="card-icon">😤</span>
@@ -1152,75 +1163,79 @@
       <div class="divider"></div>
     </div>
 
-    <!-- Featured Video -->
+    <!-- Featured Video - Rhyme Teaching -->
     <div class="video-featured fade-in">
       <iframe
-        src="https://www.youtube.com/embed/zkYniukidYw"
-        title="Namrata Kedia - AI Tools Workshop"
+        src="https://www.youtube.com/embed/37EWdUmbFIU"
+        title="Rhyme Teaching Session - Namrata Kedia"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
       <div class="video-featured-label">
         <i class="fas fa-play-circle"></i>
         <div>
-          <h4>AI Tools for Teachers — Live Workshop Session</h4>
+          <h4>Rhyme Teaching Session — Live Classroom</h4>
           <p>Watch the full session in action</p>
         </div>
       </div>
     </div>
 
-    <!-- Shorts Grid -->
+    <!-- Video Grid -->
     <div class="video-grid container">
 
+      <!-- Video 1 - Counselling -->
       <div class="video-card fade-in">
         <iframe
           src="https://www.youtube.com/embed/b1aARnK4UQQ"
-          title="Workshop Highlight 1"
+          title="Counselling Session"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
         <div class="video-label">
-          <h4>Workshop Highlight</h4>
-          <span>🎬 Live Session Clip</span>
+          <h4>Counselling Session</h4>
+          <span>🎬 Live Workshop</span>
         </div>
       </div>
 
-      <div class="video-card fade-in">
-        <iframe
-          src="https://www.youtube.com/embed/37EWdUmbFIU"
-          title="Workshop Highlight 2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        <div class="video-label">
-          <h4>Workshop Highlight</h4>
-          <span>🎬 Live Session Clip</span>
-        </div>
-      </div>
-
-      <div class="video-card fade-in">
-        <iframe
-          src="https://www.youtube.com/embed/zn0vM3vgVKQ"
-          title="Workshop Short 1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        <div class="video-label">
-          <h4>Quick Insight</h4>
-          <span>⚡ Workshop Short</span>
-        </div>
-      </div>
-
-      <div class="video-card fade-in">
+      <!-- Video 2 - Effective Communication -->
+      <div class="video-card shorts fade-in">
         <iframe
           src="https://www.youtube.com/embed/oj66hDxFC_Y"
-          title="Workshop Short 2"
+          title="Effective Communication"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
         <div class="video-label">
-          <h4>Quick Insight</h4>
-          <span>⚡ Workshop Short</span>
+          <h4>Effective Communication</h4>
+          <span>⚡ Workshop Highlight</span>
+        </div>
+      </div>
+
+      <!-- Video 3 - Phonics Session -->
+      <div class="video-card shorts fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/zn0vM3vgVKQ"
+          title="Phonics Session"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="video-label">
+          <h4>Phonics Session</h4>
+          <span>⚡ Teaching Clip</span>
+        </div>
+      </div>
+
+      <!-- Video 4 - AI Integration -->
+      <div class="video-card fade-in">
+        <iframe
+          src="https://www.youtube.com/embed/zkYniukidYw"
+          title="AI Integration Workshop"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <div class="video-label">
+          <h4>AI Integration Workshop</h4>
+          <span>🎬 Full Session</span>
         </div>
       </div>
 
