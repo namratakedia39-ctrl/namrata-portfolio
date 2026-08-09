@@ -372,22 +372,14 @@
       background: rgba(230,126,34,0.15);
       border-radius: 50%;
     }
-    .card-icon {
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-      display: block;
-    }
+    .card-icon { font-size: 2.2rem; margin-bottom: 12px; display: block; }
     .card-header h3 {
       font-family: 'Playfair Display', serif;
       color: white;
       font-size: 1.2rem;
       margin-bottom: 6px;
     }
-    .card-header p {
-      color: #B8C6D4;
-      font-size: 0.8rem;
-      font-style: italic;
-    }
+    .card-header p { color: #B8C6D4; font-size: 0.8rem; font-style: italic; }
     .card-body { padding: 25px; flex: 1; }
     .objective-box {
       background: rgba(230,126,34,0.06);
@@ -404,11 +396,7 @@
       text-transform: uppercase;
       margin-bottom: 8px;
     }
-    .objective-box p {
-      color: #5D6D7E;
-      font-size: 0.88rem;
-      line-height: 1.6;
-    }
+    .objective-box p { color: #5D6D7E; font-size: 0.88rem; line-height: 1.6; }
     .outcomes-title {
       font-size: 0.75rem;
       font-weight: 600;
@@ -463,11 +451,12 @@
 
     #college { background: #0F1923; padding: 90px 20px; }
 
+    /* ===== VIDEO GALLERY — ALL SAME SIZE ===== */
     #videos { background: #F8F9FA; }
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
       max-width: 1100px;
       margin: 0 auto;
     }
@@ -482,13 +471,21 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     }
-    .video-card iframe {
+    /* ALL videos same square size — fixes the mixing issue */
+    .video-card .video-wrapper {
+      position: relative;
       width: 100%;
-      aspect-ratio: 16/9;
-      display: block;
+      padding-top: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-card .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
     }
-    .video-card.shorts iframe { aspect-ratio: 9/16; }
     .video-label { padding: 14px 16px; background: white; }
     .video-label h4 {
       font-size: 0.85rem;
@@ -497,6 +494,23 @@
       margin-bottom: 3px;
     }
     .video-label span { font-size: 0.75rem; color: #95A5A6; }
+
+    /* College video — keep vertical for single video display */
+    .college-video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #000;
+    }
+    .college-video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     #testimonials { background: white; }
     .testimonial-video-wrapper {
@@ -730,6 +744,9 @@
     }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    @media (max-width: 900px) {
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links {
@@ -751,7 +768,7 @@
       .contact-grid { grid-template-columns: 1fr; }
       .about-highlights { grid-template-columns: 1fr; }
       .workshops-grid { grid-template-columns: 1fr; }
-      .video-grid { grid-template-columns: 1fr 1fr; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
       .cert-grid { grid-template-columns: 1fr 1fr; }
       .college-inner-grid { grid-template-columns: 1fr !important; }
       .quote-grid { grid-template-columns: 1fr !important; }
@@ -959,7 +976,7 @@
     <div style="max-width:1100px;margin:0 auto;">
       <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
 
-        <!-- College Header Banner -->
+        <!-- Header -->
         <div style="background:linear-gradient(135deg,#E67E22,#CA6F1E);padding:25px 35px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
           <div style="display:flex;align-items:center;gap:15px;">
             <div style="width:55px;height:55px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🎓</div>
@@ -971,10 +988,10 @@
           <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">✅ August 2026</div>
         </div>
 
-        <!-- College Body Grid -->
+        <!-- Body Grid -->
         <div class="college-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
 
-          <!-- LEFT: Story -->
+          <!-- Left -->
           <div style="padding:35px;border-right:1px solid rgba(255,255,255,0.06);">
 
             <div style="margin-bottom:28px;">
@@ -1022,36 +1039,53 @@
 
           </div>
 
-          <!-- RIGHT: ONE VIDEO ONLY (5tEodvnh1pk) + Google Form -->
+          <!-- Right: Single Video + Feedback Summary -->
           <div style="padding:35px;">
             <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;">📸 Session Evidence</div>
 
-            <!-- ONLY THIS VIDEO — Effective Communication Session -->
-            <div style="border-radius:14px;overflow:hidden;margin-bottom:20px;border:2px solid rgba(230,126,34,0.3);">
-              <div style="background:#E67E22;padding:10px 15px;">
+            <!-- ONLY ONE VIDEO: 5tEodvnh1pk -->
+            <div style="margin-bottom:20px;">
+              <div style="background:#E67E22;padding:10px 15px;border-radius:12px 12px 0 0;">
                 <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 Effective Communication — Live Session</div>
-                <div style="color:rgba(255,255,255,0.75);font-size:0.7rem;margin-top:2px;">B.Com Students | August 2026</div>
+                <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;margin-top:2px;">B.Com Students | August 2026</div>
               </div>
-              <iframe
-                src="https://www.youtube.com/embed/5tEodvnh1pk"
-                title="Effective Communication Session - B.Com Students"
-                width="100%"
-                style="aspect-ratio:9/16;display:block;border:none;"
-                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
-                allowfullscreen>
-              </iframe>
+              <div class="college-video-wrapper" style="border-radius:0 0 12px 12px;overflow:hidden;">
+                <iframe
+                  src="https://www.youtube.com/embed/5tEodvnh1pk"
+                  title="Effective Communication Session - B.Com Students"
+                  allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
             </div>
 
-            <!-- Google Form Feedback -->
-            <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
-              <div style="display:flex;align-items:center;gap:10px;">
+            <!-- Feedback Summary — NO LINK, just text summary -->
+            <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:14px;padding:20px;">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
                 <span style="font-size:1.5rem;">📋</span>
                 <div>
-                  <div style="color:white;font-size:0.85rem;font-weight:600;">Written Feedback — Google Form</div>
-                  <div style="color:#8FA5BC;font-size:0.73rem;margin-top:3px;">All 50+ responses were positive</div>
+                  <div style="color:white;font-size:0.85rem;font-weight:600;">Student Feedback Summary</div>
+                  <div style="color:#8FA5BC;font-size:0.72rem;margin-top:2px;">Collected via Google Form immediately after session</div>
                 </div>
               </div>
-              <a href="https://forms.gle/BgDqctscXyYmY3PG9" target="_blank" style="background:#E67E22;color:white;padding:10px 18px;border-radius:20px;text-decoration:none;font-size:0.78rem;font-weight:600;white-space:nowrap;">View Responses →</a>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <span style="color:#E67E22;font-size:1rem;">✅</span>
+                  <span style="color:#B8C6D4;font-size:0.83rem;">100% of students rated the session positively</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <span style="color:#E67E22;font-size:1rem;">✅</span>
+                  <span style="color:#B8C6D4;font-size:0.83rem;">Students requested follow-up sessions</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <span style="color:#E67E22;font-size:1rem;">✅</span>
+                  <span style="color:#B8C6D4;font-size:0.83rem;">Session rated highly interactive and practical</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <span style="color:#E67E22;font-size:1rem;">✅</span>
+                  <span style="color:#B8C6D4;font-size:0.83rem;">50+ participants — zero negative responses</span>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -1059,7 +1093,7 @@
 
         <!-- Student Quotes -->
         <div style="padding:30px 35px;border-top:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);">
-          <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;text-align:center;">💬 What Students Wrote — Direct from Google Form</div>
+          <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;text-align:center;">💬 What Students Wrote — In Their Own Words</div>
           <div class="quote-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
 
             <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
@@ -1087,9 +1121,7 @@
     </div>
   </section>
 
-  <!-- VIDEO GALLERY -->
-  <!-- Videos kept: ewePHs3Y-nk, AUlY1umbORY, 37EWdUmbFIU, b1aARnK4UQQ, oj66hDxFC_Y, zn0vM3vgVKQ, zkYniukidYw -->
-  <!-- Removed: qL9n2Wzf2Ho (feedback — stays in testimonials only), gckrG5IJVsk (duplicate — in college section), 5tEodvnh1pk (duplicate — in college section) -->
+  <!-- VIDEO GALLERY — ALL SAME SQUARE SIZE -->
   <section id="videos">
     <div class="section-header fade-in">
       <span class="section-tag">See It In Action</span>
@@ -1099,16 +1131,20 @@
     </div>
     <div class="video-grid container">
 
-      <div class="video-card shorts fade-in">
-        <iframe src="https://www.youtube.com/embed/ewePHs3Y-nk" title="Career Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      <div class="video-card fade-in">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/ewePHs3Y-nk" title="Career Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>Career Counselling Session</h4>
           <span>⚡ College Workshop</span>
         </div>
       </div>
 
-      <div class="video-card shorts fade-in">
-        <iframe src="https://www.youtube.com/embed/AUlY1umbORY" title="Effective Communication for Educators" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      <div class="video-card fade-in">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/AUlY1umbORY" title="Effective Communication for Educators" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>Effective Communication for Educators</h4>
           <span>⚡ Training Session</span>
@@ -1116,7 +1152,9 @@
       </div>
 
       <div class="video-card fade-in">
-        <iframe src="https://www.youtube.com/embed/37EWdUmbFIU" title="Rhyme Teaching Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/37EWdUmbFIU" title="Rhyme Teaching Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>Rhyme Teaching Session</h4>
           <span>🎬 Live Classroom</span>
@@ -1124,23 +1162,29 @@
       </div>
 
       <div class="video-card fade-in">
-        <iframe src="https://www.youtube.com/embed/b1aARnK4UQQ" title="Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/b1aARnK4UQQ" title="Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>Counselling Session</h4>
           <span>🎬 Live Workshop</span>
         </div>
       </div>
 
-      <div class="video-card shorts fade-in">
-        <iframe src="https://www.youtube.com/embed/oj66hDxFC_Y" title="Effective Communication Highlight" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      <div class="video-card fade-in">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/oj66hDxFC_Y" title="Effective Communication Highlight" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>Effective Communication</h4>
           <span>⚡ Workshop Highlight</span>
         </div>
       </div>
 
-      <div class="video-card shorts fade-in">
-        <iframe src="https://www.youtube.com/embed/zn0vM3vgVKQ" title="Phonics Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      <div class="video-card fade-in">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/zn0vM3vgVKQ" title="Phonics Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>Phonics Session</h4>
           <span>⚡ Teaching Clip</span>
@@ -1148,7 +1192,9 @@
       </div>
 
       <div class="video-card fade-in">
-        <iframe src="https://www.youtube.com/embed/zkYniukidYw" title="AI Integration Workshop" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/zkYniukidYw" title="AI Integration Workshop" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="video-label">
           <h4>AI Integration Workshop</h4>
           <span>🎬 Full Session</span>
@@ -1260,27 +1306,22 @@
           <div class="contact-icon"><i class="fas fa-envelope"></i></div>
           <div class="contact-item-text">1percentbettereducator@gmail.com<small>Email me anytime</small></div>
         </a>
-
         <a href="tel:+919022520611" class="contact-item">
           <div class="contact-icon"><i class="fas fa-phone"></i></div>
           <div class="contact-item-text">+91 90225 20611<small>Call or WhatsApp</small></div>
         </a>
-
         <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop%20for%20my%20school!" target="_blank" class="contact-item">
           <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
           <div class="contact-item-text">Chat on WhatsApp<small>Quick response guaranteed ⚡</small></div>
         </a>
-
         <a href="https://www.youtube.com/@1percentBetterEducator" target="_blank" class="contact-item">
           <div class="contact-icon"><i class="fab fa-youtube"></i></div>
           <div class="contact-item-text">Watch My Workshops on YouTube<small>Subscribe for free tips 🎥</small></div>
         </a>
-
         <a href="https://www.instagram.com/1percent_better_educator/" target="_blank" class="contact-item">
           <div class="contact-icon"><i class="fab fa-instagram"></i></div>
           <div class="contact-item-text">Follow on Instagram<small>Daily educator tips &amp; insights 📸</small></div>
         </a>
-
         <a href="https://www.linkedin.com/in/-namrata-kedia" target="_blank" class="contact-item">
           <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
           <div class="contact-item-text">Connect on LinkedIn<small>Professional network 💼</small></div>
