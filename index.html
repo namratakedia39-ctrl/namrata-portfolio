@@ -450,8 +450,9 @@
     }
 
     #college { background: #0F1923; padding: 90px 20px; }
+    #aakar { background: #0A1520; padding: 90px 20px; }
 
-    /* ===== VIDEO GALLERY — ALL SAME SIZE ===== */
+    /* ===== VIDEO GALLERY ===== */
     #videos { background: #F8F9FA; }
     .video-grid {
       display: grid;
@@ -471,7 +472,6 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     }
-    /* ALL videos same square size — fixes the mixing issue */
     .video-card .video-wrapper {
       position: relative;
       width: 100%;
@@ -495,7 +495,6 @@
     }
     .video-label span { font-size: 0.75rem; color: #95A5A6; }
 
-    /* College video — keep vertical for single video display */
     .college-video-wrapper {
       position: relative;
       width: 100%;
@@ -505,6 +504,23 @@
       background: #000;
     }
     .college-video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* AAKAR Instagram Reel wrapper — vertical 9:16 */
+    .aakar-reel-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      overflow: hidden;
+      border-radius: 0 0 12px 12px;
+      background: #000;
+    }
+    .aakar-reel-wrapper iframe {
       position: absolute;
       top: 0; left: 0;
       width: 100%;
@@ -572,6 +588,43 @@
     }
     .more-testimonials-note p { color: #7F8C8D; font-size: 0.88rem; }
     .more-testimonials-note strong { color: #E67E22; }
+
+    /* AAKAR Written Feedback Cards */
+    .aakar-feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .aakar-feedback-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 20px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .aakar-feedback-card:hover {
+      background: rgba(230,126,34,0.06);
+      border-color: rgba(230,126,34,0.3);
+    }
+    .aakar-quote-mark {
+      font-size: 2.5rem;
+      color: rgba(230,126,34,0.3);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .aakar-feedback-card p {
+      color: #B8C6D4;
+      font-size: 0.83rem;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .aakar-feedback-author {
+      color: #8FA5BC;
+      font-size: 0.72rem;
+    }
 
     #certificates { background: #F8F9FA; }
     .cert-total-badge { text-align: center; margin-bottom: 35px; }
@@ -746,6 +799,7 @@
 
     @media (max-width: 900px) {
       .video-grid { grid-template-columns: repeat(2, 1fr); }
+      .aakar-feedback-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
@@ -772,12 +826,17 @@
       .cert-grid { grid-template-columns: 1fr 1fr; }
       .college-inner-grid { grid-template-columns: 1fr !important; }
       .quote-grid { grid-template-columns: 1fr !important; }
+      .aakar-inner-grid { grid-template-columns: 1fr !important; }
+      .aakar-feedback-grid { grid-template-columns: 1fr !important; }
+      .aakar-pillars-grid { grid-template-columns: 1fr 1fr !important; }
     }
     @media (max-width: 480px) {
       .video-grid { grid-template-columns: 1fr; }
       .cert-grid { grid-template-columns: 1fr; }
       .hero-photo { width: 120px; height: 120px; }
       .stats-container { grid-template-columns: 1fr; }
+      .aakar-feedback-grid { grid-template-columns: 1fr; }
+      .aakar-pillars-grid { grid-template-columns: 1fr !important; }
     }
   </style>
 </head>
@@ -793,6 +852,7 @@
       <li><a href="#about" onclick="closeMenu()">About</a></li>
       <li><a href="#workshops" onclick="closeMenu()">Workshops</a></li>
       <li><a href="#college" onclick="closeMenu()">College Sessions</a></li>
+      <li><a href="#aakar" onclick="closeMenu()">AAKAR Workshop</a></li>
       <li><a href="#videos" onclick="closeMenu()">Gallery</a></li>
       <li><a href="#testimonials" onclick="closeMenu()">Testimonial</a></li>
       <li><a href="#certificates" onclick="closeMenu()">Credentials</a></li>
@@ -830,17 +890,17 @@
         <div class="stat-sublabel">Across 3 Schools</div>
       </div>
       <div class="stat-card fade-in">
-        <span class="stat-number">50+</span>
+        <span class="stat-number">100+</span>
         <div class="stat-label">College Students Trained</div>
-        <div class="stat-sublabel">B.Com 1st &amp; 2nd Year</div>
+        <div class="stat-sublabel">B.Com &amp; UG Students</div>
       </div>
       <div class="stat-card fade-in">
-        <span class="stat-number">4+</span>
+        <span class="stat-number">5+</span>
         <div class="stat-label">Institutions Reached</div>
         <div class="stat-sublabel">Schools &amp; Colleges Both</div>
       </div>
       <div class="stat-card fade-in">
-        <span class="stat-number">3</span>
+        <span class="stat-number">4</span>
         <div class="stat-label">Power Workshops</div>
         <div class="stat-sublabel">Practical. Impactful. Transformative.</div>
       </div>
@@ -862,11 +922,11 @@
       <div class="about-text">
         <h3>Transforming Teachers.<br>Transforming Schools.</h3>
         <p>I'm Namrata Kedia — a <strong>Certified Teacher Trainer</strong> with a passion for making every educator feel confident, equipped, and inspired.</p>
-        <p>I believe teachers are the backbone of every school — and when a teacher grows, an entire classroom transforms. Through my workshops, I have <strong>impacted 125+ teachers across 3 schools and 50+ college students</strong>, helping them master AI tools, communicate powerfully with parents and leaders, and handle difficult situations like a true professional.</p>
+        <p>I believe teachers are the backbone of every school — and when a teacher grows, an entire classroom transforms. Through my workshops, I have <strong>impacted 125+ teachers across 3 schools and 100+ college students</strong>, helping them master AI tools, communicate powerfully with parents and leaders, and handle difficult situations like a true professional.</p>
         <p>Certified by the <strong>Train-The-Trainer Academy by Velsoft</strong> with 8 specialized certifications — I bring both credibility and heart to every session I deliver.</p>
         <div class="about-highlights">
           <div class="highlight-item"><i class="fas fa-certificate"></i>8 Velsoft Certifications</div>
-          <div class="highlight-item"><i class="fas fa-users"></i>175+ Learners Impacted</div>
+          <div class="highlight-item"><i class="fas fa-users"></i>225+ Learners Impacted</div>
           <div class="highlight-item"><i class="fas fa-school"></i>Schools &amp; Colleges Reached</div>
           <div class="highlight-item"><i class="fas fa-heart"></i>100% Practical Learning</div>
         </div>
@@ -878,7 +938,7 @@
   <section id="workshops">
     <div class="section-header fade-in">
       <span class="section-tag">What I Offer</span>
-      <h2>My 3 Power Workshops</h2>
+      <h2>My Power Workshops</h2>
       <p>Each workshop is designed to create measurable, lasting impact in your school.</p>
       <div class="divider"></div>
     </div>
@@ -961,10 +1021,35 @@
         </div>
       </div>
 
+      <!-- NEW AAKAR WORKSHOP CARD -->
+      <div class="workshop-card fade-in">
+        <div class="card-header">
+          <span class="card-icon">🌟</span>
+          <h3>AAKAR (आकार) — Personality Development Workshop</h3>
+          <p>"Shape Yourself. Express Yourself. Rise."</p>
+        </div>
+        <div class="card-body">
+          <div class="objective-box">
+            <h4>📌 Learning Objective</h4>
+            <p>A 100% activity-based full-day workshop for UG students (17–22 yrs) that creates lasting behavioral change through experiential learning — zero passive lectures.</p>
+          </div>
+          <div class="outcomes-title">✅ After This Workshop, You Will:</div>
+          <div class="outcome-item">Speak confidently in front of a group without hesitation</div>
+          <div class="outcome-item">Communicate assertively in personal and professional settings</div>
+          <div class="outcome-item">Set one specific 90-day goal with a clear daily action plan</div>
+          <div class="outcome-item">Recognize and overcome personal limiting beliefs</div>
+          <div class="outcome-item">Demonstrate genuine eye contact &amp; strong body posture</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-quote">💡 "The goal is not to change who you are — it's to show you who you already are."</div>
+          <a href="#aakar" class="book-btn">✨ See AAKAR in Action</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- COLLEGE SESSION -->
+  <!-- COLLEGE SESSION (RDG — Effective Communication) -->
   <section id="college">
     <div class="section-header fade-in">
       <span class="section-tag" style="background:rgba(230,126,34,0.2);color:#F0A050;">Real Sessions. Real Rooms. Real Change.</span>
@@ -1039,11 +1124,10 @@
 
           </div>
 
-          <!-- Right: Single Video + Feedback Summary -->
+          <!-- Right: Video + Feedback Summary -->
           <div style="padding:35px;">
             <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;">📸 Session Evidence</div>
 
-            <!-- ONLY ONE VIDEO: 5tEodvnh1pk -->
             <div style="margin-bottom:20px;">
               <div style="background:#E67E22;padding:10px 15px;border-radius:12px 12px 0 0;">
                 <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 Effective Communication — Live Session</div>
@@ -1059,7 +1143,6 @@
               </div>
             </div>
 
-            <!-- Feedback Summary — NO LINK, just text summary -->
             <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:14px;padding:20px;">
               <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
                 <span style="font-size:1.5rem;">📋</span>
@@ -1121,7 +1204,270 @@
     </div>
   </section>
 
-  <!-- VIDEO GALLERY — ALL SAME SQUARE SIZE -->
+  <!-- ===== NEW AAKAR SECTION ===== -->
+  <section id="aakar">
+    <div class="section-header fade-in">
+      <span class="section-tag" style="background:rgba(230,126,34,0.2);color:#F0A050;">NEW — One Day Full Workshop</span>
+      <h2 style="color:white;">AAKAR (आकार) — Personality Development Workshop</h2>
+      <p style="color:#8FA5BC;">50 Girls. 9 Hours. One Powerful Day of Transformation.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+
+        <!-- Header Bar -->
+        <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71,#1a6b3a);padding:25px 35px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
+          <div style="display:flex;align-items:center;gap:15px;">
+            <div style="width:55px;height:55px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🌟</div>
+            <div>
+              <div style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Personality Development Workshop — Full Day</div>
+              <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.3rem;">Smt. Radhadeviji Goenka College of Women</h3>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">✅ 27 August 2026</div>
+            <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">⏱️ 9 Hours</div>
+          </div>
+        </div>
+
+        <!-- Four Pillars -->
+        <div style="padding:30px 35px;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.01);">
+          <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;text-align:center;">🏛️ Four Pillars of AAKAR</div>
+          <div class="aakar-pillars-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;">
+            <div style="background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:18px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:8px;">🔍</div>
+              <div style="color:#2ecc71;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 1</div>
+              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Know Yourself</div>
+              <div style="color:#8FA5BC;font-size:0.72rem;">Self-awareness, core values &amp; breaking limiting beliefs</div>
+            </div>
+            <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:14px;padding:18px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:8px;">🗣️</div>
+              <div style="color:#E67E22;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 2</div>
+              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Express Yourself</div>
+              <div style="color:#8FA5BC;font-size:0.72rem;">Public speaking, active listening &amp; assertiveness</div>
+            </div>
+            <div style="background:rgba(52,152,219,0.08);border:1px solid rgba(52,152,219,0.2);border-radius:14px;padding:18px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:8px;">🎯</div>
+              <div style="color:#3498DB;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 3</div>
+              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Direct Yourself</div>
+              <div style="color:#8FA5BC;font-size:0.72rem;">Goal setting, vision building &amp; resilience</div>
+            </div>
+            <div style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:14px;padding:18px;text-align:center;">
+              <div style="font-size:1.8rem;margin-bottom:8px;">🚀</div>
+              <div style="color:#9B59B6;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 4</div>
+              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Rise</div>
+              <div style="color:#8FA5BC;font-size:0.72rem;">Action planning, peer celebration &amp; personal manifesto</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Body Grid -->
+        <div class="aakar-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+
+          <!-- Left: Details + Ratings -->
+          <div style="padding:35px;border-right:1px solid rgba(255,255,255,0.06);">
+
+            <!-- Audience -->
+            <div style="margin-bottom:28px;">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">01</div>
+                <span style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">The Audience</span>
+              </div>
+              <p style="color:#B8C6D4;font-size:0.88rem;line-height:1.7;">50 young women (UG students, 17–22 yrs) at Smt. Radhadeviji Goenka College of Women — a full-day, 9-hour activity-based personality development experience with zero passive lectures.</p>
+            </div>
+
+            <!-- Workshop Details -->
+            <div style="margin-bottom:28px;">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">02</div>
+                <span style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Workshop Snapshot</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">📅 Date</div>
+                  <div style="color:white;font-size:0.82rem;font-weight:600;">27 August 2026</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">⏱️ Duration</div>
+                  <div style="color:white;font-size:0.82rem;font-weight:600;">Full Day — 9 Hours</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">👥 Participants</div>
+                  <div style="color:white;font-size:0.82rem;font-weight:600;">50 Girls</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">📚 Format</div>
+                  <div style="color:white;font-size:0.82rem;font-weight:600;">100% Activity-Based</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ratings -->
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">03</div>
+                <span style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Impact Numbers</span>
+              </div>
+
+              <!-- Faculty Rating -->
+              <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.15);border-radius:14px;padding:16px;margin-bottom:12px;">
+                <div style="color:#2ecc71;font-size:0.72rem;font-weight:600;margin-bottom:10px;">⭐ Faculty Rating — Anup Sharma Sir, Professor, RDG College</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                  <div style="text-align:center;">
+                    <div style="font-family:'Playfair Display',serif;font-size:2rem;color:#2ecc71;font-weight:700;">4/5</div>
+                    <div style="color:#8FA5BC;font-size:0.68rem;">Overall Workshop</div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div style="font-family:'Playfair Display',serif;font-size:2rem;color:#2ecc71;font-weight:700;">4/5</div>
+                    <div style="color:#8FA5BC;font-size:0.68rem;">Namrata as Trainer</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Student Ratings -->
+              <div style="background:rgba(230,126,34,0.06);border:1px solid rgba(230,126,34,0.15);border-radius:14px;padding:16px;">
+                <div style="color:#E67E22;font-size:0.72rem;font-weight:600;margin-bottom:10px;">📊 Student Ratings (Average — 50 Girls)</div>
+                <div style="display:flex;flex-direction:column;gap:10px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span style="color:#B8C6D4;font-size:0.78rem;">Workshop Rating</span>
+                    <span style="font-family:'Playfair Display',serif;color:#E67E22;font-size:1.3rem;font-weight:700;">8.07<span style="font-size:0.7rem;color:#8FA5BC;">/10</span></span>
+                  </div>
+                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:6px;">
+                    <div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span style="color:#B8C6D4;font-size:0.78rem;">Namrata as Trainer</span>
+                    <span style="font-family:'Playfair Display',serif;color:#E67E22;font-size:1.3rem;font-weight:700;">8.07<span style="font-size:0.7rem;color:#8FA5BC;">/10</span></span>
+                  </div>
+                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:6px;">
+                    <div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Video + Confidence Score -->
+          <div style="padding:35px;">
+
+            <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;">🎬 Workshop Reel</div>
+
+            <!-- Instagram Reel Embed -->
+            <div style="margin-bottom:20px;">
+              <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71);padding:10px 15px;border-radius:12px 12px 0 0;">
+                <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 AAKAR — Live Workshop Highlights</div>
+                <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;margin-top:2px;">RDG College | 27 August 2026 | 50 Girls | 9 Hours</div>
+              </div>
+              <div class="aakar-reel-wrapper">
+                <iframe
+                  src="https://www.instagram.com/reel/DcsJzKxove2/embed"
+                  title="AAKAR Workshop Reel"
+                  allow="autoplay;clipboard-write;encrypted-media;picture-in-picture"
+                  allowfullscreen
+                  scrolling="no"
+                  frameborder="0">
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Confidence Score Before vs After -->
+            <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px;">
+              <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1px;margin-bottom:14px;">📈 Confidence Score — Before vs After</div>
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
+                    <span style="color:#8FA5BC;font-size:0.75rem;">Before Workshop</span>
+                    <span style="color:#E74C3C;font-weight:700;font-size:0.85rem;">5.47 / 10</span>
+                  </div>
+                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;">
+                    <div style="width:54.7%;background:linear-gradient(90deg,#E74C3C,#E67E22);border-radius:10px;height:8px;"></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
+                    <span style="color:#8FA5BC;font-size:0.75rem;">After Workshop (Public Speaking)</span>
+                    <span style="color:#2ecc71;font-weight:700;font-size:0.85rem;">8.07 / 10</span>
+                  </div>
+                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;">
+                    <div style="width:80.7%;background:linear-gradient(90deg,#2ecc71,#1abc9c);border-radius:10px;height:8px;"></div>
+                  </div>
+                </div>
+                <div style="text-align:center;margin-top:6px;background:rgba(46,204,113,0.12);border-radius:10px;padding:10px;">
+                  <span style="color:#2ecc71;font-weight:700;font-size:1.1rem;">+47.5% 📈</span>
+                  <span style="color:#8FA5BC;font-size:0.72rem;display:block;margin-top:2px;">Average confidence growth in one day</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Written Feedback — Best Quotes -->
+        <div style="padding:30px 35px;border-top:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.01);">
+          <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;text-align:center;">💬 In Their Own Words</div>
+          <div style="text-align:center;color:#8FA5BC;font-size:0.78rem;margin-bottom:20px;">What students wrote in the feedback form after AAKAR</div>
+
+          <!-- AAKAR in ONE Sentence -->
+          <div style="margin-bottom:24px;">
+            <div style="color:#E67E22;font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;padding-left:4px;">📌 "Describe AAKAR in ONE sentence"</div>
+            <div class="aakar-feedback-grid">
+              <div class="aakar-feedback-card">
+                <div class="aakar-quote-mark">"</div>
+                <p>AAKAR is a workshop that helps us understand ourselves, build confidence, and move towards our goals.</p>
+                <div class="aakar-feedback-author">— Student Feedback</div>
+              </div>
+              <div class="aakar-feedback-card">
+                <div class="aakar-quote-mark">"</div>
+                <p>AAKAR is a meaningful and motivational workshop that helps us build confidence, learn new skills, and grow personally.</p>
+                <div class="aakar-feedback-author">— Student Feedback</div>
+              </div>
+              <div class="aakar-feedback-card">
+                <div class="aakar-quote-mark">"</div>
+                <p>Aakar is a journey of self-discovery that helps you understand yourself, express yourself, and grow with confidence.</p>
+                <div class="aakar-feedback-author">— Student Feedback</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Before & After AAKAR -->
+          <div>
+            <div style="color:#E67E22;font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;padding-left:4px;">📌 "Before AAKAR I was ___ and after AAKAR I feel ___"</div>
+            <div class="aakar-feedback-grid">
+              <div class="aakar-feedback-card">
+                <div class="aakar-quote-mark">"</div>
+                <p>Before AAKAR I was in my comfort zone of no socializing and after AAKAR I feel confident enough to speak up.</p>
+                <div class="aakar-feedback-author">— Student Feedback</div>
+              </div>
+              <div class="aakar-feedback-card">
+                <div class="aakar-quote-mark">"</div>
+                <p>Before AAKAR I was afraid of taking the first step and after AAKAR I felt ready to take it.</p>
+                <div class="aakar-feedback-author">— Student Feedback</div>
+              </div>
+              <div class="aakar-feedback-card">
+                <div class="aakar-quote-mark">"</div>
+                <p>Before AAKAR I was very insecure about myself and after AAKAR I gained a lot of confidence. I feel I can do anything if I try my best.</p>
+                <div class="aakar-feedback-author">— Student Feedback</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Quote -->
+          <div style="margin-top:28px;text-align:center;padding:22px 30px;background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.15);border-radius:16px;">
+            <div style="font-size:1.8rem;color:rgba(46,204,113,0.4);font-family:Georgia,serif;margin-bottom:8px;">"</div>
+            <p style="color:#B8C6D4;font-size:0.92rem;font-style:italic;line-height:1.7;">The goal is not to change who students are.<br>The goal is to show them who they already are — and give them the tools to live from that place.</p>
+            <div style="color:#2ecc71;font-size:0.78rem;font-weight:600;margin-top:12px;">— AAKAR Workshop Philosophy</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ===== END AAKAR SECTION ===== -->
+
+  <!-- VIDEO GALLERY -->
   <section id="videos">
     <div class="section-header fade-in">
       <span class="section-tag">See It In Action</span>
@@ -1222,7 +1568,7 @@
       <p>B.Com students from Smt. Radhadeviji Goenka College shared their honest experience. This is what transformation looks like — straight from the students.</p>
     </div>
     <div class="more-testimonials-note fade-in">
-      <p>🎯 <strong>175+ learners impacted</strong> (125+ teachers + 50+ students) across 4 institutions.<br>More testimonials being collected — stay tuned! 🌟</p>
+      <p>🎯 <strong>225+ learners impacted</strong> (125+ teachers + 100+ students) across 5 institutions.<br>More testimonials being collected — stay tuned! 🌟</p>
     </div>
   </section>
 
@@ -1330,7 +1676,7 @@
 
       <div class="contact-cta">
         <h4>Book a Workshop for<br>Your School Today</h4>
-        <p>Bring AI tools, communication skills, and parent management strategies directly to your teachers.<br><br>Let's create real impact together. 🚀</p>
+        <p>Bring AI tools, communication skills, and personality development directly to your students and teachers.<br><br>Let's create real impact together. 🚀</p>
         <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop%20for%20my%20school!" target="_blank" class="btn-primary">🚀 Book a Workshop Now</a>
       </div>
     </div>
