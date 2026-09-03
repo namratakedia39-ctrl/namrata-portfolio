@@ -16,6 +16,7 @@
       line-height: 1.7;
     }
 
+    /* ===== NAVBAR ===== */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -68,6 +69,7 @@
       transition: 0.3s;
     }
 
+    /* ===== HERO ===== */
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, #2C3E50 0%, #3D5166 50%, #2C3E50 100%);
@@ -109,8 +111,7 @@
       margin-bottom: 25px;
     }
     .hero-photo {
-      width: 150px;
-      height: 150px;
+      width: 150px; height: 150px;
       border-radius: 50%;
       border: 4px solid #E67E22;
       margin: 0 auto 25px;
@@ -182,6 +183,7 @@
       transform: translateY(-2px);
     }
 
+    /* ===== STATS ===== */
     #stats {
       background: white;
       padding: 60px 20px;
@@ -230,6 +232,7 @@
       margin-top: 3px;
     }
 
+    /* ===== GENERAL ===== */
     section { padding: 80px 20px; }
     .section-header {
       text-align: center;
@@ -267,13 +270,14 @@
     }
     .container { max-width: 1100px; margin: 0 auto; }
 
+    /* ===== ABOUT — FIXED ===== */
     #about { background: #F8F9FA; }
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 50px;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 60px;
       align-items: center;
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 0 auto;
     }
     .about-image-box { position: relative; }
@@ -288,7 +292,7 @@
       transition: transform 0.3s;
     }
     .about-photo:hover { transform: scale(1.02); }
-    .cert-badge {
+    .about-cert-badge {
       position: absolute;
       bottom: -15px; right: -15px;
       background: #E67E22;
@@ -300,47 +304,93 @@
       text-align: center;
       box-shadow: 0 4px 15px rgba(230,126,34,0.4);
     }
-    .cert-badge span {
+    .about-cert-badge span {
       display: block;
       font-size: 1.5rem;
       font-weight: 700;
     }
+
+    /* Story Timeline */
+    .story-tag {
+      display: inline-block;
+      background: rgba(230,126,34,0.1);
+      color: #E67E22;
+      padding: 5px 14px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
     .about-text h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       color: #2C3E50;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
+      line-height: 1.3;
     }
-    .about-text p {
+    .story-block {
+      background: white;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      border-left: 4px solid #E67E22;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .story-block:hover { transform: translateX(5px); }
+    .story-block-icon {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .story-block p {
       color: #5D6D7E;
-      margin-bottom: 15px;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .story-block p strong { color: #2C3E50; }
+    .about-mission {
+      background: linear-gradient(135deg, #2C3E50, #3D5166);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .about-mission p {
+      color: #F0A050;
       font-size: 0.95rem;
+      font-weight: 600;
+      font-style: italic;
+      margin: 0;
     }
     .about-highlights {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 25px;
+      gap: 10px;
     }
     .highlight-item {
       display: flex;
       align-items: center;
       gap: 10px;
       background: white;
-      padding: 12px 15px;
+      padding: 11px 14px;
       border-radius: 10px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #2C3E50;
       font-weight: 500;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
     .highlight-item i { color: #E67E22; font-size: 1rem; }
 
+    /* ===== WORKSHOPS ===== */
     #workshops { background: white; }
     .workshops-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 28px;
       max-width: 1100px;
       margin: 0 auto;
     }
@@ -360,7 +410,7 @@
     }
     .card-header {
       background: linear-gradient(135deg, #2C3E50, #3D5166);
-      padding: 28px 25px;
+      padding: 25px;
       position: relative;
       overflow: hidden;
     }
@@ -372,63 +422,78 @@
       background: rgba(230,126,34,0.15);
       border-radius: 50%;
     }
-    .card-icon { font-size: 2.2rem; margin-bottom: 12px; display: block; }
+    .card-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
     .card-header h3 {
       font-family: 'Playfair Display', serif;
       color: white;
-      font-size: 1.2rem;
-      margin-bottom: 6px;
+      font-size: 1.15rem;
+      margin-bottom: 5px;
     }
-    .card-header p { color: #B8C6D4; font-size: 0.8rem; font-style: italic; }
-    .card-body { padding: 25px; flex: 1; }
+    .card-header p { color: #B8C6D4; font-size: 0.78rem; font-style: italic; }
+    /* Workshop meta pills */
+    .card-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .meta-pill {
+      background: rgba(230,126,34,0.2);
+      color: #F0A050;
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .card-body { padding: 22px; flex: 1; }
     .objective-box {
       background: rgba(230,126,34,0.06);
       border-left: 3px solid #E67E22;
       border-radius: 0 10px 10px 0;
-      padding: 14px 16px;
-      margin-bottom: 22px;
+      padding: 12px 14px;
+      margin-bottom: 18px;
     }
     .objective-box h4 {
       color: #E67E22;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-    .objective-box p { color: #5D6D7E; font-size: 0.88rem; line-height: 1.6; }
+    .objective-box p { color: #5D6D7E; font-size: 0.85rem; line-height: 1.6; }
     .outcomes-title {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: #2C3E50;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .outcome-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-size: 0.875rem;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 0.84rem;
       color: #5D6D7E;
     }
     .outcome-item::before {
       content: '✦';
       color: #E67E22;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       margin-top: 4px;
       flex-shrink: 0;
     }
-    .card-footer { padding: 0 25px 25px; }
+    .card-footer { padding: 0 22px 22px; }
     .card-quote {
       background: #F8F9FA;
       border-radius: 10px;
-      padding: 12px 15px;
-      font-size: 0.82rem;
+      padding: 10px 14px;
+      font-size: 0.8rem;
       color: #7F8C8D;
       font-style: italic;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       text-align: center;
     }
     .book-btn {
@@ -436,11 +501,11 @@
       text-align: center;
       background: linear-gradient(135deg, #E67E22, #CA6F1E);
       color: white;
-      padding: 13px;
+      padding: 12px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       transition: all 0.3s;
       box-shadow: 0 4px 15px rgba(230,126,34,0.3);
     }
@@ -449,16 +514,97 @@
       box-shadow: 0 6px 20px rgba(230,126,34,0.45);
     }
 
+    /* ===== WHO I TRAIN — NEW SECTION ===== */
+    #audience { background: #F8F9FA; }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .audience-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+      border: 2px solid transparent;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .audience-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: #E67E22;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .audience-card:hover {
+      border-color: rgba(230,126,34,0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    }
+    .audience-card:hover::before { transform: scaleX(1); }
+    .audience-icon {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .audience-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #2C3E50;
+      margin-bottom: 10px;
+    }
+    .audience-card p {
+      color: #7F8C8D;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .best-time-box {
+      background: rgba(230,126,34,0.07);
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .best-time-box .bt-label {
+      color: #E67E22;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .best-time-box .bt-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #5D6D7E;
+      margin-bottom: 3px;
+    }
+    .best-time-box .bt-item::before {
+      content: '▸';
+      color: #E67E22;
+      font-size: 0.65rem;
+    }
+
+    /* ===== COLLEGE SESSIONS ===== */
     #college { background: #0F1923; padding: 90px 20px; }
     #aakar { background: #0A1520; padding: 90px 20px; }
 
-    /* ===== VIDEO GALLERY ===== */
+    /* ===== VIDEO GALLERY — FIXED (3 videos only) ===== */
     #videos { background: #F8F9FA; }
     .video-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
     }
     .video-card {
@@ -482,18 +628,32 @@
     .video-card .video-wrapper iframe {
       position: absolute;
       top: 0; left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       border: none;
     }
-    .video-label { padding: 14px 16px; background: white; }
+    .video-label {
+      padding: 14px 16px;
+      background: white;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .video-card:hover .video-label { border-top-color: #E67E22; }
     .video-label h4 {
       font-size: 0.85rem;
       color: #2C3E50;
       font-weight: 600;
       margin-bottom: 3px;
     }
-    .video-label span { font-size: 0.75rem; color: #95A5A6; }
+    .video-label .v-school {
+      font-size: 0.75rem;
+      color: #E67E22;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .video-label .v-meta {
+      font-size: 0.72rem;
+      color: #95A5A6;
+    }
 
     .college-video-wrapper {
       position: relative;
@@ -506,12 +666,9 @@
     .college-video-wrapper iframe {
       position: absolute;
       top: 0; left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       border: none;
     }
-
-    /* AAKAR Instagram Reel wrapper — vertical 9:16 */
     .aakar-reel-wrapper {
       position: relative;
       width: 100%;
@@ -523,109 +680,169 @@
     .aakar-reel-wrapper iframe {
       position: absolute;
       top: 0; left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       border: none;
     }
 
+    /* ===== TESTIMONIALS — FULLY FIXED ===== */
     #testimonials { background: white; }
-    .testimonial-video-wrapper {
-      max-width: 400px;
-      margin: 0 auto 40px;
+    .testimonials-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    /* Left: video */
+    .testi-video-col {}
+    .testi-video-wrap {
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 10px 40px rgba(230,126,34,0.2);
       border: 3px solid rgba(230,126,34,0.3);
       position: relative;
     }
-    .testimonial-video-wrapper iframe {
+    .testi-video-wrap iframe {
       width: 100%;
       aspect-ratio: 9/16;
       display: block;
       border: none;
     }
-    .testimonial-badge {
+    .testi-video-badge {
       position: absolute;
       top: 15px; left: 15px;
       background: #E67E22;
       color: white;
       padding: 6px 14px;
       border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 600;
       z-index: 2;
     }
-    .testimonial-caption {
+    .testi-video-caption {
+      margin-top: 16px;
       text-align: center;
-      margin-top: 25px;
-      padding: 0 20px;
     }
-    .testimonial-caption h3 {
-      font-family: 'Playfair Display', serif;
-      color: #2C3E50;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-    .testimonial-caption p {
-      color: #7F8C8D;
-      font-size: 0.9rem;
-      max-width: 450px;
-      margin: 0 auto;
-    }
-    .stars {
+    .testi-video-caption .stars {
       color: #F39C12;
-      font-size: 1.4rem;
-      margin: 15px 0 5px;
+      font-size: 1.2rem;
       letter-spacing: 3px;
+      margin-bottom: 6px;
     }
-    .more-testimonials-note {
-      text-align: center;
-      margin: 30px auto 0;
-      padding: 20px 30px;
-      background: rgba(230,126,34,0.06);
-      border-radius: 15px;
-      max-width: 500px;
+    .testi-video-caption p {
+      color: #7F8C8D;
+      font-size: 0.82rem;
     }
-    .more-testimonials-note p { color: #7F8C8D; font-size: 0.88rem; }
-    .more-testimonials-note strong { color: #E67E22; }
-
-    /* AAKAR Written Feedback Cards */
-    .aakar-feedback-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 30px;
+    /* Right: written cards */
+    .testi-cards-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
-    .aakar-feedback-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
+    .testi-col-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: #2C3E50;
+      margin-bottom: 6px;
+    }
+    .testi-col-sub {
+      color: #7F8C8D;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+    .testi-card {
+      background: #F8F9FA;
+      border-radius: 16px;
       padding: 20px;
-      transition: border-color 0.3s, background 0.3s;
+      border: 1px solid #EAECEE;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    .aakar-feedback-card:hover {
-      background: rgba(230,126,34,0.06);
+    .testi-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: #E67E22;
+      border-radius: 4px 0 0 4px;
+    }
+    .testi-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
       border-color: rgba(230,126,34,0.3);
     }
-    .aakar-quote-mark {
-      font-size: 2.5rem;
-      color: rgba(230,126,34,0.3);
+    .testi-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .testi-name {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: #2C3E50;
+    }
+    .testi-role {
+      font-size: 0.72rem;
+      color: #E67E22;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .testi-stars {
+      color: #F39C12;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      flex-shrink: 0;
+    }
+    .testi-quote-mark {
+      font-size: 2rem;
+      color: rgba(230,126,34,0.2);
       font-family: Georgia, serif;
       line-height: 1;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-    .aakar-feedback-card p {
-      color: #B8C6D4;
-      font-size: 0.83rem;
-      line-height: 1.6;
+    .testi-card p {
+      color: #5D6D7E;
+      font-size: 0.84rem;
+      line-height: 1.65;
       font-style: italic;
-      margin-bottom: 12px;
     }
-    .aakar-feedback-author {
+    .testi-tag {
+      display: inline-block;
+      margin-top: 10px;
+      background: rgba(230,126,34,0.08);
+      color: #E67E22;
+      padding: 3px 10px;
+      border-radius: 8px;
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+    /* Impact bar */
+    .testi-impact-bar {
+      background: linear-gradient(135deg, #2C3E50, #3D5166);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .tib-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #E67E22;
+      font-weight: 700;
+    }
+    .tib-label {
+      font-size: 0.7rem;
       color: #8FA5BC;
-      font-size: 0.72rem;
+      margin-top: 2px;
     }
 
+    /* ===== CERTIFICATES ===== */
     #certificates { background: #F8F9FA; }
     .cert-total-badge { text-align: center; margin-bottom: 35px; }
     .cert-total-badge span {
@@ -687,6 +904,7 @@
     .cert-issuer { font-size: 0.75rem; color: #95A5A6; }
     .cert-date { font-size: 0.72rem; color: #E67E22; font-weight: 500; margin-top: 8px; }
 
+    /* ===== CONTACT ===== */
     #contact { background: linear-gradient(135deg, #2C3E50, #1A252F); color: white; }
     #contact .section-header h2 { color: white; }
     #contact .section-header p { color: #B8C6D4; }
@@ -797,8 +1015,47 @@
     }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    /* AAKAR Specific */
+    .aakar-feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .aakar-feedback-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 18px;
+      transition: all 0.3s;
+    }
+    .aakar-feedback-card:hover {
+      background: rgba(230,126,34,0.06);
+      border-color: rgba(230,126,34,0.25);
+    }
+    .aakar-quote-mark {
+      font-size: 2.2rem;
+      color: rgba(230,126,34,0.3);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .aakar-feedback-card p {
+      color: #B8C6D4;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .aakar-feedback-author { color: #8FA5BC; font-size: 0.7rem; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .testimonials-layout { grid-template-columns: 320px 1fr; }
+    }
     @media (max-width: 900px) {
-      .video-grid { grid-template-columns: repeat(2, 1fr); }
+      .video-grid { grid-template-columns: repeat(2,1fr); }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
       .aakar-feedback-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
@@ -815,20 +1072,24 @@
         z-index: 999;
       }
       .nav-links.open { display: flex; }
-      .nav-links a { color: white; font-size: 1.2rem; }
+      .nav-links a { color: white; font-size: 1.1rem; }
       .hamburger { display: flex; z-index: 1000; }
       .stats-container { grid-template-columns: 1fr 1fr; gap: 12px; }
       .about-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
       .about-highlights { grid-template-columns: 1fr; }
       .workshops-grid { grid-template-columns: 1fr; }
-      .video-grid { grid-template-columns: repeat(2, 1fr); }
-      .cert-grid { grid-template-columns: 1fr 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-layout { grid-template-columns: 1fr; }
+      .testi-video-col { max-width: 360px; margin: 0 auto; }
+      .tib-num { font-size: 1.4rem; }
+      .contact-grid { grid-template-columns: 1fr; }
       .college-inner-grid { grid-template-columns: 1fr !important; }
       .quote-grid { grid-template-columns: 1fr !important; }
       .aakar-inner-grid { grid-template-columns: 1fr !important; }
       .aakar-feedback-grid { grid-template-columns: 1fr !important; }
       .aakar-pillars-grid { grid-template-columns: 1fr 1fr !important; }
+      .cert-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 480px) {
       .video-grid { grid-template-columns: 1fr; }
@@ -837,886 +1098,946 @@
       .stats-container { grid-template-columns: 1fr; }
       .aakar-feedback-grid { grid-template-columns: 1fr; }
       .aakar-pillars-grid { grid-template-columns: 1fr !important; }
+      .testi-impact-bar { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#hero" class="nav-logo">Namrata <span>Kedia</span></a>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <a href="#hero" class="nav-logo">Namrata <span>Kedia</span></a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="closeMenu()">My Story</a></li>
+    <li><a href="#workshops" onclick="closeMenu()">Workshops</a></li>
+    <li><a href="#college" onclick="closeMenu()">Sessions</a></li>
+    <li><a href="#videos" onclick="closeMenu()">Gallery</a></li>
+    <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
+    <li><a href="#certificates" onclick="closeMenu()">Credentials</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Book a Workshop</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✦ CERTIFIED TEACHER TRAINER — 5 MONTHS. REAL IMPACT. ✦</div>
+    <img src="namrata.jpg" alt="Namrata Kedia" class="hero-photo" onerror="this.style.display='none'"/>
+    <h1>Hi, I'm <span>Namrata Kedia</span></h1>
+    <p class="hero-tagline">
+      I don't just train teachers —<br>
+      <strong>I TRANSFORM how they teach, communicate &amp; lead.</strong>
+    </p>
+    <p class="hero-subtitle">
+      On a mission to make every teacher, student &amp; professional<br>
+      <strong style="color:#E67E22;">1% Better — Every Single Day.</strong>
+    </p>
+    <div class="hero-buttons">
+      <a href="#workshops" class="btn-primary">🚀 Explore Workshops</a>
+      <a href="#contact" class="btn-secondary">📩 Book a Session</a>
     </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about" onclick="closeMenu()">About</a></li>
-      <li><a href="#workshops" onclick="closeMenu()">Workshops</a></li>
-      <li><a href="#college" onclick="closeMenu()">College Sessions</a></li>
-      <li><a href="#aakar" onclick="closeMenu()">AAKAR Workshop</a></li>
-      <li><a href="#videos" onclick="closeMenu()">Gallery</a></li>
-      <li><a href="#testimonials" onclick="closeMenu()">Testimonial</a></li>
-      <li><a href="#certificates" onclick="closeMenu()">Credentials</a></li>
-      <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Book a Workshop</a></li>
-    </ul>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-content">
-      <div class="hero-badge">✦ CERTIFIED TEACHER TRAINER ✦</div>
-      <img src="namrata.jpg" alt="Namrata Kedia" class="hero-photo" onerror="this.style.display='none'"/>
-      <h1>Hi, I'm <span>Namrata Kedia</span></h1>
-      <p class="hero-tagline">
-        I don't just train teachers —<br>
-        <strong>I TRANSFORM how they teach, communicate &amp; lead.</strong>
-      </p>
-      <p class="hero-subtitle">
-        Empowering educators across India through high-impact workshops<br>
-        that create real change in real classrooms.
-      </p>
-      <div class="hero-buttons">
-        <a href="#workshops" class="btn-primary">🚀 Explore Workshops</a>
-        <a href="#contact" class="btn-secondary">📩 Book a Session</a>
-      </div>
+<!-- ===== STATS ===== -->
+<section id="stats">
+  <div class="stats-container">
+    <div class="stat-card fade-in">
+      <span class="stat-number">125+</span>
+      <div class="stat-label">Teachers Trained</div>
+      <div class="stat-sublabel">Across 3 Schools</div>
     </div>
-  </section>
-
-  <!-- STATS -->
-  <section id="stats">
-    <div class="stats-container">
-      <div class="stat-card fade-in">
-        <span class="stat-number">125+</span>
-        <div class="stat-label">Teachers Trained</div>
-        <div class="stat-sublabel">Across 3 Schools</div>
-      </div>
-      <div class="stat-card fade-in">
-        <span class="stat-number">100+</span>
-        <div class="stat-label">College Students Trained</div>
-        <div class="stat-sublabel">B.Com &amp; UG Students</div>
-      </div>
-      <div class="stat-card fade-in">
-        <span class="stat-number">5+</span>
-        <div class="stat-label">Institutions Reached</div>
-        <div class="stat-sublabel">Schools &amp; Colleges Both</div>
-      </div>
-      <div class="stat-card fade-in">
-        <span class="stat-number">4</span>
-        <div class="stat-label">Power Workshops</div>
-        <div class="stat-sublabel">Practical. Impactful. Transformative.</div>
-      </div>
+    <div class="stat-card fade-in">
+      <span class="stat-number">100+</span>
+      <div class="stat-label">College Students</div>
+      <div class="stat-sublabel">UG Students Impacted</div>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-header fade-in">
-      <span class="section-tag">Who Am I</span>
-      <h2>Meet Namrata Kedia</h2>
-      <div class="divider"></div>
+    <div class="stat-card fade-in">
+      <span class="stat-number">5+</span>
+      <div class="stat-label">Institutions</div>
+      <div class="stat-sublabel">Schools &amp; Colleges</div>
     </div>
-    <div class="about-grid container fade-in">
-      <div class="about-image-box">
-        <img src="namrata.jpg" alt="Namrata Kedia" class="about-photo" onerror="this.style.display='none'"/>
-        <div class="cert-badge"><span>8+</span>Certifications</div>
-      </div>
-      <div class="about-text">
-        <h3>Transforming Teachers.<br>Transforming Schools.</h3>
-        <p>I'm Namrata Kedia — a <strong>Certified Teacher Trainer</strong> with a passion for making every educator feel confident, equipped, and inspired.</p>
-        <p>I believe teachers are the backbone of every school — and when a teacher grows, an entire classroom transforms. Through my workshops, I have <strong>impacted 125+ teachers across 3 schools and 100+ college students</strong>, helping them master AI tools, communicate powerfully with parents and leaders, and handle difficult situations like a true professional.</p>
-        <p>Certified by the <strong>Train-The-Trainer Academy by Velsoft</strong> with 8 specialized certifications — I bring both credibility and heart to every session I deliver.</p>
-        <div class="about-highlights">
-          <div class="highlight-item"><i class="fas fa-certificate"></i>8 Velsoft Certifications</div>
-          <div class="highlight-item"><i class="fas fa-users"></i>225+ Learners Impacted</div>
-          <div class="highlight-item"><i class="fas fa-school"></i>Schools &amp; Colleges Reached</div>
-          <div class="highlight-item"><i class="fas fa-heart"></i>100% Practical Learning</div>
-        </div>
-      </div>
+    <div class="stat-card fade-in">
+      <span class="stat-number">5</span>
+      <div class="stat-label">Months Journey</div>
+      <div class="stat-sublabel">Started. Growing. Unstoppable.</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WORKSHOPS -->
-  <section id="workshops">
-    <div class="section-header fade-in">
-      <span class="section-tag">What I Offer</span>
-      <h2>My Power Workshops</h2>
-      <p>Each workshop is designed to create measurable, lasting impact in your school.</p>
-      <div class="divider"></div>
+<!-- ===== ABOUT — FIXED WITH REAL STORY ===== -->
+<section id="about">
+  <div class="section-header fade-in">
+    <span class="section-tag">My Story</span>
+    <h2>Why I Do What I Do</h2>
+    <p>Every mission has a moment it began. Here's mine.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="about-grid container fade-in">
+    <div class="about-image-box">
+      <img src="namrata.jpg" alt="Namrata Kedia" class="about-photo" onerror="this.style.display='none'"/>
+      <div class="about-cert-badge"><span>8+</span>Certifications</div>
     </div>
-    <div class="workshops-grid">
+    <div class="about-text">
+      <span class="story-tag">✦ The Journey</span>
+      <h3>From Teacher<br>to Teacher Trainer.</h3>
 
-      <div class="workshop-card fade-in">
-        <div class="card-header">
-          <span class="card-icon">🤖</span>
-          <h3>AI Tools for Teachers</h3>
-          <p>"Work Smarter. Teach Better. Save Time."</p>
-        </div>
-        <div class="card-body">
-          <div class="objective-box">
-            <h4>📌 Learning Objective</h4>
-            <p>To empower teachers with AI tools to save time, enhance creativity, and personalize learning experiences for every student.</p>
-          </div>
-          <div class="outcomes-title">✅ After This Session, You Will:</div>
-          <div class="outcome-item">Use AI tools to create NEP-aligned lesson plans</div>
-          <div class="outcome-item">Write effective prompts using the RECIPE Method</div>
-          <div class="outcome-item">Design circulars, slides, posters &amp; worksheets effortlessly</div>
-          <div class="outcome-item">Generate personalized report card comments</div>
-          <div class="outcome-item">Create mind maps &amp; flashcards using NotebookLM</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-quote">💡 "1% Better Everyday 🚀"</div>
-          <a href="#contact" class="book-btn">📩 Book This Workshop</a>
-        </div>
+      <div class="story-block">
+        <span class="story-block-icon">👩‍🏫</span>
+        <p>I started as a <strong>teacher myself</strong> — and I watched something that broke my heart. Teachers around me were giving their <strong>Sunday nights to school</strong>, carrying stress home, struggling with their mental health — not because they were bad at teaching, but because <strong>no one ever showed them a better way.</strong></p>
       </div>
 
-      <div class="workshop-card fade-in">
-        <div class="card-header">
-          <span class="card-icon">🗣️</span>
-          <h3>Effective Communication for Teachers &amp; Leaders</h3>
-          <p>"From Good to Great Communicator"</p>
-        </div>
-        <div class="card-body">
-          <div class="objective-box">
-            <h4>📌 Learning Objective</h4>
-            <p>To develop essential communication skills that empower teachers and leaders to connect, influence, and lead with confidence in every interaction.</p>
-          </div>
-          <div class="outcomes-title">✅ After This Workshop, You Will:</div>
-          <div class="outcome-item">Explain the 7-38-55 rule confidently</div>
-          <div class="outcome-item">Demonstrate confident open body language</div>
-          <div class="outcome-item">Apply volume, speed, tone &amp; pause in class</div>
-          <div class="outcome-item">Replace 5 negative phrases immediately</div>
-          <div class="outcome-item">Respond — not react — in tough moments</div>
-          <div class="outcome-item">Use the 3+1 formula in parent meetings</div>
-          <div class="outcome-item">Give feedback using Sandwich Method</div>
-          <div class="outcome-item">Apply TRUST formula daily</div>
-          <div class="outcome-item">Construct open questions consistently</div>
-          <div class="outcome-item">Practice 1% better communication every day</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-quote">💡 "Great leaders are great communicators."</div>
-          <a href="#contact" class="book-btn">📩 Book This Workshop</a>
-        </div>
+      <div class="story-block">
+        <span class="story-block-icon">💡</span>
+        <p>The tools were always there — AI, communication frameworks, parent management strategies — but <strong>no one was making it accessible</strong> to teachers who needed it most. I realized the problem wasn't the teachers. It was the <strong>lack of awareness</strong> of how to do it differently.</p>
       </div>
 
-      <div class="workshop-card fade-in">
-        <div class="card-header">
-          <span class="card-icon">😤</span>
-          <h3>Handling Angry Parents Like a Pro</h3>
-          <p>"Turn Conflict into Collaboration"</p>
-        </div>
-        <div class="card-body">
-          <div class="objective-box">
-            <h4>📌 Learning Objective</h4>
-            <p>Teachers will move from a place of fear, avoidance and reaction — to a place of confidence, preparation and professional response when facing any angry or difficult parent situation.</p>
-          </div>
-          <div class="outcomes-title">✅ After This Session, You Will:</div>
-          <div class="outcome-item">Approach every parent conversation with calm, confidence &amp; clarity</div>
-          <div class="outcome-item">Replace fear &amp; avoidance with preparation &amp; professional response</div>
-          <div class="outcome-item">De-escalate anger and turn heated moments into productive dialogue</div>
-          <div class="outcome-item">Manage PTM meetings with structure, confidence and full control</div>
-          <div class="outcome-item">Stay ready, resilient and composed in every challenging parent situation</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-quote">💡 "You don't have to fear difficult parents — just use the right tools."</div>
-          <a href="#contact" class="book-btn">📩 Book This Workshop</a>
-        </div>
+      <div class="story-block">
+        <span class="story-block-icon">🚀</span>
+        <p>So <strong>5 months ago</strong>, I stood up and started. I began training teachers, college students, and professionals — anyone who wants to grow. My mission is simple: <strong>make people only 1% better every day</strong> — because that 1% compounds into transformation.</p>
       </div>
 
-      <!-- NEW AAKAR WORKSHOP CARD -->
-      <div class="workshop-card fade-in">
-        <div class="card-header">
-          <span class="card-icon">🌟</span>
-          <h3>AAKAR (आकार) — Personality Development Workshop</h3>
-          <p>"Shape Yourself. Express Yourself. Rise."</p>
-        </div>
-        <div class="card-body">
-          <div class="objective-box">
-            <h4>📌 Learning Objective</h4>
-            <p>A 100% activity-based full-day workshop for UG students (17–22 yrs) that creates lasting behavioral change through experiential learning — zero passive lectures.</p>
-          </div>
-          <div class="outcomes-title">✅ After This Workshop, You Will:</div>
-          <div class="outcome-item">Speak confidently in front of a group without hesitation</div>
-          <div class="outcome-item">Communicate assertively in personal and professional settings</div>
-          <div class="outcome-item">Set one specific 90-day goal with a clear daily action plan</div>
-          <div class="outcome-item">Recognize and overcome personal limiting beliefs</div>
-          <div class="outcome-item">Demonstrate genuine eye contact &amp; strong body posture</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-quote">💡 "The goal is not to change who you are — it's to show you who you already are."</div>
-          <a href="#aakar" class="book-btn">✨ See AAKAR in Action</a>
-        </div>
+      <div class="about-mission">
+        <p>🎯 "Teachers are too busy — but few are having productive days. I'm here to change that."</p>
       </div>
 
-    </div>
-  </section>
-
-  <!-- COLLEGE SESSION (RDG — Effective Communication) -->
-  <section id="college">
-    <div class="section-header fade-in">
-      <span class="section-tag" style="background:rgba(230,126,34,0.2);color:#F0A050;">Real Sessions. Real Rooms. Real Change.</span>
-      <h2 style="color:white;">B.Com College Workshop — Effective Communication</h2>
-      <p style="color:#8FA5BC;">From classroom to college — transformation happens when skills meet practice.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div style="max-width:1100px;margin:0 auto;">
-      <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-
-        <!-- Header -->
-        <div style="background:linear-gradient(135deg,#E67E22,#CA6F1E);padding:25px 35px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
-          <div style="display:flex;align-items:center;gap:15px;">
-            <div style="width:55px;height:55px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🎓</div>
-            <div>
-              <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">College Workshop — Effective Communication</div>
-              <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.3rem;">Smt. Radhadeviji Goenka College of Women</h3>
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">✅ August 2026</div>
-        </div>
-
-        <!-- Body Grid -->
-        <div class="college-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
-
-          <!-- Left -->
-          <div style="padding:35px;border-right:1px solid rgba(255,255,255,0.06);">
-
-            <div style="margin-bottom:28px;">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <div style="width:28px;height:28px;background:#E67E22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">01</div>
-                <span style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">The Audience</span>
-              </div>
-              <p style="color:#B8C6D4;font-size:0.88rem;line-height:1.7;">50+ B.Com 1st and 2nd year students at Smt. Radhadeviji Goenka College of Women — young women preparing for professional life, needing real communication skills for interviews, workplaces, and leadership roles.</p>
-            </div>
-
-            <div style="margin-bottom:28px;">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <div style="width:28px;height:28px;background:#E67E22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">02</div>
-                <span style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">What Was Delivered</span>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">The 7-38-55 Rule — words, tone and body language</span></div>
-                <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Confident body language and open posture</span></div>
-                <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Vocal variety — tone, pace, pause and volume</span></div>
-                <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Replacing negative phrases with powerful words</span></div>
-                <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Respond — not react — in tough conversations</span></div>
-              </div>
-            </div>
-
-            <div>
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <div style="width:28px;height:28px;background:#E67E22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">03</div>
-                <span style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">The Impact</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
-                <div style="background:rgba(230,126,34,0.1);border:1px solid rgba(230,126,34,0.2);border-radius:12px;padding:14px 10px;text-align:center;">
-                  <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#E67E22;font-weight:700;">50+</div>
-                  <div style="font-size:0.68rem;color:#8FA5BC;margin-top:3px;">Students</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 10px;text-align:center;">
-                  <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:white;font-weight:700;">100%</div>
-                  <div style="font-size:0.68rem;color:#8FA5BC;margin-top:3px;">Positive Feedback</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 10px;text-align:center;">
-                  <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:white;font-weight:700;">2</div>
-                  <div style="font-size:0.68rem;color:#8FA5BC;margin-top:3px;">Hours</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Right: Video + Feedback Summary -->
-          <div style="padding:35px;">
-            <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;">📸 Session Evidence</div>
-
-            <div style="margin-bottom:20px;">
-              <div style="background:#E67E22;padding:10px 15px;border-radius:12px 12px 0 0;">
-                <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 Effective Communication — Live Session</div>
-                <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;margin-top:2px;">B.Com Students | August 2026</div>
-              </div>
-              <div class="college-video-wrapper" style="border-radius:0 0 12px 12px;overflow:hidden;">
-                <iframe
-                  src="https://www.youtube.com/embed/5tEodvnh1pk"
-                  title="Effective Communication Session - B.Com Students"
-                  allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-
-            <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:14px;padding:20px;">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <span style="font-size:1.5rem;">📋</span>
-                <div>
-                  <div style="color:white;font-size:0.85rem;font-weight:600;">Student Feedback Summary</div>
-                  <div style="color:#8FA5BC;font-size:0.72rem;margin-top:2px;">Collected via Google Form immediately after session</div>
-                </div>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="display:flex;align-items:center;gap:10px;">
-                  <span style="color:#E67E22;font-size:1rem;">✅</span>
-                  <span style="color:#B8C6D4;font-size:0.83rem;">100% of students rated the session positively</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;">
-                  <span style="color:#E67E22;font-size:1rem;">✅</span>
-                  <span style="color:#B8C6D4;font-size:0.83rem;">Students requested follow-up sessions</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;">
-                  <span style="color:#E67E22;font-size:1rem;">✅</span>
-                  <span style="color:#B8C6D4;font-size:0.83rem;">Session rated highly interactive and practical</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;">
-                  <span style="color:#E67E22;font-size:1rem;">✅</span>
-                  <span style="color:#B8C6D4;font-size:0.83rem;">50+ participants — zero negative responses</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Student Quotes -->
-        <div style="padding:30px 35px;border-top:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);">
-          <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;text-align:center;">💬 What Students Wrote — In Their Own Words</div>
-          <div class="quote-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
-              <div style="font-size:2.5rem;color:rgba(230,126,34,0.3);font-family:Georgia,serif;line-height:1;margin-bottom:8px;">"</div>
-              <p style="color:#B8C6D4;font-size:0.83rem;line-height:1.6;font-style:italic;margin-bottom:12px;">I really loved your session and I was really shocked about myself. I noticed a lot of things thanks to you. I would really appreciate another session with you again.</p>
-              <div style="color:#8FA5BC;font-size:0.72rem;">— Tamanna Saiwal, B.Com Student</div>
-            </div>
-
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
-              <div style="font-size:2.5rem;color:rgba(230,126,34,0.3);font-family:Georgia,serif;line-height:1;margin-bottom:8px;">"</div>
-              <p style="color:#B8C6D4;font-size:0.83rem;line-height:1.6;font-style:italic;margin-bottom:12px;">It was very informative and engaging. I learned how body language, facial expressions, eye contact, and voice tone play an important role in effective communication. Thank you Ma'am for such an inspiring and interactive session.</p>
-              <div style="color:#8FA5BC;font-size:0.72rem;">— Kashish Agrawal, B.Com Student</div>
-            </div>
-
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
-              <div style="font-size:2.5rem;color:rgba(230,126,34,0.3);font-family:Georgia,serif;line-height:1;margin-bottom:8px;">"</div>
-              <p style="color:#B8C6D4;font-size:0.83rem;line-height:1.6;font-style:italic;margin-bottom:12px;">Thank you so much dii. I was feeling like this is my own future self. I also want to be a motivational speaker and body language expert. I was very overwhelmed to watch you. I personally want to attend and grow with your sessions.</p>
-              <div style="color:#8FA5BC;font-size:0.72rem;">— Aachal Sanjay More, B.Com Student</div>
-            </div>
-
-          </div>
-        </div>
-
+      <div class="about-highlights">
+        <div class="highlight-item"><i class="fas fa-certificate"></i>8 Velsoft Certifications</div>
+        <div class="highlight-item"><i class="fas fa-users"></i>225+ Learners Impacted</div>
+        <div class="highlight-item"><i class="fas fa-school"></i>Schools &amp; Colleges Reached</div>
+        <div class="highlight-item"><i class="fas fa-fire"></i>5 Months. Real Results.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== NEW AAKAR SECTION ===== -->
-  <section id="aakar">
-    <div class="section-header fade-in">
-      <span class="section-tag" style="background:rgba(230,126,34,0.2);color:#F0A050;">NEW — One Day Full Workshop</span>
-      <h2 style="color:white;">AAKAR (आकार) — Personality Development Workshop</h2>
-      <p style="color:#8FA5BC;">50 Girls. 9 Hours. One Powerful Day of Transformation.</p>
-      <div class="divider"></div>
+<!-- ===== WHO I TRAIN — NEW CLEAN SECTION ===== -->
+<section id="audience">
+  <div class="section-header fade-in">
+    <span class="section-tag">Who I Train</span>
+    <h2>I Work With All Types of Learners</h2>
+    <p>Teachers, Students or Professionals — growth is for everyone.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="audience-grid container fade-in">
+
+    <div class="audience-card">
+      <span class="audience-icon">🏫</span>
+      <h3>School Teachers</h3>
+      <p>Helping teachers move from burnout to breakthrough — with AI tools, communication skills and parent management strategies.</p>
+      <div class="best-time-box">
+        <div class="bt-label">📅 Best Training Time</div>
+        <div class="bt-item">April–May (Summer Vacation)</div>
+        <div class="bt-item">June (New Academic Year)</div>
+        <div class="bt-item">October (Festive Break)</div>
+        <div class="bt-item">Every Saturday (Half Day)</div>
+      </div>
     </div>
 
-    <div style="max-width:1100px;margin:0 auto;">
-      <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <div class="audience-card">
+      <span class="audience-icon">🎓</span>
+      <h3>College Students</h3>
+      <p>Helping UG students discover who they are — building confidence, communication skills and a clear vision for their future.</p>
+      <div class="best-time-box">
+        <div class="bt-label">📅 Best Training Time</div>
+        <div class="bt-item">July–August (Freshers Orientation)</div>
+        <div class="bt-item">November (Pre-Exam Motivation)</div>
+        <div class="bt-item">February–March (Placement Season)</div>
+        <div class="bt-item">Any Saturday (Full Day Workshop)</div>
+      </div>
+    </div>
 
-        <!-- Header Bar -->
-        <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71,#1a6b3a);padding:25px 35px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
-          <div style="display:flex;align-items:center;gap:15px;">
-            <div style="width:55px;height:55px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🌟</div>
-            <div>
-              <div style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Personality Development Workshop — Full Day</div>
-              <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.3rem;">Smt. Radhadeviji Goenka College of Women</h3>
-            </div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">✅ 27 August 2026</div>
-            <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">⏱️ 9 Hours</div>
-          </div>
+    <div class="audience-card">
+      <span class="audience-icon">💼</span>
+      <h3>Corporate Employees</h3>
+      <p>Helping professionals sharpen communication, build leadership presence and show up powerfully in every meeting and interaction.</p>
+      <div class="best-time-box">
+        <div class="bt-label">📅 Best Training Time</div>
+        <div class="bt-item">January–March (New FY Planning)</div>
+        <div class="bt-item">July–September (Mid-Year Review)</div>
+        <div class="bt-item">Weekdays 10am–4pm</div>
+        <div class="bt-item">Friday Afternoons (Team Sessions)</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== WORKSHOPS ===== -->
+<section id="workshops">
+  <div class="section-header fade-in">
+    <span class="section-tag">What I Offer</span>
+    <h2>My Power Workshops</h2>
+    <p>Practical. Activity-based. Designed for real change in real rooms.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="workshops-grid">
+
+    <div class="workshop-card fade-in">
+      <div class="card-header">
+        <span class="card-icon">🤖</span>
+        <h3>AI Tools for Teachers</h3>
+        <p>"Work Smarter. Teach Better. Save Time."</p>
+        <div class="card-meta">
+          <span class="meta-pill">🏫 School Teachers</span>
+          <span class="meta-pill">⏱️ Half Day / Full Day</span>
         </div>
-
-        <!-- Four Pillars -->
-        <div style="padding:30px 35px;border-bottom:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.01);">
-          <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;text-align:center;">🏛️ Four Pillars of AAKAR</div>
-          <div class="aakar-pillars-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;">
-            <div style="background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:18px;text-align:center;">
-              <div style="font-size:1.8rem;margin-bottom:8px;">🔍</div>
-              <div style="color:#2ecc71;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 1</div>
-              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Know Yourself</div>
-              <div style="color:#8FA5BC;font-size:0.72rem;">Self-awareness, core values &amp; breaking limiting beliefs</div>
-            </div>
-            <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:14px;padding:18px;text-align:center;">
-              <div style="font-size:1.8rem;margin-bottom:8px;">🗣️</div>
-              <div style="color:#E67E22;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 2</div>
-              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Express Yourself</div>
-              <div style="color:#8FA5BC;font-size:0.72rem;">Public speaking, active listening &amp; assertiveness</div>
-            </div>
-            <div style="background:rgba(52,152,219,0.08);border:1px solid rgba(52,152,219,0.2);border-radius:14px;padding:18px;text-align:center;">
-              <div style="font-size:1.8rem;margin-bottom:8px;">🎯</div>
-              <div style="color:#3498DB;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 3</div>
-              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Direct Yourself</div>
-              <div style="color:#8FA5BC;font-size:0.72rem;">Goal setting, vision building &amp; resilience</div>
-            </div>
-            <div style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:14px;padding:18px;text-align:center;">
-              <div style="font-size:1.8rem;margin-bottom:8px;">🚀</div>
-              <div style="color:#9B59B6;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Pillar 4</div>
-              <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:4px;">Rise</div>
-              <div style="color:#8FA5BC;font-size:0.72rem;">Action planning, peer celebration &amp; personal manifesto</div>
-            </div>
-          </div>
+      </div>
+      <div class="card-body">
+        <div class="objective-box">
+          <h4>📌 Objective</h4>
+          <p>Empower teachers with AI tools to save time, enhance creativity and personalize learning — without being tech-savvy.</p>
         </div>
+        <div class="outcomes-title">✅ You Will Be Able To:</div>
+        <div class="outcome-item">Create NEP-aligned lesson plans using AI in minutes</div>
+        <div class="outcome-item">Write powerful prompts using the RECIPE Method</div>
+        <div class="outcome-item">Design circulars, slides &amp; worksheets effortlessly</div>
+        <div class="outcome-item">Generate personalized report card comments</div>
+        <div class="outcome-item">Build mind maps &amp; flashcards using NotebookLM</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-quote">💡 "1% Better Everyday 🚀"</div>
+        <a href="#contact" class="book-btn">📩 Book This Workshop</a>
+      </div>
+    </div>
 
-        <!-- Main Body Grid -->
-        <div class="aakar-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
-
-          <!-- Left: Details + Ratings -->
-          <div style="padding:35px;border-right:1px solid rgba(255,255,255,0.06);">
-
-            <!-- Audience -->
-            <div style="margin-bottom:28px;">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">01</div>
-                <span style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">The Audience</span>
-              </div>
-              <p style="color:#B8C6D4;font-size:0.88rem;line-height:1.7;">50 young women (UG students, 17–22 yrs) at Smt. Radhadeviji Goenka College of Women — a full-day, 9-hour activity-based personality development experience with zero passive lectures.</p>
-            </div>
-
-            <!-- Workshop Details -->
-            <div style="margin-bottom:28px;">
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">02</div>
-                <span style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Workshop Snapshot</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
-                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">📅 Date</div>
-                  <div style="color:white;font-size:0.82rem;font-weight:600;">27 August 2026</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
-                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">⏱️ Duration</div>
-                  <div style="color:white;font-size:0.82rem;font-weight:600;">Full Day — 9 Hours</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
-                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">👥 Participants</div>
-                  <div style="color:white;font-size:0.82rem;font-weight:600;">50 Girls</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
-                  <div style="color:#8FA5BC;font-size:0.68rem;margin-bottom:4px;">📚 Format</div>
-                  <div style="color:white;font-size:0.82rem;font-weight:600;">100% Activity-Based</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Ratings -->
-            <div>
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-                <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">03</div>
-                <span style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Impact Numbers</span>
-              </div>
-
-              <!-- Faculty Rating -->
-              <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.15);border-radius:14px;padding:16px;margin-bottom:12px;">
-                <div style="color:#2ecc71;font-size:0.72rem;font-weight:600;margin-bottom:10px;">⭐ Faculty Rating — Anup Sharma Sir, Professor, RDG College</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                  <div style="text-align:center;">
-                    <div style="font-family:'Playfair Display',serif;font-size:2rem;color:#2ecc71;font-weight:700;">4/5</div>
-                    <div style="color:#8FA5BC;font-size:0.68rem;">Overall Workshop</div>
-                  </div>
-                  <div style="text-align:center;">
-                    <div style="font-family:'Playfair Display',serif;font-size:2rem;color:#2ecc71;font-weight:700;">4/5</div>
-                    <div style="color:#8FA5BC;font-size:0.68rem;">Namrata as Trainer</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Student Ratings -->
-              <div style="background:rgba(230,126,34,0.06);border:1px solid rgba(230,126,34,0.15);border-radius:14px;padding:16px;">
-                <div style="color:#E67E22;font-size:0.72rem;font-weight:600;margin-bottom:10px;">📊 Student Ratings (Average — 50 Girls)</div>
-                <div style="display:flex;flex-direction:column;gap:10px;">
-                  <div style="display:flex;justify-content:space-between;align-items:center;">
-                    <span style="color:#B8C6D4;font-size:0.78rem;">Workshop Rating</span>
-                    <span style="font-family:'Playfair Display',serif;color:#E67E22;font-size:1.3rem;font-weight:700;">8.07<span style="font-size:0.7rem;color:#8FA5BC;">/10</span></span>
-                  </div>
-                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:6px;">
-                    <div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div>
-                  </div>
-                  <div style="display:flex;justify-content:space-between;align-items:center;">
-                    <span style="color:#B8C6D4;font-size:0.78rem;">Namrata as Trainer</span>
-                    <span style="font-family:'Playfair Display',serif;color:#E67E22;font-size:1.3rem;font-weight:700;">8.07<span style="font-size:0.7rem;color:#8FA5BC;">/10</span></span>
-                  </div>
-                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:6px;">
-                    <div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Right: Video + Confidence Score -->
-          <div style="padding:35px;">
-
-            <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;">🎬 Workshop Reel</div>
-
-            <!-- Instagram Reel Embed -->
-            <div style="margin-bottom:20px;">
-              <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71);padding:10px 15px;border-radius:12px 12px 0 0;">
-                <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 AAKAR — Live Workshop Highlights</div>
-                <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;margin-top:2px;">RDG College | 27 August 2026 | 50 Girls | 9 Hours</div>
-              </div>
-              <div class="aakar-reel-wrapper">
-                <iframe
-                  src="https://www.instagram.com/reel/DcsJzKxove2/embed"
-                  title="AAKAR Workshop Reel"
-                  allow="autoplay;clipboard-write;encrypted-media;picture-in-picture"
-                  allowfullscreen
-                  scrolling="no"
-                  frameborder="0">
-                </iframe>
-              </div>
-            </div>
-
-            <!-- Confidence Score Before vs After -->
-            <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px;">
-              <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1px;margin-bottom:14px;">📈 Confidence Score — Before vs After</div>
-              <div style="display:flex;flex-direction:column;gap:12px;">
-                <div>
-                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
-                    <span style="color:#8FA5BC;font-size:0.75rem;">Before Workshop</span>
-                    <span style="color:#E74C3C;font-weight:700;font-size:0.85rem;">5.47 / 10</span>
-                  </div>
-                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;">
-                    <div style="width:54.7%;background:linear-gradient(90deg,#E74C3C,#E67E22);border-radius:10px;height:8px;"></div>
-                  </div>
-                </div>
-                <div>
-                  <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
-                    <span style="color:#8FA5BC;font-size:0.75rem;">After Workshop (Public Speaking)</span>
-                    <span style="color:#2ecc71;font-weight:700;font-size:0.85rem;">8.07 / 10</span>
-                  </div>
-                  <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;">
-                    <div style="width:80.7%;background:linear-gradient(90deg,#2ecc71,#1abc9c);border-radius:10px;height:8px;"></div>
-                  </div>
-                </div>
-                <div style="text-align:center;margin-top:6px;background:rgba(46,204,113,0.12);border-radius:10px;padding:10px;">
-                  <span style="color:#2ecc71;font-weight:700;font-size:1.1rem;">+47.5% 📈</span>
-                  <span style="color:#8FA5BC;font-size:0.72rem;display:block;margin-top:2px;">Average confidence growth in one day</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+    <div class="workshop-card fade-in">
+      <div class="card-header">
+        <span class="card-icon">🗣️</span>
+        <h3>Effective Communication</h3>
+        <p>"From Good to Great Communicator"</p>
+        <div class="card-meta">
+          <span class="meta-pill">🏫 Teachers &amp; Leaders</span>
+          <span class="meta-pill">🎓 College Students</span>
+          <span class="meta-pill">⏱️ Half Day+</span>
         </div>
+      </div>
+      <div class="card-body">
+        <div class="objective-box">
+          <h4>📌 Objective</h4>
+          <p>Build communication skills that help you connect, influence and lead with confidence in every interaction.</p>
+        </div>
+        <div class="outcomes-title">✅ You Will Be Able To:</div>
+        <div class="outcome-item">Apply the 7-38-55 rule in every interaction</div>
+        <div class="outcome-item">Demonstrate confident body language &amp; posture</div>
+        <div class="outcome-item">Use volume, speed, tone &amp; pause powerfully</div>
+        <div class="outcome-item">Replace 5 negative phrases with powerful words</div>
+        <div class="outcome-item">Respond — not react — in difficult situations</div>
+        <div class="outcome-item">Use the Sandwich Method for feedback</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-quote">💡 "Great leaders are great communicators."</div>
+        <a href="#contact" class="book-btn">📩 Book This Workshop</a>
+      </div>
+    </div>
 
-        <!-- Written Feedback — Best Quotes -->
-        <div style="padding:30px 35px;border-top:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.01);">
-          <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;text-align:center;">💬 In Their Own Words</div>
-          <div style="text-align:center;color:#8FA5BC;font-size:0.78rem;margin-bottom:20px;">What students wrote in the feedback form after AAKAR</div>
+    <div class="workshop-card fade-in">
+      <div class="card-header">
+        <span class="card-icon">😤</span>
+        <h3>Handling Angry Parents Like a Pro</h3>
+        <p>"Turn Conflict into Collaboration"</p>
+        <div class="card-meta">
+          <span class="meta-pill">🏫 School Teachers</span>
+          <span class="meta-pill">⏱️ Half Day</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="objective-box">
+          <h4>📌 Objective</h4>
+          <p>Move from fear &amp; avoidance to confidence &amp; professional response in every parent situation.</p>
+        </div>
+        <div class="outcomes-title">✅ You Will Be Able To:</div>
+        <div class="outcome-item">Approach parent conversations with calm &amp; clarity</div>
+        <div class="outcome-item">De-escalate anger and turn conflict into dialogue</div>
+        <div class="outcome-item">Manage PTM meetings with full confidence</div>
+        <div class="outcome-item">Stay composed in every challenging situation</div>
+        <div class="outcome-item">Replace fear with preparation &amp; professional tools</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-quote">💡 "Right tools turn difficult parents into partners."</div>
+        <a href="#contact" class="book-btn">📩 Book This Workshop</a>
+      </div>
+    </div>
 
-          <!-- AAKAR in ONE Sentence -->
-          <div style="margin-bottom:24px;">
-            <div style="color:#E67E22;font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;padding-left:4px;">📌 "Describe AAKAR in ONE sentence"</div>
-            <div class="aakar-feedback-grid">
-              <div class="aakar-feedback-card">
-                <div class="aakar-quote-mark">"</div>
-                <p>AAKAR is a workshop that helps us understand ourselves, build confidence, and move towards our goals.</p>
-                <div class="aakar-feedback-author">— Student Feedback</div>
-              </div>
-              <div class="aakar-feedback-card">
-                <div class="aakar-quote-mark">"</div>
-                <p>AAKAR is a meaningful and motivational workshop that helps us build confidence, learn new skills, and grow personally.</p>
-                <div class="aakar-feedback-author">— Student Feedback</div>
-              </div>
-              <div class="aakar-feedback-card">
-                <div class="aakar-quote-mark">"</div>
-                <p>Aakar is a journey of self-discovery that helps you understand yourself, express yourself, and grow with confidence.</p>
-                <div class="aakar-feedback-author">— Student Feedback</div>
-              </div>
-            </div>
-          </div>
+    <div class="workshop-card fade-in">
+      <div class="card-header">
+        <span class="card-icon">🌟</span>
+        <h3>AAKAR — Personality Development</h3>
+        <p>"Shape Yourself. Express Yourself. Rise."</p>
+        <div class="card-meta">
+          <span class="meta-pill">🎓 UG Students (17–22)</span>
+          <span class="meta-pill">⏱️ Full Day — 9 Hours</span>
+          <span class="meta-pill">✅ Zero Lecture</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="objective-box">
+          <h4>📌 Objective</h4>
+          <p>100% activity-based full-day workshop that creates lasting behavioral change — helping students discover who they truly are.</p>
+        </div>
+        <div class="outcomes-title">✅ You Will Be Able To:</div>
+        <div class="outcome-item">Speak confidently in front of a group</div>
+        <div class="outcome-item">Set a clear 90-day goal with action plan</div>
+        <div class="outcome-item">Recognize &amp; break personal limiting beliefs</div>
+        <div class="outcome-item">Communicate assertively in any setting</div>
+        <div class="outcome-item">Leave with a written personal manifesto</div>
+      </div>
+      <div class="card-footer">
+        <div class="card-quote">💡 "Show them who they already are."</div>
+        <a href="#aakar" class="book-btn">✨ See AAKAR in Action</a>
+      </div>
+    </div>
 
-          <!-- Before & After AAKAR -->
+  </div>
+</section>
+
+<!-- ===== COLLEGE SESSION — RDG ===== -->
+<section id="college">
+  <div class="section-header fade-in">
+    <span class="section-tag" style="background:rgba(230,126,34,0.2);color:#F0A050;">Real Sessions. Real Rooms. Real Change.</span>
+    <h2 style="color:white;">B.Com Workshop — Effective Communication</h2>
+    <p style="color:#8FA5BC;">Smt. Radhadeviji Goenka College of Women</p>
+    <div class="divider"></div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+
+      <div style="background:linear-gradient(135deg,#E67E22,#CA6F1E);padding:25px 35px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
+        <div style="display:flex;align-items:center;gap:15px;">
+          <div style="width:55px;height:55px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🎓</div>
           <div>
-            <div style="color:#E67E22;font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;padding-left:4px;">📌 "Before AAKAR I was ___ and after AAKAR I feel ___"</div>
-            <div class="aakar-feedback-grid">
-              <div class="aakar-feedback-card">
-                <div class="aakar-quote-mark">"</div>
-                <p>Before AAKAR I was in my comfort zone of no socializing and after AAKAR I feel confident enough to speak up.</p>
-                <div class="aakar-feedback-author">— Student Feedback</div>
+            <div style="color:rgba(255,255,255,0.8);font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Effective Communication — College Workshop</div>
+            <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.3rem;">Smt. Radhadeviji Goenka College of Women</h3>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">📅 August 2026</div>
+          <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">👥 50+ Students</div>
+        </div>
+      </div>
+
+      <div class="college-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+        <div style="padding:35px;border-right:1px solid rgba(255,255,255,0.06);">
+
+          <div style="margin-bottom:28px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+              <div style="width:28px;height:28px;background:#E67E22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">01</div>
+              <span style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">The Audience</span>
+            </div>
+            <p style="color:#B8C6D4;font-size:0.88rem;line-height:1.7;">50+ B.Com 1st and 2nd year students — young women preparing for professional life, needing real communication skills for interviews, workplaces and leadership roles.</p>
+          </div>
+
+          <div style="margin-bottom:28px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+              <div style="width:28px;height:28px;background:#E67E22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">02</div>
+              <span style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">What Was Delivered</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">The 7-38-55 Rule — words, tone and body language</span></div>
+              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Confident body language and open posture</span></div>
+              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Vocal variety — tone, pace, pause and volume</span></div>
+              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Replacing negative phrases with powerful words</span></div>
+              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.85rem;">Respond — not react — in tough conversations</span></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+              <div style="width:28px;height:28px;background:#E67E22;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">03</div>
+              <span style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">The Impact</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+              <div style="background:rgba(230,126,34,0.1);border:1px solid rgba(230,126,34,0.2);border-radius:12px;padding:14px 10px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#E67E22;font-weight:700;">50+</div>
+                <div style="font-size:0.68rem;color:#8FA5BC;margin-top:3px;">Students</div>
               </div>
-              <div class="aakar-feedback-card">
-                <div class="aakar-quote-mark">"</div>
-                <p>Before AAKAR I was afraid of taking the first step and after AAKAR I felt ready to take it.</p>
-                <div class="aakar-feedback-author">— Student Feedback</div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 10px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:white;font-weight:700;">100%</div>
+                <div style="font-size:0.68rem;color:#8FA5BC;margin-top:3px;">Positive</div>
               </div>
-              <div class="aakar-feedback-card">
-                <div class="aakar-quote-mark">"</div>
-                <p>Before AAKAR I was very insecure about myself and after AAKAR I gained a lot of confidence. I feel I can do anything if I try my best.</p>
-                <div class="aakar-feedback-author">— Student Feedback</div>
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 10px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:white;font-weight:700;">2</div>
+                <div style="font-size:0.68rem;color:#8FA5BC;margin-top:3px;">Hours</div>
               </div>
             </div>
           </div>
 
-          <!-- Bottom Quote -->
-          <div style="margin-top:28px;text-align:center;padding:22px 30px;background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.15);border-radius:16px;">
-            <div style="font-size:1.8rem;color:rgba(46,204,113,0.4);font-family:Georgia,serif;margin-bottom:8px;">"</div>
-            <p style="color:#B8C6D4;font-size:0.92rem;font-style:italic;line-height:1.7;">The goal is not to change who students are.<br>The goal is to show them who they already are — and give them the tools to live from that place.</p>
-            <div style="color:#2ecc71;font-size:0.78rem;font-weight:600;margin-top:12px;">— AAKAR Workshop Philosophy</div>
+        </div>
+
+        <div style="padding:35px;">
+          <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;">📸 Session Evidence</div>
+          <div style="margin-bottom:20px;">
+            <div style="background:#E67E22;padding:10px 15px;border-radius:12px 12px 0 0;">
+              <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 Effective Communication — Live Session</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;margin-top:2px;">B.Com Students | RDG College | August 2026</div>
+            </div>
+            <div class="college-video-wrapper" style="border-radius:0 0 12px 12px;overflow:hidden;">
+              <iframe src="https://www.youtube.com/embed/5tEodvnh1pk" title="Effective Communication Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:14px;padding:18px;">
+            <div style="color:white;font-size:0.85rem;font-weight:600;margin-bottom:12px;">📋 Feedback Summary</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;gap:10px;"><span style="color:#E67E22;">✅</span><span style="color:#B8C6D4;font-size:0.82rem;">100% students rated the session positively</span></div>
+              <div style="display:flex;align-items:center;gap:10px;"><span style="color:#E67E22;">✅</span><span style="color:#B8C6D4;font-size:0.82rem;">Students requested follow-up sessions</span></div>
+              <div style="display:flex;align-items:center;gap:10px;"><span style="color:#E67E22;">✅</span><span style="color:#B8C6D4;font-size:0.82rem;">Rated highly interactive and practical</span></div>
+              <div style="display:flex;align-items:center;gap:10px;"><span style="color:#E67E22;">✅</span><span style="color:#B8C6D4;font-size:0.82rem;">Zero negative responses from 50+ participants</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:28px 35px;border-top:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);">
+        <div style="color:#E67E22;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;text-align:center;">💬 What Students Wrote</div>
+        <div class="quote-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
+            <div style="font-size:2.2rem;color:rgba(230,126,34,0.3);font-family:Georgia,serif;line-height:1;margin-bottom:8px;">"</div>
+            <p style="color:#B8C6D4;font-size:0.83rem;line-height:1.6;font-style:italic;margin-bottom:12px;">I really loved your session. I noticed a lot of things thanks to you. I would really appreciate another session with you again.</p>
+            <div style="color:#8FA5BC;font-size:0.72rem;">— Tamanna Saiwal, B.Com Student</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
+            <div style="font-size:2.2rem;color:rgba(230,126,34,0.3);font-family:Georgia,serif;line-height:1;margin-bottom:8px;">"</div>
+            <p style="color:#B8C6D4;font-size:0.83rem;line-height:1.6;font-style:italic;margin-bottom:12px;">I learned how body language, facial expressions, eye contact and voice tone play a crucial role in communication. Thank you for such an inspiring session.</p>
+            <div style="color:#8FA5BC;font-size:0.72rem;">— Kashish Agrawal, B.Com Student</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;">
+            <div style="font-size:2.2rem;color:rgba(230,126,34,0.3);font-family:Georgia,serif;line-height:1;margin-bottom:8px;">"</div>
+            <p style="color:#B8C6D4;font-size:0.83rem;line-height:1.6;font-style:italic;margin-bottom:12px;">I was feeling like this is my own future self. I also want to be a motivational speaker. I personally want to attend and grow with your sessions.</p>
+            <div style="color:#8FA5BC;font-size:0.72rem;">— Aachal Sanjay More, B.Com Student</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== AAKAR SECTION ===== -->
+<section id="aakar">
+  <div class="section-header fade-in">
+    <span class="section-tag" style="background:rgba(46,204,113,0.15);color:#2ecc71;">NEW — Full Day Workshop</span>
+    <h2 style="color:white;">AAKAR (आकार) — Personality Development</h2>
+    <p style="color:#8FA5BC;">50 Girls. 9 Hours. One Day That Changed Everything.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71,#1a6b3a);padding:25px 35px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
+        <div style="display:flex;align-items:center;gap:15px;">
+          <div style="width:55px;height:55px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🌟</div>
+          <div>
+            <div style="color:rgba(255,255,255,0.85);font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Personality Development — Full Day</div>
+            <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.3rem;">Smt. Radhadeviji Goenka College of Women</h3>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">📅 27 August 2026</div>
+          <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">⏱️ 9 Hours</div>
+          <div style="background:rgba(255,255,255,0.2);padding:8px 18px;border-radius:20px;color:white;font-size:0.78rem;font-weight:600;">👥 50 Girls</div>
+        </div>
+      </div>
+
+      <!-- Four Pillars -->
+      <div style="padding:28px 35px;border-bottom:1px solid rgba(255,255,255,0.06);">
+        <div style="color:#2ecc71;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;text-align:center;">🏛️ Four Pillars of AAKAR</div>
+        <div class="aakar-pillars-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+          <div style="background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.2);border-radius:12px;padding:16px;text-align:center;">
+            <div style="font-size:1.6rem;margin-bottom:6px;">🔍</div>
+            <div style="color:#2ecc71;font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Pillar 1</div>
+            <div style="color:white;font-size:0.82rem;font-weight:600;">Know Yourself</div>
+            <div style="color:#8FA5BC;font-size:0.7rem;margin-top:4px;">Self-awareness &amp; core values</div>
+          </div>
+          <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:12px;padding:16px;text-align:center;">
+            <div style="font-size:1.6rem;margin-bottom:6px;">🗣️</div>
+            <div style="color:#E67E22;font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Pillar 2</div>
+            <div style="color:white;font-size:0.82rem;font-weight:600;">Express Yourself</div>
+            <div style="color:#8FA5BC;font-size:0.7rem;margin-top:4px;">Public speaking &amp; assertiveness</div>
+          </div>
+          <div style="background:rgba(52,152,219,0.08);border:1px solid rgba(52,152,219,0.2);border-radius:12px;padding:16px;text-align:center;">
+            <div style="font-size:1.6rem;margin-bottom:6px;">🎯</div>
+            <div style="color:#3498DB;font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Pillar 3</div>
+            <div style="color:white;font-size:0.82rem;font-weight:600;">Direct Yourself</div>
+            <div style="color:#8FA5BC;font-size:0.7rem;margin-top:4px;">Goal setting &amp; resilience</div>
+          </div>
+          <div style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:12px;padding:16px;text-align:center;">
+            <div style="font-size:1.6rem;margin-bottom:6px;">🚀</div>
+            <div style="color:#9B59B6;font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Pillar 4</div>
+            <div style="color:white;font-size:0.82rem;font-weight:600;">Rise</div>
+            <div style="color:#8FA5BC;font-size:0.7rem;margin-top:4px;">Action plan &amp; manifesto</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Grid -->
+      <div class="aakar-inner-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+
+        <div style="padding:35px;border-right:1px solid rgba(255,255,255,0.06);">
+
+          <!-- Workshop Snapshot -->
+          <div style="margin-bottom:24px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">01</div>
+              <span style="color:#2ecc71;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Workshop Snapshot</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:11px;">
+                <div style="color:#8FA5BC;font-size:0.65rem;margin-bottom:3px;">📅 Date</div>
+                <div style="color:white;font-size:0.8rem;font-weight:600;">27 August 2026</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:11px;">
+                <div style="color:#8FA5BC;font-size:0.65rem;margin-bottom:3px;">⏱️ Duration</div>
+                <div style="color:white;font-size:0.8rem;font-weight:600;">Full Day — 9 Hours</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:11px;">
+                <div style="color:#8FA5BC;font-size:0.65rem;margin-bottom:3px;">👥 Participants</div>
+                <div style="color:white;font-size:0.8rem;font-weight:600;">50 Girls</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:11px;">
+                <div style="color:#8FA5BC;font-size:0.65rem;margin-bottom:3px;">📚 Format</div>
+                <div style="color:white;font-size:0.8rem;font-weight:600;">100% Activity-Based</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ratings -->
+          <div style="margin-bottom:24px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">02</div>
+              <span style="color:#2ecc71;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Ratings &amp; Results</span>
+            </div>
+
+            <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.15);border-radius:12px;padding:14px;margin-bottom:10px;">
+              <div style="color:#2ecc71;font-size:0.7rem;font-weight:600;margin-bottom:8px;">⭐ Faculty — Anup Sharma Sir, Professor RDG College</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center;">
+                <div>
+                  <div style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#2ecc71;font-weight:700;">4/5</div>
+                  <div style="color:#8FA5BC;font-size:0.65rem;">Overall Workshop</div>
+                </div>
+                <div>
+                  <div style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#2ecc71;font-weight:700;">4/5</div>
+                  <div style="color:#8FA5BC;font-size:0.65rem;">Namrata as Trainer</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:rgba(230,126,34,0.06);border:1px solid rgba(230,126,34,0.15);border-radius:12px;padding:14px;">
+              <div style="color:#E67E22;font-size:0.7rem;font-weight:600;margin-bottom:10px;">📊 Student Average Ratings (50 Girls)</div>
+              <div style="margin-bottom:8px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:#8FA5BC;font-size:0.75rem;">Workshop Rating</span>
+                  <span style="color:#E67E22;font-weight:700;font-size:0.82rem;">8.07/10</span>
+                </div>
+                <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:6px;">
+                  <div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:#8FA5BC;font-size:0.75rem;">Namrata as Trainer</span>
+                  <span style="color:#E67E22;font-weight:700;font-size:0.82rem;">8.07/10</span>
+                </div>
+                <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:6px;">
+                  <div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Confidence Score -->
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:#2ecc71;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;">03</div>
+              <span style="color:#2ecc71;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Confidence Growth</span>
+            </div>
+            <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);border-radius:12px;padding:16px;">
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:#8FA5BC;font-size:0.75rem;">Before Workshop</span>
+                  <span style="color:#E74C3C;font-weight:700;font-size:0.82rem;">5.47/10</span>
+                </div>
+                <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;">
+                  <div style="width:54.7%;background:linear-gradient(90deg,#E74C3C,#E67E22);border-radius:10px;height:8px;"></div>
+                </div>
+              </div>
+              <div style="margin-bottom:12px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:#8FA5BC;font-size:0.75rem;">After Workshop</span>
+                  <span style="color:#2ecc71;font-weight:700;font-size:0.82rem;">8.07/10</span>
+                </div>
+                <div style="width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;">
+                  <div style="width:80.7%;background:linear-gradient(90deg,#2ecc71,#1abc9c);border-radius:10px;height:8px;"></div>
+                </div>
+              </div>
+              <div style="text-align:center;background:rgba(46,204,113,0.12);border-radius:8px;padding:8px;">
+                <span style="color:#2ecc71;font-weight:700;font-size:1.1rem;">+47.5% Confidence Growth 📈</span>
+                <div style="color:#8FA5BC;font-size:0.68rem;margin-top:2px;">In just one day</div>
+              </div>
+            </div>
           </div>
 
         </div>
 
-      </div>
-    </div>
-  </section>
-  <!-- ===== END AAKAR SECTION ===== -->
-
-  <!-- VIDEO GALLERY -->
-  <section id="videos">
-    <div class="section-header fade-in">
-      <span class="section-tag">See It In Action</span>
-      <h2>Workshop Highlights</h2>
-      <p>Real sessions. Real teachers &amp; students. Real transformation.</p>
-      <div class="divider"></div>
-    </div>
-    <div class="video-grid container">
-
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ewePHs3Y-nk" title="Career Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-label">
-          <h4>Career Counselling Session</h4>
-          <span>⚡ College Workshop</span>
+        <!-- Right: Reel -->
+        <div style="padding:35px;">
+          <div style="color:#2ecc71;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">🎬 Workshop Reel</div>
+          <div>
+            <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71);padding:10px 15px;border-radius:12px 12px 0 0;">
+              <div style="color:white;font-size:0.78rem;font-weight:600;">🎬 AAKAR — Live Highlights</div>
+              <div style="color:rgba(255,255,255,0.8);font-size:0.68rem;margin-top:2px;">RDG College | 27 Aug 2026 | 50 Girls | 9 Hours</div>
+            </div>
+            <div class="aakar-reel-wrapper">
+              <iframe src="https://www.instagram.com/reel/DcsJzKxove2/embed" title="AAKAR Workshop Reel" allow="autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen scrolling="no" frameborder="0"></iframe>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/AUlY1umbORY" title="Effective Communication for Educators" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-label">
-          <h4>Effective Communication for Educators</h4>
-          <span>⚡ Training Session</span>
-        </div>
-      </div>
+      <!-- Written Feedback -->
+      <div style="padding:28px 35px;border-top:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.01);">
+        <div style="color:#2ecc71;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;text-align:center;">💬 In Their Own Words</div>
+        <div style="text-align:center;color:#8FA5BC;font-size:0.78rem;margin-bottom:20px;">Written feedback collected immediately after AAKAR</div>
 
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/37EWdUmbFIU" title="Rhyme Teaching Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div style="color:#E67E22;font-size:0.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">📌 "Describe AAKAR in ONE sentence"</div>
+        <div class="aakar-feedback-grid" style="margin-bottom:20px;">
+          <div class="aakar-feedback-card">
+            <div class="aakar-quote-mark">"</div>
+            <p>AAKAR is a workshop that helps us understand ourselves, build confidence, and move towards our goals.</p>
+            <div class="aakar-feedback-author">— Student Feedback</div>
+          </div>
+          <div class="aakar-feedback-card">
+            <div class="aakar-quote-mark">"</div>
+            <p>AAKAR is a meaningful and motivational workshop that helps us build confidence, learn new skills, and grow personally.</p>
+            <div class="aakar-feedback-author">— Student Feedback</div>
+          </div>
+          <div class="aakar-feedback-card">
+            <div class="aakar-quote-mark">"</div>
+            <p>Aakar is a journey of self-discovery that helps you understand yourself, express yourself, and grow with confidence.</p>
+            <div class="aakar-feedback-author">— Student Feedback</div>
+          </div>
         </div>
-        <div class="video-label">
-          <h4>Rhyme Teaching Session</h4>
-          <span>🎬 Live Classroom</span>
-        </div>
-      </div>
 
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/b1aARnK4UQQ" title="Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div style="color:#E67E22;font-size:0.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">📌 "Before AAKAR I was ___ and after AAKAR I feel ___"</div>
+        <div class="aakar-feedback-grid">
+          <div class="aakar-feedback-card">
+            <div class="aakar-quote-mark">"</div>
+            <p>Before AAKAR I was in my comfort zone of no socializing and after AAKAR I feel confident enough to speak up.</p>
+            <div class="aakar-feedback-author">— Student Feedback</div>
+          </div>
+          <div class="aakar-feedback-card">
+            <div class="aakar-quote-mark">"</div>
+            <p>Before AAKAR I was afraid of taking the first step and after AAKAR I felt ready to take it.</p>
+            <div class="aakar-feedback-author">— Student Feedback</div>
+          </div>
+          <div class="aakar-feedback-card">
+            <div class="aakar-quote-mark">"</div>
+            <p>Before AAKAR I was very insecure about myself and after AAKAR I gained a lot of confidence. I feel I can do anything if I try my best.</p>
+            <div class="aakar-feedback-author">— Student Feedback</div>
+          </div>
         </div>
-        <div class="video-label">
-          <h4>Counselling Session</h4>
-          <span>🎬 Live Workshop</span>
-        </div>
-      </div>
 
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/oj66hDxFC_Y" title="Effective Communication Highlight" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-label">
-          <h4>Effective Communication</h4>
-          <span>⚡ Workshop Highlight</span>
-        </div>
-      </div>
-
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/zn0vM3vgVKQ" title="Phonics Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-label">
-          <h4>Phonics Session</h4>
-          <span>⚡ Teaching Clip</span>
-        </div>
-      </div>
-
-      <div class="video-card fade-in">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/zkYniukidYw" title="AI Integration Workshop" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-label">
-          <h4>AI Integration Workshop</h4>
-          <span>🎬 Full Session</span>
+        <div style="margin-top:24px;text-align:center;padding:20px 30px;background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.15);border-radius:14px;">
+          <p style="color:#B8C6D4;font-size:0.9rem;font-style:italic;line-height:1.7;">"The goal is not to change who students are.<br>The goal is to show them who they already are — and give them the tools to live from that place."</p>
+          <div style="color:#2ecc71;font-size:0.75rem;font-weight:600;margin-top:10px;">— AAKAR Workshop Philosophy</div>
         </div>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <div class="section-header fade-in">
-      <span class="section-tag">Real Voices</span>
-      <h2>What Teachers &amp; Students Say About Me</h2>
-      <p>Hear it directly from those who experienced the transformation.</p>
-      <div class="divider"></div>
-    </div>
-    <div class="testimonial-video-wrapper fade-in">
-      <div class="testimonial-badge">⭐ Student Testimonial</div>
-      <iframe src="https://www.youtube.com/embed/qL9n2Wzf2Ho" title="B.Com Student Testimonial" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="testimonial-caption fade-in">
-      <div class="stars">★★★★★</div>
-      <h3>"Real Impact. Real Words."</h3>
-      <p>B.Com students from Smt. Radhadeviji Goenka College shared their honest experience. This is what transformation looks like — straight from the students.</p>
-    </div>
-    <div class="more-testimonials-note fade-in">
-      <p>🎯 <strong>225+ learners impacted</strong> (125+ teachers + 100+ students) across 5 institutions.<br>More testimonials being collected — stay tuned! 🌟</p>
-    </div>
-  </section>
+<!-- ===== VIDEO GALLERY — FIXED: 3 Best Videos With Context ===== -->
+<section id="videos">
+  <div class="section-header fade-in">
+    <span class="section-tag">See It In Action</span>
+    <h2>Workshop Highlights</h2>
+    <p>3 best sessions — real rooms, real people, real transformation.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="video-grid container">
 
-  <!-- CERTIFICATES -->
-  <section id="certificates">
-    <div class="section-header fade-in">
-      <span class="section-tag">My Credentials</span>
-      <h2>Certified. Qualified. Trusted.</h2>
-      <p>8 specialized certifications — each achieved with a minimum 80% score.</p>
-      <div class="divider"></div>
-    </div>
-    <div class="cert-total-badge fade-in">
-      <span>🏆 Train-The-Trainer Academy by Velsoft — 8 Certifications Completed</span>
-    </div>
-    <div class="cert-grid">
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Implementing AI in Your Workplace</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
+    <div class="video-card fade-in">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/zkYniukidYw" title="AI Integration Workshop" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Advanced Skills for the Practical Trainer</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Developing a Training Needs Analysis</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Facilitation Skills</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Mastering Adult Learning Methods</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Measuring Training Results</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Survival Skills for the New Trainer</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-      <div class="cert-card fade-in">
-        <div class="cert-icon-box"><i class="fas fa-award"></i></div>
-        <h4>Using Activities to Make Training Fun</h4>
-        <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
-        <div class="cert-date">📅 July 2026</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-header fade-in">
-      <span class="section-tag">Let's Connect</span>
-      <h2>Ready to Impact Your School?</h2>
-      <p>Let's bring transformation to your teachers — one workshop at a time.</p>
-      <div class="divider"></div>
-    </div>
-    <div class="contact-grid container fade-in">
-      <div class="contact-info">
-        <h3>Let's Start a Conversation</h3>
-        <p>Whether you're a Principal, HOD, or School Coordinator — I'm just one message away. Let's make your teachers unstoppable.</p>
-
-        <a href="mailto:1percentbettereducator@gmail.com" class="contact-item">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-item-text">1percentbettereducator@gmail.com<small>Email me anytime</small></div>
-        </a>
-        <a href="tel:+919022520611" class="contact-item">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-item-text">+91 90225 20611<small>Call or WhatsApp</small></div>
-        </a>
-        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop%20for%20my%20school!" target="_blank" class="contact-item">
-          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-          <div class="contact-item-text">Chat on WhatsApp<small>Quick response guaranteed ⚡</small></div>
-        </a>
-        <a href="https://www.youtube.com/@1percentBetterEducator" target="_blank" class="contact-item">
-          <div class="contact-icon"><i class="fab fa-youtube"></i></div>
-          <div class="contact-item-text">Watch My Workshops on YouTube<small>Subscribe for free tips 🎥</small></div>
-        </a>
-        <a href="https://www.instagram.com/1percent_better_educator/" target="_blank" class="contact-item">
-          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-          <div class="contact-item-text">Follow on Instagram<small>Daily educator tips &amp; insights 📸</small></div>
-        </a>
-        <a href="https://www.linkedin.com/in/-namrata-kedia" target="_blank" class="contact-item">
-          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-          <div class="contact-item-text">Connect on LinkedIn<small>Professional network 💼</small></div>
-        </a>
-      </div>
-
-      <div class="contact-cta">
-        <h4>Book a Workshop for<br>Your School Today</h4>
-        <p>Bring AI tools, communication skills, and personality development directly to your students and teachers.<br><br>Let's create real impact together. 🚀</p>
-        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop%20for%20my%20school!" target="_blank" class="btn-primary">🚀 Book a Workshop Now</a>
+      <div class="video-label">
+        <h4>AI Tools for Teachers</h4>
+        <div class="v-school">🏫 School Teacher Training</div>
+        <div class="v-meta">⚡ Full Session Highlight</div>
       </div>
     </div>
 
-    <div class="tagline-final container">
-      <strong>"Real Impact. Real Classrooms. Real Change."</strong><br>
-      — Namrata Kedia &nbsp;|&nbsp; 1% Better Educator
+    <div class="video-card fade-in">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/AUlY1umbORY" title="Effective Communication for Educators" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-label">
+        <h4>Effective Communication</h4>
+        <div class="v-school">🏫 Teacher Training Session</div>
+        <div class="v-meta">⚡ Live Workshop Clip</div>
+      </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 <span>Namrata Kedia</span> | Certified Teacher Trainer | Made with <span>❤️</span> for every educator who dares to grow.</p>
-  </footer>
+    <div class="video-card fade-in">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/ewePHs3Y-nk" title="Career Counselling Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-label">
+        <h4>Career Counselling Session</h4>
+        <div class="v-school">🎓 College Workshop</div>
+        <div class="v-meta">🎬 Live Session</div>
+      </div>
+    </div>
 
-  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  </div>
+</section>
 
-  <script>
-    window.addEventListener('scroll', () => {
-      const btn = document.getElementById('scrollTop');
-      btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+<!-- ===== TESTIMONIALS — FULLY REBUILT ===== -->
+<section id="testimonials">
+  <div class="section-header fade-in">
+    <span class="section-tag">Real Voices</span>
+    <h2>What People Say</h2>
+    <p>Straight from the people who experienced the transformation.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="testimonials-layout fade-in">
+
+    <!-- Left: Video -->
+    <div class="testi-video-col">
+      <div class="testi-video-wrap">
+        <div class="testi-video-badge">⭐ Student Testimonial</div>
+        <iframe src="https://www.youtube.com/embed/qL9n2Wzf2Ho" title="B.Com Student Testimonial" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="testi-video-caption">
+        <div class="stars">★★★★★</div>
+        <p>B.Com Students — RDG College<br>Sharing their honest experience in their own words.</p>
+      </div>
+    </div>
+
+    <!-- Right: Written Testimonials -->
+    <div class="testi-cards-col">
+      <h3 class="testi-col-title">Written Feedback — In Their Own Words</h3>
+      <p class="testi-col-sub">Real feedback collected via Google Forms immediately after sessions.</p>
+
+      <div class="testi-card">
+        <div class="testi-card-top">
+          <div>
+            <div class="testi-name">Tamanna Saiwal</div>
+            <div class="testi-role">B.Com Student — RDG College</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote-mark">"</div>
+        <p>I really loved your session and I was really shocked about myself. I noticed a lot of things thanks to you. I would really appreciate another session with you again.</p>
+        <span class="testi-tag">🎓 Effective Communication Workshop</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-card-top">
+          <div>
+            <div class="testi-name">Kashish Agrawal</div>
+            <div class="testi-role">B.Com Student — RDG College</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote-mark">"</div>
+        <p>It was very informative and engaging. I learned how body language, facial expressions, eye contact and voice tone play an important role in communication. Thank you for such an inspiring and interactive session.</p>
+        <span class="testi-tag">🎓 Effective Communication Workshop</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-card-top">
+          <div>
+            <div class="testi-name">Aachal Sanjay More</div>
+            <div class="testi-role">B.Com Student — RDG College</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote-mark">"</div>
+        <p>I was feeling like this is my own future self. I want to be a motivational speaker and body language expert. I was very overwhelmed watching you. I personally want to attend and grow with your sessions.</p>
+        <span class="testi-tag">🎓 Effective Communication Workshop</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-card-top">
+          <div>
+            <div class="testi-name">AAKAR Student</div>
+            <div class="testi-role">UG Student — RDG College</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote-mark">"</div>
+        <p>Before AAKAR I was afraid of taking the first step and after AAKAR I felt ready to take it. The entire day was a journey I'll never forget.</p>
+        <span class="testi-tag">🌟 AAKAR Personality Development</span>
+      </div>
+
+      <!-- Impact bar -->
+      <div class="testi-impact-bar">
+        <div>
+          <div class="tib-num">225+</div>
+          <div class="tib-label">Learners Impacted</div>
+        </div>
+        <div>
+          <div class="tib-num">100%</div>
+          <div class="tib-label">Positive Feedback</div>
+        </div>
+        <div>
+          <div class="tib-num">5</div>
+          <div class="tib-label">Institutions Reached</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATES ===== -->
+<section id="certificates">
+  <div class="section-header fade-in">
+    <span class="section-tag">My Credentials</span>
+    <h2>Certified. Qualified. Trusted.</h2>
+    <p>8 specialized certifications — each scored minimum 80%.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="cert-total-badge fade-in">
+    <span>🏆 Train-The-Trainer Academy by Velsoft — 8 Certifications</span>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Implementing AI in Your Workplace</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Advanced Skills for the Practical Trainer</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Developing a Training Needs Analysis</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Facilitation Skills</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Mastering Adult Learning Methods</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Measuring Training Results</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Survival Skills for the New Trainer</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+    <div class="cert-card fade-in">
+      <div class="cert-icon-box"><i class="fas fa-award"></i></div>
+      <h4>Using Activities to Make Training Fun</h4>
+      <div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div>
+      <div class="cert-date">📅 July 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-header fade-in">
+    <span class="section-tag">Let's Connect</span>
+    <h2>Ready to Create Impact?</h2>
+    <p>Let's bring transformation to your teachers, students or team.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="contact-grid container fade-in">
+    <div class="contact-info">
+      <h3>Let's Start a Conversation</h3>
+      <p>Whether you're a Principal, HOD, College Coordinator or HR Manager — I'm one message away. Let's make your people unstoppable.</p>
+      <a href="mailto:1percentbettereducator@gmail.com" class="contact-item">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-item-text">1percentbettereducator@gmail.com<small>Email me anytime</small></div>
+      </a>
+      <a href="tel:+919022520611" class="contact-item">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div class="contact-item-text">+91 90225 20611<small>Call or WhatsApp</small></div>
+      </a>
+      <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop!" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="contact-item-text">Chat on WhatsApp<small>Quick response guaranteed ⚡</small></div>
+      </a>
+      <a href="https://www.youtube.com/@1percentBetterEducator" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+        <div class="contact-item-text">YouTube Channel<small>Watch real workshop sessions 🎥</small></div>
+      </a>
+      <a href="https://www.instagram.com/1percent_better_educator/" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+        <div class="contact-item-text">Instagram<small>Daily tips &amp; workshop reels 📸</small></div>
+      </a>
+      <a href="https://www.linkedin.com/in/-namrata-kedia" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+        <div class="contact-item-text">LinkedIn<small>Let's connect professionally 💼</small></div>
+      </a>
+    </div>
+    <div class="contact-cta">
+      <h4>Book a Workshop for<br>Your Institution Today</h4>
+      <p>Schools • Colleges • Corporates<br><br>Bring real, measurable transformation to your people. Activity-based. Zero passive lectures. 100% impact. 🚀</p>
+      <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20would%20like%20to%20book%20a%20workshop!" target="_blank" class="btn-primary">🚀 Book a Workshop Now</a>
+    </div>
+  </div>
+  <div class="tagline-final container">
+    <strong>"Real Impact. Real Classrooms. Real Change."</strong><br>
+    — Namrata Kedia &nbsp;|&nbsp; 1% Better Educator
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>Namrata Kedia</span> | Certified Teacher Trainer | Made with <span>❤️</span> for every person who dares to grow.</p>
+</footer>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTop');
+    btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) el.target.classList.add('visible');
     });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(el => {
-        if (el.isIntersecting) el.target.classList.add('visible');
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('open');
-    }
-    function closeMenu() {
-      document.getElementById('navLinks').classList.remove('open');
-    }
-  </script>
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('navLinks').classList.remove('open');
+  }
+</script>
 
 </body>
 </html>
