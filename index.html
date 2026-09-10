@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Namrata Kedia | Youth Transformation Trainer | AAKAR Workshop</title>
-  <meta name="description" content="Namrata Kedia - Founder of AAKAR Workshop. Helping college students discover who they are through 100% activity-based personality development workshops in Maharashtra."/>
+  <title>Namrata Kedia | Founder of AAKAR | Youth Transformation Trainer</title>
+  <meta name="description" content="Namrata Kedia — Founder of AAKAR Workshop. Helping college students discover who they are through 1-day activity-based personality development workshops in Maharashtra."/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
@@ -12,1348 +12,1060 @@
     html{scroll-behavior:smooth;}
     body{font-family:'Poppins',sans-serif;background:#FAFAFA;color:#2C3E50;line-height:1.7;}
 
-    /* ===== NAVBAR ===== */
-    nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.08);}
-    .nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:#2C3E50;text-decoration:none;font-weight:700;}
-    .nav-logo span{color:#E67E22;}
-    .nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
-    .nav-links a{text-decoration:none;color:#2C3E50;font-size:0.85rem;font-weight:500;transition:color 0.3s;}
+    /* NAVBAR */
+    nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.07);}
+    .nav-logo{text-decoration:none;}
+    .nav-logo-name{font-family:'Playfair Display',serif;font-size:1.3rem;color:#2C3E50;font-weight:700;display:block;line-height:1.2;}
+    .nav-logo-tag{font-size:0.65rem;color:#E67E22;font-weight:500;letter-spacing:1px;text-transform:uppercase;}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center;}
+    .nav-links a{text-decoration:none;color:#2C3E50;font-size:0.82rem;font-weight:500;transition:color 0.3s;}
     .nav-links a:hover{color:#E67E22;}
-    .nav-cta{background:#E67E22!important;color:white!important;padding:9px 22px;border-radius:25px;font-weight:600!important;}
-    .nav-cta:hover{background:#CA6F1E!important;color:white!important;}
+    .nav-cta{background:#E67E22!important;color:white!important;padding:9px 20px;border-radius:25px;font-weight:600!important;font-size:0.78rem!important;white-space:nowrap;}
+    .nav-cta:hover{background:#CA6F1E!important;}
     .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1001;}
     .hamburger span{width:25px;height:3px;background:#2C3E50;border-radius:3px;transition:0.3s;}
 
-    /* ===== HERO ===== */
-    #hero{min-height:100vh;background:linear-gradient(135deg,#1a252f 0%,#2C3E50 50%,#1a252f 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 80px;position:relative;overflow:hidden;}
-    #hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(230,126,34,0.07) 0%,transparent 60%);animation:pulse 5s ease-in-out infinite;}
-    @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
-    .hero-content{position:relative;z-index:1;max-width:820px;}
-    .hero-badge{display:inline-block;background:rgba(230,126,34,0.15);border:1px solid rgba(230,126,34,0.4);color:#F0A050;padding:8px 22px;border-radius:25px;font-size:0.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:28px;}
-    .hero-photo{width:140px;height:140px;border-radius:50%;border:4px solid #E67E22;margin:0 auto 24px;display:block;object-fit:cover;object-position:center top;box-shadow:0 0 0 8px rgba(230,126,34,0.12),0 15px 50px rgba(0,0,0,0.4);}
-    .hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);color:#fff;margin-bottom:14px;line-height:1.2;}
-    .hero-content h1 span{color:#E67E22;}
-    .hero-tagline{font-size:clamp(1rem,2.5vw,1.25rem);color:#B8C6D4;margin-bottom:10px;font-weight:300;}
-    .hero-tagline strong{color:#E67E22;font-weight:600;}
-    .hero-subtitle{font-size:0.95rem;color:#8FA5BC;margin-bottom:16px;}
-
-    /* HERO DATA PROOF */
-    .hero-proof{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:28px 0 36px;}
+    /* HERO */
+    #hero{min-height:100vh;background:linear-gradient(135deg,#1a252f 0%,#2C3E50 60%,#1a252f 100%);display:flex;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden;}
+    #hero::before{content:'';position:absolute;top:-40%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(230,126,34,0.08) 0%,transparent 65%);animation:pulse 6s ease-in-out infinite;}
+    #hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(230,126,34,0.05) 0%,transparent 65%);}
+    @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+    .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;}
+    .hero-text{}
+    .hero-badge{display:inline-block;background:rgba(230,126,34,0.15);border:1px solid rgba(230,126,34,0.35);color:#F0A050;padding:7px 18px;border-radius:25px;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;}
+    .hero-text h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);color:#fff;line-height:1.25;margin-bottom:20px;}
+    .hero-text h1 span{color:#E67E22;}
+    .hero-secondary{font-size:1rem;color:#B8C6D4;margin-bottom:28px;line-height:1.8;border-left:3px solid #E67E22;padding-left:16px;}
+    .hero-secondary strong{color:#E67E22;}
+    .hero-proof-strip{display:flex;gap:24px;margin-bottom:32px;flex-wrap:wrap;}
     .hero-proof-item{text-align:center;}
-    .hero-proof-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:#E67E22;font-weight:700;display:block;line-height:1;}
-    .hero-proof-label{font-size:0.72rem;color:#8FA5BC;margin-top:4px;font-weight:400;}
-    .hero-proof-divider{width:1px;background:rgba(255,255,255,0.1);align-self:stretch;}
-
-    .hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-    .btn-primary{background:#E67E22;color:white;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.3s;box-shadow:0 4px 20px rgba(230,126,34,0.4);display:inline-block;}
+    .hero-proof-num{font-family:'Playfair Display',serif;font-size:1.9rem;color:#E67E22;font-weight:700;display:block;line-height:1;}
+    .hero-proof-label{font-size:0.65rem;color:#8FA5BC;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;}
+    .hero-proof-sep{width:1px;background:rgba(255,255,255,0.1);align-self:stretch;margin:4px 0;}
+    .hero-cta-group{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn-primary{background:#E67E22;color:white;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:600;font-size:0.88rem;transition:all 0.3s;box-shadow:0 4px 20px rgba(230,126,34,0.4);display:inline-flex;align-items:center;gap:8px;}
     .btn-primary:hover{background:#CA6F1E;transform:translateY(-2px);box-shadow:0 6px 28px rgba(230,126,34,0.5);}
-    .btn-secondary{background:transparent;color:white;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:500;font-size:0.9rem;border:2px solid rgba(255,255,255,0.3);transition:all 0.3s;}
-    .btn-secondary:hover{border-color:#E67E22;color:#E67E22;transform:translateY(-2px);}
+    .btn-ghost{background:transparent;color:white;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:500;font-size:0.88rem;border:1.5px solid rgba(255,255,255,0.25);transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;}
+    .btn-ghost:hover{border-color:#E67E22;color:#E67E22;transform:translateY(-2px);}
+    .hero-image-col{position:relative;display:flex;justify-content:center;}
+    .hero-photo-wrap{position:relative;display:inline-block;}
+    .hero-photo{width:380px;height:480px;object-fit:cover;object-position:center top;border-radius:24px;display:block;box-shadow:0 20px 60px rgba(0,0,0,0.4);}
+    .hero-photo-badge{position:absolute;bottom:-16px;left:-20px;background:linear-gradient(135deg,#E67E22,#CA6F1E);color:white;padding:14px 20px;border-radius:16px;box-shadow:0 6px 20px rgba(230,126,34,0.4);}
+    .hero-photo-badge .badge-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;display:block;line-height:1;}
+    .hero-photo-badge .badge-label{font-size:0.68rem;font-weight:500;opacity:0.9;}
+    .hero-float-card{position:absolute;top:24px;right:-24px;background:white;border-radius:14px;padding:14px 18px;box-shadow:0 8px 30px rgba(0,0,0,0.15);max-width:180px;}
+    .hero-float-card .fc-num{font-family:'Playfair Display',serif;font-size:1.6rem;color:#E67E22;font-weight:700;}
+    .hero-float-card .fc-label{font-size:0.68rem;color:#7F8C8D;margin-top:2px;line-height:1.4;}
 
-    /* ===== URGENCY STRIP ===== */
-    .urgency-strip{background:linear-gradient(135deg,#E67E22,#CA6F1E);padding:12px 20px;text-align:center;color:white;font-size:0.85rem;font-weight:600;letter-spacing:0.5px;}
-    .urgency-strip span{background:rgba(255,255,255,0.2);padding:3px 12px;border-radius:12px;margin:0 8px;}
+    /* STATS STRIP */
+    #stats{background:white;padding:50px 20px;box-shadow:0 4px 30px rgba(0,0,0,0.05);}
+    .stats-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+    .stat-card{padding:26px 16px;border-radius:16px;background:linear-gradient(135deg,#2C3E50,#3D5166);position:relative;overflow:hidden;}
+    .stat-card::before{content:'';position:absolute;top:-15px;right:-15px;width:60px;height:60px;background:rgba(230,126,34,0.12);border-radius:50%;}
+    .stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;color:#E67E22;font-weight:700;display:block;}
+    .stat-label{font-size:0.78rem;color:#B8C6D4;margin-top:4px;}
+    .stat-sub{font-size:0.68rem;color:#8FA5BC;margin-top:3px;}
 
-    /* ===== STATS ===== */
-    #stats{background:white;padding:55px 20px;box-shadow:0 4px 30px rgba(0,0,0,0.05);}
-    .stats-container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
-    .stat-card{padding:28px 20px;border-radius:16px;background:linear-gradient(135deg,#2C3E50,#3D5166);color:white;position:relative;overflow:hidden;}
-    .stat-card::before{content:'';position:absolute;top:-20px;right:-20px;width:80px;height:80px;background:rgba(230,126,34,0.12);border-radius:50%;}
-    .stat-number{font-family:'Playfair Display',serif;font-size:2.6rem;color:#E67E22;font-weight:700;display:block;}
-    .stat-label{font-size:0.82rem;color:#B8C6D4;margin-top:5px;}
-    .stat-sublabel{font-size:0.72rem;color:#8FA5BC;margin-top:3px;}
-
-    /* ===== GENERAL ===== */
+    /* GENERAL */
     section{padding:80px 20px;}
     .section-header{text-align:center;margin-bottom:55px;}
-    .section-tag{display:inline-block;background:rgba(230,126,34,0.1);color:#E67E22;padding:6px 18px;border-radius:15px;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
-    .section-header h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);color:#2C3E50;margin-bottom:12px;}
-    .section-header p{color:#7F8C8D;font-size:0.95rem;max-width:550px;margin:0 auto;}
+    .section-tag{display:inline-block;background:rgba(230,126,34,0.1);color:#E67E22;padding:6px 18px;border-radius:15px;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
+    .section-header h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);color:#2C3E50;margin-bottom:12px;line-height:1.3;}
+    .section-header p{color:#7F8C8D;font-size:0.92rem;max-width:580px;margin:0 auto;line-height:1.8;}
     .divider{width:55px;height:3px;background:#E67E22;margin:14px auto 0;border-radius:2px;}
     .container{max-width:1100px;margin:0 auto;}
 
-    /* ===== DATA PROOF SECTION ===== */
-    #data-proof{background:linear-gradient(135deg,#1a252f,#2C3E50);padding:70px 20px;}
-    .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto 40px;}
-    .proof-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:28px;text-align:center;transition:all 0.3s;}
-    .proof-card:hover{background:rgba(230,126,34,0.08);border-color:rgba(230,126,34,0.3);transform:translateY(-4px);}
-    .proof-big-num{font-family:'Playfair Display',serif;font-size:3rem;color:#E67E22;font-weight:700;display:block;line-height:1;}
-    .proof-label{color:#B8C6D4;font-size:0.85rem;margin-top:8px;}
-    .proof-sublabel{color:#8FA5BC;font-size:0.72rem;margin-top:4px;}
-    .confidence-bar-section{max-width:600px;margin:0 auto;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:28px;}
-    .conf-title{color:#E67E22;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;text-align:center;}
-    .conf-row{margin-bottom:14px;}
-    .conf-row-label{display:flex;justify-content:space-between;margin-bottom:6px;}
-    .conf-row-label span:first-child{color:#8FA5BC;font-size:0.78rem;}
-    .conf-row-label span:last-child{font-weight:700;font-size:0.82rem;}
-    .conf-bar{width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;}
-    .conf-fill-before{height:8px;border-radius:10px;background:linear-gradient(90deg,#E74C3C,#E67E22);}
-    .conf-fill-after{height:8px;border-radius:10px;background:linear-gradient(90deg,#2ecc71,#1abc9c);}
-    .conf-growth-badge{text-align:center;margin-top:16px;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:12px;padding:12px;}
-    .conf-growth-badge span{color:#2ecc71;font-weight:700;font-size:1.1rem;}
-    .conf-growth-badge small{display:block;color:#8FA5BC;font-size:0.7rem;margin-top:3px;}
+    /* PROBLEM SECTION */
+    #problem{background:#F8F9FA;}
+    .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1050px;margin:0 auto;}
+    .problem-card{background:white;border-radius:20px;padding:30px 24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-top:4px solid #E67E22;transition:transform 0.3s,box-shadow 0.3s;}
+    .problem-card:hover{transform:translateY(-6px);box-shadow:0 12px 35px rgba(0,0,0,0.1);}
+    .problem-icon{font-size:2.2rem;margin-bottom:16px;display:block;}
+    .problem-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:#2C3E50;margin-bottom:12px;line-height:1.4;}
+    .problem-card p{color:#7F8C8D;font-size:0.84rem;line-height:1.7;}
+    .problem-card p strong{color:#E67E22;}
+    .problem-italic{color:#5D6D7E;font-size:0.82rem;font-style:italic;margin-top:10px;display:block;border-left:3px solid rgba(230,126,34,0.3);padding-left:10px;}
 
-    /* ===== ABOUT ===== */
+    /* AUTHORITY TRIGGER */
+    #authority{background:linear-gradient(135deg,#1a252f,#2C3E50);}
+    .authority-question-box{max-width:800px;margin:0 auto 50px;text-align:center;}
+    .authority-big-q{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);color:white;line-height:1.5;margin-bottom:24px;}
+    .authority-big-q span{color:#E67E22;}
+    .authority-sub{color:#B8C6D4;font-size:0.95rem;line-height:1.9;max-width:650px;margin:0 auto 16px;}
+    .authority-sub strong{color:#E67E22;}
+    .authority-answer{font-family:'Playfair Display',serif;font-size:1.2rem;color:#8FA5BC;font-style:italic;margin-bottom:40px;}
+    .authority-change-line{font-size:1.1rem;color:white;font-weight:600;text-align:center;margin-bottom:40px;}
+    .authority-change-line span{color:#E67E22;}
+    .authority-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto;}
+    .auth-col{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:28px 22px;text-align:center;transition:all 0.3s;}
+    .auth-col:hover{background:rgba(230,126,34,0.07);border-color:rgba(230,126,34,0.25);transform:translateY(-4px);}
+    .auth-col-icon{font-size:2rem;margin-bottom:14px;display:block;}
+    .auth-col h3{font-family:'Playfair Display',serif;color:white;font-size:1.05rem;margin-bottom:12px;}
+    .auth-col p{color:#8FA5BC;font-size:0.82rem;line-height:1.7;}
+    .auth-col p strong{color:#E67E22;}
+
+    /* ABOUT */
     #about{background:#F8F9FA;}
     .about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:center;max-width:1050px;margin:0 auto;}
-    .about-image-box{position:relative;}
-    .about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:20px;display:block;box-shadow:0 10px 40px rgba(0,0,0,0.15);}
-    .about-cert-badge{position:absolute;bottom:-15px;right:-15px;background:#E67E22;color:white;padding:12px 18px;border-radius:12px;font-size:0.8rem;font-weight:600;text-align:center;box-shadow:0 4px 15px rgba(230,126,34,0.4);}
-    .about-cert-badge span{display:block;font-size:1.5rem;font-weight:700;}
-    .story-tag{display:inline-block;background:rgba(230,126,34,0.1);color:#E67E22;padding:5px 14px;border-radius:12px;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
-    .about-text h3{font-family:'Playfair Display',serif;font-size:1.9rem;color:#2C3E50;margin-bottom:18px;line-height:1.3;}
+    .about-img-wrap{position:relative;}
+    .about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.14);}
+    .about-cert{position:absolute;bottom:-14px;right:-14px;background:#E67E22;color:white;padding:12px 16px;border-radius:12px;font-size:0.78rem;font-weight:600;text-align:center;box-shadow:0 4px 15px rgba(230,126,34,0.4);}
+    .about-cert span{display:block;font-size:1.4rem;font-weight:700;}
+    .story-tag-inline{display:inline-block;background:rgba(230,126,34,0.1);color:#E67E22;padding:5px 14px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
+    .about-text h3{font-family:'Playfair Display',serif;font-size:1.85rem;color:#2C3E50;margin-bottom:22px;line-height:1.3;}
     .story-block{background:white;border-radius:14px;padding:18px 20px;margin-bottom:14px;border-left:4px solid #E67E22;box-shadow:0 2px 12px rgba(0,0,0,0.05);transition:transform 0.3s;}
     .story-block:hover{transform:translateX(5px);}
-    .story-block-icon{font-size:1.2rem;margin-bottom:6px;display:block;}
-    .story-block p{color:#5D6D7E;font-size:0.87rem;line-height:1.7;margin:0;}
+    .story-icon{font-size:1.2rem;margin-bottom:6px;display:block;}
+    .story-block p{color:#5D6D7E;font-size:0.86rem;line-height:1.75;margin:0;}
     .story-block p strong{color:#2C3E50;}
-    .about-mission{background:linear-gradient(135deg,#2C3E50,#3D5166);border-radius:14px;padding:18px 20px;margin-bottom:20px;text-align:center;}
-    .about-mission p{color:#F0A050;font-size:0.92rem;font-weight:600;font-style:italic;margin:0;}
+    .about-mission{background:linear-gradient(135deg,#2C3E50,#3D5166);border-radius:14px;padding:18px 22px;margin-bottom:20px;text-align:center;}
+    .about-mission p{color:#F0A050;font-size:0.9rem;font-weight:600;font-style:italic;margin:0;line-height:1.8;}
     .about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-    .highlight-item{display:flex;align-items:center;gap:10px;background:white;padding:11px 14px;border-radius:10px;font-size:0.8rem;color:#2C3E50;font-weight:500;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
-    .highlight-item i{color:#E67E22;font-size:0.95rem;}
+    .hl-item{display:flex;align-items:center;gap:10px;background:white;padding:11px 14px;border-radius:10px;font-size:0.78rem;color:#2C3E50;font-weight:500;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+    .hl-item i{color:#E67E22;}
 
-    /* ===== HOW IT WORKS ===== */
-    #how-it-works{background:white;}
-    .steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;max-width:1100px;margin:0 auto;position:relative;}
-    .steps-grid::before{content:'';position:absolute;top:35px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,#E67E22,#CA6F1E);z-index:0;}
-    .step-card{text-align:center;padding:20px 16px;position:relative;z-index:1;}
-    .step-num{width:70px;height:70px;background:linear-gradient(135deg,#E67E22,#CA6F1E);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Playfair Display',serif;font-size:1.4rem;color:white;font-weight:700;box-shadow:0 4px 15px rgba(230,126,34,0.35);}
-    .step-card h4{font-size:0.88rem;color:#2C3E50;font-weight:600;margin-bottom:6px;}
-    .step-card p{font-size:0.75rem;color:#7F8C8D;line-height:1.5;}
+    /* AAKAR WORKSHOP */
+    #aakar{background:#0F1923;padding:80px 20px;}
+    .aakar-pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1050px;margin:0 auto 40px;}
+    .pillar-card{border-radius:16px;padding:20px 16px;text-align:center;}
+    .pillar-card:nth-child(1){background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.2);}
+    .pillar-card:nth-child(2){background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);}
+    .pillar-card:nth-child(3){background:rgba(52,152,219,0.08);border:1px solid rgba(52,152,219,0.2);}
+    .pillar-card:nth-child(4){background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);}
+    .pillar-icon{font-size:1.8rem;margin-bottom:8px;display:block;}
+    .pillar-num{font-size:0.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+    .pillar-card:nth-child(1) .pillar-num{color:#2ecc71;}
+    .pillar-card:nth-child(2) .pillar-num{color:#E67E22;}
+    .pillar-card:nth-child(3) .pillar-num{color:#3498DB;}
+    .pillar-card:nth-child(4) .pillar-num{color:#9B59B6;}
+    .pillar-title{color:white;font-size:0.85rem;font-weight:600;margin-bottom:5px;}
+    .pillar-sub{color:#8FA5BC;font-size:0.7rem;line-height:1.5;}
+    .aakar-details-strip{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;max-width:900px;margin:0 auto 40px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:20px;}
+    .detail-item{text-align:center;}
+    .detail-item .d-icon{font-size:1.4rem;display:block;margin-bottom:5px;}
+    .detail-item .d-label{color:#8FA5BC;font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+    .detail-item .d-val{color:white;font-size:0.82rem;font-weight:600;}
 
-    /* ===== WORKSHOPS ===== */
-    #workshops{background:#F8F9FA;}
-    .workshops-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;max-width:1100px;margin:0 auto;}
-    .workshop-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 5px 30px rgba(0,0,0,0.07);transition:transform 0.3s,box-shadow 0.3s;border:1px solid #F0F0F0;display:flex;flex-direction:column;}
-    .workshop-card:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(0,0,0,0.11);}
-    .card-header{background:linear-gradient(135deg,#2C3E50,#3D5166);padding:24px;position:relative;overflow:hidden;}
-    .card-header::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(230,126,34,0.12);border-radius:50%;}
-    .card-icon{font-size:1.8rem;margin-bottom:10px;display:block;}
-    .card-header h3{font-family:'Playfair Display',serif;color:white;font-size:1.1rem;margin-bottom:5px;}
-    .card-header p{color:#B8C6D4;font-size:0.75rem;font-style:italic;}
-    .card-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;}
-    .meta-pill{background:rgba(230,126,34,0.2);color:#F0A050;padding:3px 10px;border-radius:10px;font-size:0.68rem;font-weight:600;}
-    .card-body{padding:22px;flex:1;}
-    .objective-box{background:rgba(230,126,34,0.06);border-left:3px solid #E67E22;border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:16px;}
-    .objective-box h4{color:#E67E22;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
-    .objective-box p{color:#5D6D7E;font-size:0.83rem;line-height:1.6;}
-    .outcomes-title{font-size:0.7rem;font-weight:700;color:#2C3E50;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
-    .outcome-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px;font-size:0.82rem;color:#5D6D7E;}
-    .outcome-item::before{content:'✦';color:#E67E22;font-size:0.6rem;margin-top:5px;flex-shrink:0;}
-    .price-tag{background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:10px;padding:10px 14px;margin-top:14px;text-align:center;}
-    .price-tag .price{font-family:'Playfair Display',serif;font-size:1.4rem;color:#E67E22;font-weight:700;}
-    .price-tag .price-note{font-size:0.7rem;color:#7F8C8D;margin-top:2px;}
-    .card-footer{padding:0 22px 22px;}
-    .book-btn{display:block;text-align:center;background:linear-gradient(135deg,#E67E22,#CA6F1E);color:white;padding:12px;border-radius:12px;text-decoration:none;font-weight:600;font-size:0.85rem;transition:all 0.3s;box-shadow:0 4px 15px rgba(230,126,34,0.28);}
-    .book-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(230,126,34,0.42);}
+    /* BEFORE AFTER */
+    .before-after{max-width:800px;margin:0 auto 50px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:20px;overflow:hidden;}
+    .ba-header{display:grid;grid-template-columns:1fr auto 1fr;background:rgba(255,255,255,0.05);padding:14px 24px;text-align:center;}
+    .ba-header span{font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+    .ba-header span:first-child{color:#E74C3C;}
+    .ba-header span:last-child{color:#2ecc71;}
+    .ba-header span:nth-child(2){color:#8FA5BC;font-size:0.8rem;}
+    .ba-row{display:grid;grid-template-columns:1fr auto 1fr;padding:14px 24px;border-top:1px solid rgba(255,255,255,0.05);align-items:center;}
+    .ba-row:hover{background:rgba(255,255,255,0.02);}
+    .ba-before{color:#B8C6D4;font-size:0.83rem;font-style:italic;text-align:right;padding-right:16px;}
+    .ba-arrow{color:#E67E22;font-size:1rem;}
+    .ba-after{color:#2ecc71;font-size:0.83rem;font-style:italic;padding-left:16px;}
+    .ba-conf-row{display:grid;grid-template-columns:1fr auto 1fr;padding:16px 24px;border-top:1px solid rgba(255,255,255,0.05);align-items:center;background:rgba(230,126,34,0.05);}
+    .ba-conf-before,.ba-conf-after{display:flex;flex-direction:column;gap:5px;}
+    .ba-conf-before{align-items:flex-end;padding-right:16px;}
+    .ba-conf-after{align-items:flex-start;padding-left:16px;}
+    .conf-label{font-size:0.68rem;color:#8FA5BC;text-transform:uppercase;letter-spacing:1px;}
+    .conf-val-before{font-family:'Playfair Display',serif;font-size:1.6rem;color:#E74C3C;font-weight:700;}
+    .conf-val-after{font-family:'Playfair Display',serif;font-size:1.6rem;color:#2ecc71;font-weight:700;}
+    .ba-growth-badge{text-align:center;padding:14px;background:rgba(46,204,113,0.08);border-top:1px solid rgba(46,204,113,0.15);}
+    .ba-growth-badge span{color:#2ecc71;font-weight:700;font-size:1rem;}
+    .ba-growth-badge small{display:block;color:#8FA5BC;font-size:0.7rem;margin-top:3px;}
 
-    /* ===== WHO I TRAIN ===== */
-    #audience{background:white;}
-    .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto;}
-    .audience-card{background:#F8F9FA;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.05);border:2px solid transparent;transition:all 0.3s;position:relative;overflow:hidden;}
-    .audience-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:#E67E22;transform:scaleX(0);transition:transform 0.3s;}
-    .audience-card:hover{border-color:rgba(230,126,34,0.2);transform:translateY(-6px);box-shadow:0 12px 35px rgba(0,0,0,0.09);}
-    .audience-card:hover::before{transform:scaleX(1);}
-    .audience-icon{font-size:2.4rem;margin-bottom:14px;display:block;}
-    .audience-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#2C3E50;margin-bottom:10px;}
-    .audience-card p{color:#7F8C8D;font-size:0.83rem;line-height:1.6;margin-bottom:16px;}
-    .best-time-box{background:rgba(230,126,34,0.07);border-radius:10px;padding:10px 14px;text-align:left;}
-    .bt-label{color:#E67E22;font-size:0.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
-    .bt-item{display:flex;align-items:center;gap:6px;font-size:0.73rem;color:#5D6D7E;margin-bottom:3px;}
-    .bt-item::before{content:'▸';color:#E67E22;font-size:0.62rem;}
+    /* VIDEOS */
+    .videos-label{text-align:center;margin-bottom:28px;}
+    .videos-label span{display:inline-block;background:rgba(230,126,34,0.15);border:1px solid rgba(230,126,34,0.3);color:#F0A050;padding:7px 20px;border-radius:20px;font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+    .videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1050px;margin:0 auto;}
+    .video-card{border-radius:16px;overflow:hidden;box-shadow:0 6px 25px rgba(0,0,0,0.25);transition:transform 0.3s;}
+    .video-card:hover{transform:translateY(-5px);}
+    .video-header{padding:12px 16px;}
+    .video-card:nth-child(1) .video-header{background:linear-gradient(135deg,#1a6b3a,#2ecc71);}
+    .video-card:nth-child(2) .video-header{background:linear-gradient(135deg,#E67E22,#CA6F1E);}
+    .video-card:nth-child(3) .video-header{background:linear-gradient(135deg,#2C3E50,#3D5166);}
+    .video-header h4{color:white;font-size:0.78rem;font-weight:600;}
+    .video-header p{color:rgba(255,255,255,0.75);font-size:0.68rem;margin-top:2px;}
+    .reel-wrap{position:relative;width:100%;padding-top:177.78%;background:#000;}
+    .reel-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
 
-    /* ===== SESSIONS ===== */
-    #college{background:#0F1923;padding:80px 20px;}
-    #aakar{background:#0A1520;padding:80px 20px;}
+    /* DATA PROOF */
+    #data-proof{background:white;}
+    .proof-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:900px;margin:0 auto 40px;text-align:center;}
+    .proof-num-card{padding:24px 16px;border-radius:16px;background:#F8F9FA;border:2px solid #F0F0F0;transition:all 0.3s;}
+    .proof-num-card:hover{border-color:#E67E22;transform:translateY(-4px);}
+    .pn-num{font-family:'Playfair Display',serif;font-size:2.6rem;color:#E67E22;font-weight:700;display:block;}
+    .pn-label{font-size:0.75rem;color:#7F8C8D;margin-top:5px;}
+    .pn-sub{font-size:0.68rem;color:#95A5A6;margin-top:3px;}
+    .conf-visual{max-width:650px;margin:0 auto;background:linear-gradient(135deg,#2C3E50,#3D5166);border-radius:20px;padding:30px;}
+    .conf-title-inner{color:#E67E22;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;text-align:center;}
+    .conf-row-item{margin-bottom:16px;}
+    .conf-row-top{display:flex;justify-content:space-between;margin-bottom:6px;}
+    .conf-row-top span:first-child{color:#8FA5BC;font-size:0.78rem;}
+    .conf-row-top span:last-child{font-weight:700;font-size:0.82rem;}
+    .conf-bar-bg{width:100%;background:rgba(255,255,255,0.08);border-radius:10px;height:8px;}
+    .conf-bar-fill{height:8px;border-radius:10px;}
+    .fill-before{background:linear-gradient(90deg,#E74C3C,#E67E22);width:54.7%;}
+    .fill-after{background:linear-gradient(90deg,#2ecc71,#1abc9c);width:80.7%;}
+    .conf-growth-box{text-align:center;margin-top:18px;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.2);border-radius:12px;padding:12px;}
+    .conf-growth-box strong{color:#2ecc71;font-size:1.1rem;}
+    .conf-growth-box small{display:block;color:#8FA5BC;font-size:0.7rem;margin-top:3px;}
+    .faculty-line{text-align:center;margin-top:20px;color:#8FA5BC;font-size:0.82rem;font-style:italic;}
+    .faculty-line strong{color:#E67E22;}
 
-    /* ===== TESTIMONIALS ===== */
-    #testimonials{background:#F8F9FA;}
-
-    /* Workshop Feedback Tabs */
-    .feedback-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;}
-    .tab-btn{padding:10px 28px;border-radius:25px;border:2px solid #E67E22;background:transparent;color:#E67E22;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.3s;font-family:'Poppins',sans-serif;}
-    .tab-btn.active{background:#E67E22;color:white;}
-    .tab-btn:hover{background:#E67E22;color:white;}
-    .tab-content{display:none;}
-    .tab-content.active{display:block;}
-
-    /* Video + cards layout */
-    .testi-layout{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:36px;align-items:start;}
-    .testi-video-wrap{border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(230,126,34,0.18);border:3px solid rgba(230,126,34,0.3);position:relative;}
-    .testi-video-badge{position:absolute;top:14px;left:14px;background:#E67E22;color:white;padding:6px 14px;border-radius:20px;font-size:0.7rem;font-weight:600;z-index:2;}
-    .testi-video-wrap iframe{width:100%;aspect-ratio:9/16;display:block;border:none;}
-    .testi-video-caption{margin-top:14px;text-align:center;}
-    .testi-stars-big{color:#F39C12;font-size:1.1rem;letter-spacing:3px;margin-bottom:5px;}
-    .testi-video-caption p{color:#7F8C8D;font-size:0.8rem;}
-    .testi-cards-col{display:flex;flex-direction:column;gap:14px;}
-    .testi-col-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:#2C3E50;margin-bottom:4px;}
-    .testi-col-sub{color:#7F8C8D;font-size:0.82rem;margin-bottom:14px;}
-
-    /* Individual feedback card */
-    .testi-card{background:white;border-radius:16px;padding:18px;border:1px solid #EAECEE;transition:all 0.3s;position:relative;overflow:hidden;}
+    /* STUDENT VOICES */
+    #voices{background:#F8F9FA;}
+    .voices-layout{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:36px;align-items:start;}
+    .voices-video-col{}
+    .voices-video-wrap{border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(230,126,34,0.18);border:3px solid rgba(230,126,34,0.3);position:relative;}
+    .voices-video-badge{position:absolute;top:14px;left:14px;background:#E67E22;color:white;padding:5px 13px;border-radius:18px;font-size:0.68rem;font-weight:600;z-index:2;}
+    .voices-reel-wrap{position:relative;width:100%;padding-top:177.78%;background:#000;}
+    .voices-reel-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+    .voices-video-caption{margin-top:14px;text-align:center;}
+    .voices-stars{color:#F39C12;font-size:1.1rem;letter-spacing:3px;margin-bottom:5px;}
+    .voices-video-caption p{color:#7F8C8D;font-size:0.78rem;}
+    .voices-cards{display:flex;flex-direction:column;gap:13px;}
+    .voices-col-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:#2C3E50;margin-bottom:4px;}
+    .voices-col-sub{color:#7F8C8D;font-size:0.8rem;margin-bottom:14px;}
+    .testi-card{background:white;border-radius:14px;padding:16px 18px;border:1px solid #EAECEE;transition:all 0.3s;position:relative;overflow:hidden;}
     .testi-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:#E67E22;border-radius:4px 0 0 4px;}
-    .testi-card:hover{transform:translateX(5px);box-shadow:0 6px 20px rgba(0,0,0,0.07);border-color:rgba(230,126,34,0.3);}
-    .testi-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;}
-    .testi-name{font-weight:600;font-size:0.87rem;color:#2C3E50;}
-    .testi-role{font-size:0.7rem;color:#E67E22;font-weight:500;margin-top:2px;}
-    .testi-stars{color:#F39C12;font-size:0.82rem;letter-spacing:2px;flex-shrink:0;}
-    .testi-quote-mark{font-size:1.8rem;color:rgba(230,126,34,0.2);font-family:Georgia,serif;line-height:1;margin-bottom:5px;}
-    .testi-card p{color:#5D6D7E;font-size:0.82rem;line-height:1.65;font-style:italic;}
-    .testi-tag{display:inline-block;margin-top:9px;background:rgba(230,126,34,0.08);color:#E67E22;padding:3px 10px;border-radius:8px;font-size:0.66rem;font-weight:600;}
-    .testi-rating-badge{display:inline-block;margin-top:6px;background:rgba(46,204,113,0.08);color:#2ecc71;padding:3px 10px;border-radius:8px;font-size:0.66rem;font-weight:600;margin-left:6px;}
+    .testi-card:hover{transform:translateX(5px);box-shadow:0 5px 18px rgba(0,0,0,0.07);border-color:rgba(230,126,34,0.25);}
+    .testi-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px;}
+    .testi-name{font-weight:600;font-size:0.85rem;color:#2C3E50;}
+    .testi-role{font-size:0.68rem;color:#E67E22;font-weight:500;margin-top:2px;}
+    .testi-stars{color:#F39C12;font-size:0.78rem;letter-spacing:2px;flex-shrink:0;}
+    .testi-quote{font-size:1.6rem;color:rgba(230,126,34,0.18);font-family:Georgia,serif;line-height:1;margin-bottom:5px;}
+    .testi-card p{color:#5D6D7E;font-size:0.8rem;line-height:1.65;font-style:italic;}
+    .testi-pill{display:inline-block;margin-top:8px;background:rgba(230,126,34,0.08);color:#E67E22;padding:3px 10px;border-radius:8px;font-size:0.64rem;font-weight:600;}
+    .testi-pill-green{display:inline-block;margin-top:8px;margin-left:5px;background:rgba(46,204,113,0.08);color:#2ecc71;padding:3px 10px;border-radius:8px;font-size:0.64rem;font-weight:600;}
+    .voices-impact{background:linear-gradient(135deg,#2C3E50,#3D5166);border-radius:14px;padding:18px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;margin-top:6px;}
+    .vi-num{font-family:'Playfair Display',serif;font-size:1.7rem;color:#E67E22;font-weight:700;}
+    .vi-label{font-size:0.66rem;color:#8FA5BC;margin-top:2px;}
 
-    /* 2-hour feedback grid */
-    .feedback-2h-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:1100px;margin:0 auto;}
-    .feedback-2h-card{background:white;border-radius:16px;padding:20px;border:1px solid #EAECEE;transition:all 0.3s;position:relative;overflow:hidden;}
-    .feedback-2h-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:#3498DB;border-radius:4px 0 0 4px;}
-    .feedback-2h-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,0.08);}
-    .f2h-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;}
-    .f2h-name{font-weight:600;font-size:0.87rem;color:#2C3E50;}
-    .f2h-role{font-size:0.7rem;color:#3498DB;font-weight:500;margin-top:2px;}
-    .f2h-ratings{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
-    .f2h-rating-pill{background:rgba(52,152,219,0.08);color:#3498DB;padding:3px 10px;border-radius:8px;font-size:0.68rem;font-weight:600;}
-    .f2h-quote{font-size:0.82rem;color:#5D6D7E;font-style:italic;line-height:1.6;}
-    .f2h-conf-change{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.75rem;color:#7F8C8D;}
-    .f2h-conf-change strong{color:#2ecc71;}
+    /* HOW IT WORKS */
+    #how{background:white;}
+    .steps-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
+    .steps-wrap::before{content:'';position:absolute;top:34px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,#E67E22,#CA6F1E);z-index:0;}
+    .step-item{text-align:center;padding:16px 12px;position:relative;z-index:1;}
+    .step-circle{width:68px;height:68px;background:linear-gradient(135deg,#E67E22,#CA6F1E);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Playfair Display',serif;font-size:1.3rem;color:white;font-weight:700;box-shadow:0 4px 15px rgba(230,126,34,0.35);}
+    .step-item h4{font-size:0.82rem;color:#2C3E50;font-weight:600;margin-bottom:5px;}
+    .step-item p{font-size:0.72rem;color:#7F8C8D;line-height:1.5;}
 
-    /* Impact bar */
-    .testi-impact-bar{background:linear-gradient(135deg,#2C3E50,#3D5166);border-radius:16px;padding:20px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;margin-top:8px;}
-    .tib-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:#E67E22;font-weight:700;}
-    .tib-label{font-size:0.68rem;color:#8FA5BC;margin-top:2px;}
+    /* GALLERY */
+    #gallery{background:#F8F9FA;}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1050px;margin:0 auto;}
+    .gallery-item{border-radius:16px;overflow:hidden;position:relative;box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:transform 0.3s;}
+    .gallery-item:hover{transform:scale(1.02);}
+    .gallery-item img{width:100%;height:240px;object-fit:cover;display:block;transition:transform 0.4s;}
+    .gallery-item:hover img{transform:scale(1.05);}
+    .gallery-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,37,47,0.85));padding:20px 16px 14px;}
+    .gallery-overlay span{color:white;font-size:0.75rem;font-weight:500;}
 
-    /* ===== VIDEO GALLERY ===== */
-    #videos{background:white;}
-    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto;}
-    .video-card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.07);transition:transform 0.3s,box-shadow 0.3s;}
-    .video-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,0.11);}
-    .video-wrapper{position:relative;width:100%;padding-top:100%;overflow:hidden;background:#000;}
-    .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
-    .video-label{padding:14px 16px;background:white;border-top:3px solid transparent;transition:border-color 0.3s;}
-    .video-card:hover .video-label{border-top-color:#E67E22;}
-    .video-label h4{font-size:0.83rem;color:#2C3E50;font-weight:600;margin-bottom:3px;}
-    .v-school{font-size:0.72rem;color:#E67E22;font-weight:500;margin-bottom:2px;}
-    .v-meta{font-size:0.7rem;color:#95A5A6;}
-
-    .college-video-wrapper{position:relative;width:100%;padding-top:177.78%;overflow:hidden;border-radius:0 0 12px 12px;background:#000;}
-    .college-video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
-    .aakar-reel-wrapper{position:relative;width:100%;padding-top:177.78%;overflow:hidden;border-radius:0 0 12px 12px;background:#000;}
-    .aakar-reel-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
-
-    /* ===== CERTIFICATES ===== */
-    #certificates{background:#F8F9FA;}
-    .cert-total-badge{text-align:center;margin-bottom:32px;}
-    .cert-total-badge span{display:inline-block;background:linear-gradient(135deg,#E67E22,#CA6F1E);color:white;padding:10px 28px;border-radius:25px;font-size:0.85rem;font-weight:600;box-shadow:0 4px 15px rgba(230,126,34,0.28);}
-    .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;max-width:1100px;margin:0 auto;}
-    .cert-card{background:white;border:1px solid #E8ECEE;border-radius:14px;padding:20px;transition:all 0.3s;position:relative;overflow:hidden;}
+    /* CERTIFICATES */
+    #certificates{background:white;}
+    .cert-badge-top{text-align:center;margin-bottom:30px;}
+    .cert-badge-top span{display:inline-block;background:linear-gradient(135deg,#E67E22,#CA6F1E);color:white;padding:9px 26px;border-radius:25px;font-size:0.82rem;font-weight:600;box-shadow:0 4px 15px rgba(230,126,34,0.28);}
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;max-width:1050px;margin:0 auto;}
+    .cert-card{background:#F8F9FA;border:1px solid #E8ECEE;border-radius:14px;padding:18px;transition:all 0.3s;position:relative;overflow:hidden;}
     .cert-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:#E67E22;border-radius:4px 0 0 4px;}
-    .cert-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,0.09);border-color:#E67E22;}
-    .cert-icon-box{width:40px;height:40px;background:rgba(230,126,34,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:11px;}
-    .cert-icon-box i{color:#E67E22;font-size:1rem;}
-    .cert-card h4{font-size:0.85rem;color:#2C3E50;font-weight:600;margin-bottom:5px;line-height:1.4;}
-    .cert-issuer{font-size:0.72rem;color:#95A5A6;}
-    .cert-date{font-size:0.7rem;color:#E67E22;font-weight:500;margin-top:7px;}
+    .cert-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,0.08);border-color:rgba(230,126,34,0.3);}
+    .cert-icon{width:38px;height:38px;background:rgba(230,126,34,0.1);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+    .cert-icon i{color:#E67E22;font-size:0.95rem;}
+    .cert-card h4{font-size:0.82rem;color:#2C3E50;font-weight:600;margin-bottom:5px;line-height:1.4;}
+    .cert-issuer{font-size:0.7rem;color:#95A5A6;}
+    .cert-date{font-size:0.68rem;color:#E67E22;font-weight:500;margin-top:6px;}
 
-    /* ===== CONTACT ===== */
-    #contact{background:linear-gradient(135deg,#2C3E50,#1A252F);color:white;}
+    /* CONTACT */
+    #contact{background:linear-gradient(135deg,#1a252f,#2C3E50);}
     #contact .section-header h2{color:white;}
     #contact .section-header p{color:#B8C6D4;}
-    #contact .section-tag{background:rgba(230,126,34,0.2);color:#F0A050;}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:900px;margin:0 auto;align-items:start;}
-    .contact-info h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:12px;color:white;}
-    .contact-info>p{color:#B8C6D4;margin-bottom:28px;font-size:0.92rem;}
-    .contact-item{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding:14px 18px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px solid rgba(255,255,255,0.07);text-decoration:none;color:white;transition:all 0.3s;}
-    .contact-item:hover{background:rgba(230,126,34,0.12);border-color:rgba(230,126,34,0.35);transform:translateX(5px);}
-    .contact-icon{width:40px;height:40px;background:rgba(230,126,34,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#E67E22;font-size:0.95rem;flex-shrink:0;}
-    .contact-item-text{font-size:0.87rem;}
-    .contact-item-text small{display:block;color:#8FA5BC;font-size:0.72rem;}
-    .contact-cta{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:35px;text-align:center;}
-    .contact-cta h4{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:white;}
-    .contact-cta p{color:#8FA5BC;font-size:0.85rem;margin-bottom:24px;line-height:1.8;}
-    .slots-badge{background:rgba(230,126,34,0.15);border:1px solid rgba(230,126,34,0.3);border-radius:10px;padding:10px 16px;margin-bottom:20px;display:inline-block;}
-    .slots-badge span{color:#F0A050;font-size:0.82rem;font-weight:600;}
-    .tagline-final{text-align:center;margin-top:50px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);color:#8FA5BC;font-size:0.82rem;line-height:2;}
-    .tagline-final strong{color:#E67E22;}
+    #contact .section-tag{background:rgba(230,126,34,0.18);color:#F0A050;}
+    .contact-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+    .contact-info-col h3{font-family:'Playfair Display',serif;font-size:1.45rem;color:white;margin-bottom:12px;}
+    .contact-info-col>p{color:#B8C6D4;font-size:0.88rem;margin-bottom:26px;line-height:1.8;}
+    .contact-link{display:flex;align-items:center;gap:13px;margin-bottom:12px;padding:13px 16px;background:rgba(255,255,255,0.04);border-radius:12px;border:1px solid rgba(255,255,255,0.07);text-decoration:none;color:white;transition:all 0.3s;}
+    .contact-link:hover{background:rgba(230,126,34,0.1);border-color:rgba(230,126,34,0.3);transform:translateX(4px);}
+    .contact-link-icon{width:38px;height:38px;background:rgba(230,126,34,0.16);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#E67E22;font-size:0.9rem;flex-shrink:0;}
+    .contact-link-text{font-size:0.84rem;}
+    .contact-link-text small{display:block;color:#8FA5BC;font-size:0.7rem;}
+    .contact-form-col{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:22px;padding:32px;}
+    .contact-form-col h4{font-family:'Playfair Display',serif;font-size:1.25rem;color:white;margin-bottom:6px;}
+    .contact-form-col p{color:#8FA5BC;font-size:0.8rem;margin-bottom:22px;}
+    .form-group{margin-bottom:14px;}
+    .form-group label{display:block;color:#B8C6D4;font-size:0.75rem;font-weight:600;margin-bottom:6px;letter-spacing:0.5px;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;color:white;font-family:'Poppins',sans-serif;font-size:0.83rem;transition:border-color 0.3s;outline:none;}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:#5D6D7E;}
+    .form-group select option{background:#2C3E50;color:white;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#E67E22;}
+    .form-group textarea{resize:vertical;min-height:90px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .form-submit-wrap{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+    .btn-form-submit{background:linear-gradient(135deg,#E67E22,#CA6F1E);color:white;padding:13px;border-radius:12px;border:none;font-family:'Poppins',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.3s;box-shadow:0 4px 15px rgba(230,126,34,0.35);}
+    .btn-form-submit:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(230,126,34,0.5);}
+    .btn-wa-alt{display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);color:#25d366;padding:12px;border-radius:12px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.3s;}
+    .btn-wa-alt:hover{background:rgba(37,211,102,0.2);transform:translateY(-2px);}
+    .contact-footer-line{text-align:center;margin-top:50px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);color:#8FA5BC;font-size:0.82rem;line-height:2;}
+    .contact-footer-line strong{color:#E67E22;}
 
-    footer{background:#1A252F;text-align:center;padding:24px;color:#5D6D7E;font-size:0.8rem;}
+    footer{background:#1A252F;text-align:center;padding:24px;color:#5D6D7E;font-size:0.78rem;}
     footer span{color:#E67E22;}
 
     .scroll-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;background:#E67E22;color:white;border:none;border-radius:50%;cursor:pointer;font-size:1rem;box-shadow:0 4px 15px rgba(230,126,34,0.4);transition:all 0.3s;display:none;align-items:center;justify-content:center;z-index:999;}
     .scroll-top:hover{background:#CA6F1E;transform:translateY(-3px);}
 
-    .fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease;}
     .fade-in.visible{opacity:1;transform:translateY(0);}
 
-    /* ===== RESPONSIVE ===== */
+    /* RESPONSIVE */
     @media(max-width:1024px){
-      .testi-layout{grid-template-columns:300px 1fr;}
-      .steps-grid{grid-template-columns:repeat(3,1fr);}
-      .steps-grid::before{display:none;}
-    }
-    @media(max-width:900px){
-      .video-grid{grid-template-columns:repeat(2,1fr);}
-      .audience-grid{grid-template-columns:1fr 1fr;}
-      .proof-grid{grid-template-columns:1fr 1fr;}
+      .hero-inner{grid-template-columns:1fr;text-align:center;}
+      .hero-image-col{order:-1;}
+      .hero-photo{width:280px;height:360px;}
+      .hero-float-card{right:0;}
+      .hero-proof-strip{justify-content:center;}
+      .hero-cta-group{justify-content:center;}
+      .hero-secondary{text-align:left;}
+      .about-grid{grid-template-columns:1fr;}
+      .voices-layout{grid-template-columns:1fr;}
+      .voices-video-col{max-width:320px;margin:0 auto;}
+      .steps-wrap{grid-template-columns:repeat(3,1fr);}
+      .steps-wrap::before{display:none;}
+      .authority-cols{grid-template-columns:1fr 1fr;}
     }
     @media(max-width:768px){
-      nav{padding:14px 20px;}
-      .nav-links{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,37,47,0.98);align-items:center;justify-content:center;gap:28px;z-index:999;}
+      nav{padding:12px 20px;}
+      .nav-links{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,37,47,0.98);align-items:center;justify-content:center;gap:26px;z-index:999;}
       .nav-links.open{display:flex;}
-      .nav-links a{color:white;font-size:1.05rem;}
+      .nav-links a{color:white;font-size:1rem;}
       .hamburger{display:flex;}
-      .stats-container{grid-template-columns:1fr 1fr;gap:12px;}
-      .about-grid{grid-template-columns:1fr;}
+      .stats-grid{grid-template-columns:1fr 1fr;gap:12px;}
+      .problem-grid{grid-template-columns:1fr;}
+      .aakar-pillars{grid-template-columns:1fr 1fr;}
+      .videos-grid{grid-template-columns:1fr;}
+      .proof-nums{grid-template-columns:1fr 1fr;}
+      .steps-wrap{grid-template-columns:1fr 1fr;}
+      .gallery-grid{grid-template-columns:1fr 1fr;}
+      .contact-wrap{grid-template-columns:1fr;}
+      .cert-grid{grid-template-columns:1fr 1fr;}
+      .authority-cols{grid-template-columns:1fr;}
       .about-highlights{grid-template-columns:1fr;}
-      .workshops-grid{grid-template-columns:1fr;}
-      .audience-grid{grid-template-columns:1fr;}
-      .video-grid{grid-template-columns:1fr 1fr;}
-      .testi-layout{grid-template-columns:1fr;}
-      .testi-video-col{max-width:340px;margin:0 auto;}
-      .contact-grid{grid-template-columns:1fr;}
-      .steps-grid{grid-template-columns:1fr 1fr;}
-      .proof-grid{grid-template-columns:1fr;}
-      .testi-impact-bar{grid-template-columns:1fr 1fr;}
+      .form-row{grid-template-columns:1fr;}
+      .voices-impact{grid-template-columns:1fr;}
+      .ba-before,.ba-after{font-size:0.75rem;}
     }
     @media(max-width:480px){
-      .video-grid{grid-template-columns:1fr;}
+      #hero{padding:90px 20px 50px;}
+      .hero-photo{width:220px;height:280px;}
+      .hero-float-card{display:none;}
+      .stats-grid{grid-template-columns:1fr;}
+      .aakar-pillars{grid-template-columns:1fr;}
+      .gallery-grid{grid-template-columns:1fr;}
+      .proof-nums{grid-template-columns:1fr;}
+      .steps-wrap{grid-template-columns:1fr;}
       .cert-grid{grid-template-columns:1fr;}
-      .hero-proof{gap:16px;}
-      .hero-proof-divider{display:none;}
-      .stats-container{grid-template-columns:1fr;}
-      .testi-impact-bar{grid-template-columns:1fr;}
-      .steps-grid{grid-template-columns:1fr;}
-      .feedback-2h-grid{grid-template-columns:1fr;}
+      .voices-impact{grid-template-columns:1fr 1fr;}
     }
   </style>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- NAVBAR -->
 <nav>
-  <a href="#hero" class="nav-logo">Namrata <span>Kedia</span></a>
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-name">Namrata Kedia</span>
+    <span class="nav-logo-tag">Founder · AAKAR · Youth Transformation Trainer</span>
+  </a>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about" onclick="closeMenu()">My Story</a></li>
-    <li><a href="#workshops" onclick="closeMenu()">Workshops</a></li>
-    <li><a href="#data-proof" onclick="closeMenu()">Results</a></li>
-    <li><a href="#testimonials" onclick="closeMenu()">Feedback</a></li>
-    <li><a href="#videos" onclick="closeMenu()">Gallery</a></li>
-    <li><a href="#certificates" onclick="closeMenu()">Credentials</a></li>
-    <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Book a Workshop</a></li>
+    <li><a href="#problem" onclick="closeMenu()">Why AAKAR</a></li>
+    <li><a href="#aakar" onclick="closeMenu()">The Workshop</a></li>
+    <li><a href="#data-proof" onclick="closeMenu()">Real Results</a></li>
+    <li><a href="#voices" onclick="closeMenu()">Student Stories</a></li>
+    <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Bring Workshop to Your College</a></li>
   </ul>
 </nav>
 
-<!-- ===== URGENCY STRIP ===== -->
-<div class="urgency-strip">
-  🔥 Limited Workshop Slots Available for August–October 2026 — <span>Only 3 Slots Left</span> — Book Now Before They Fill Up
-</div>
-
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section id="hero">
-  <div class="hero-content">
-    <div class="hero-badge">✦ Youth Transformation Trainer — Akola, Maharashtra ✦</div>
-    <img src="namrata.jpg" alt="Namrata Kedia - Youth Trainer" class="hero-photo" onerror="this.style.display='none'"/>
-    <h1>Your Students Are Lost.<br><span>One Day Changes That.</span></h1>
-    <p class="hero-tagline">
-      I help college students go from <strong>confused → confident</strong><br>
-      through 100% activity-based workshops.
-    </p>
-    <p class="hero-subtitle">Founder of AAKAR Workshop · 5+ Years in Education · Akola, Maharashtra</p>
-
-    <div class="hero-proof">
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">47.5%</span>
-        <div class="hero-proof-label">Avg Confidence Growth</div>
+  <div class="hero-inner">
+    <div class="hero-text fade-in">
+      <div class="hero-badge">✦ Youth Transformation Trainer · Akola, Maharashtra ✦</div>
+      <h1>Your Students Will Graduate.<br>But Will They Know<br><span>Who They Are?</span></h1>
+      <p class="hero-secondary">
+        Every college gives a degree.<br>
+        Very few give their students <strong>a direction in life to be truly self-satisfied.</strong>
+      </p>
+      <div class="hero-proof-strip">
+        <div class="hero-proof-item">
+          <span class="hero-proof-num">47.5%</span>
+          <div class="hero-proof-label">Confidence Growth</div>
+        </div>
+        <div class="hero-proof-sep"></div>
+        <div class="hero-proof-item">
+          <span class="hero-proof-num">8.07</span>
+          <div class="hero-proof-label">Avg Rating / 10</div>
+        </div>
+        <div class="hero-proof-sep"></div>
+        <div class="hero-proof-item">
+          <span class="hero-proof-num">225+</span>
+          <div class="hero-proof-label">Learners Impacted</div>
+        </div>
+        <div class="hero-proof-sep"></div>
+        <div class="hero-proof-item">
+          <span class="hero-proof-num">100%</span>
+          <div class="hero-proof-label">Positive Feedback</div>
+        </div>
       </div>
-      <div class="hero-proof-divider"></div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">8.07</span>
-        <div class="hero-proof-label">Avg Rating out of 10</div>
-      </div>
-      <div class="hero-proof-divider"></div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">225+</span>
-        <div class="hero-proof-label">Learners Impacted</div>
-      </div>
-      <div class="hero-proof-divider"></div>
-      <div class="hero-proof-item">
-        <span class="hero-proof-num">100%</span>
-        <div class="hero-proof-label">Positive Feedback</div>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20bring%20AAKAR%20workshop%20to%20my%20college!" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Bring AAKAR to Your College</a>
+        <a href="#data-proof" class="btn-ghost"><i class="fas fa-chart-bar"></i> See Real Results</a>
       </div>
     </div>
-
-    <div class="hero-buttons">
-      <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20a%20workshop%20for%20my%20college!" target="_blank" class="btn-primary">🚀 Book a Workshop — WhatsApp</a>
-      <a href="#data-proof" class="btn-secondary">📊 See Real Results</a>
+    <div class="hero-image-col fade-in">
+      <div class="hero-photo-wrap">
+        <img src="namrata.jpg" alt="Namrata Kedia — Youth Transformation Trainer" class="hero-photo" onerror="this.style.display='none'"/>
+        <div class="hero-photo-badge">
+          <span class="badge-num">1 Day</span>
+          <span class="badge-label">Real Transformation</span>
+        </div>
+        <div class="hero-float-card">
+          <div class="fc-num">+47.5%</div>
+          <div class="fc-label">Confidence Growth<br>in One Day</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== STATS ===== -->
+<!-- STATS -->
 <section id="stats">
-  <div class="stats-container container">
+  <div class="stats-grid container">
     <div class="stat-card fade-in">
-      <span class="stat-number">47.5%</span>
+      <span class="stat-num">47.5%</span>
       <div class="stat-label">Confidence Growth</div>
-      <div class="stat-sublabel">Measured. Documented. Real.</div>
+      <div class="stat-sub">Measured. Documented. Real.</div>
     </div>
     <div class="stat-card fade-in">
-      <span class="stat-number">225+</span>
+      <span class="stat-num">225+</span>
       <div class="stat-label">Students Transformed</div>
-      <div class="stat-sublabel">Across Schools & Colleges</div>
+      <div class="stat-sub">Across Schools & Colleges</div>
     </div>
     <div class="stat-card fade-in">
-      <span class="stat-number">8.07</span>
+      <span class="stat-num">8.07</span>
       <div class="stat-label">Average Rating / 10</div>
-      <div class="stat-sublabel">From 50 Student Feedback Forms</div>
+      <div class="stat-sub">From 50 Real Feedback Forms</div>
     </div>
     <div class="stat-card fade-in">
-      <span class="stat-number">100%</span>
+      <span class="stat-num">100%</span>
       <div class="stat-label">Positive Feedback</div>
-      <div class="stat-sublabel">Zero Negative Responses</div>
+      <div class="stat-sub">Zero Negative Responses</div>
     </div>
   </div>
 </section>
 
-<!-- ===== DATA PROOF ===== -->
-<section id="data-proof">
+<!-- PROBLEM -->
+<section id="problem">
   <div class="section-header fade-in">
-    <span class="section-tag" style="background:rgba(230,126,34,0.15);color:#F0A050;">Real Data. Real Results.</span>
-    <h2 style="color:white;">The Numbers Don't Lie</h2>
-    <p style="color:#8FA5BC;">Every number below comes from real student feedback forms — not estimates.</p>
+    <span class="section-tag">The Real Problem</span>
+    <h2>Here Is What Your Students Think Currently</h2>
+    <p>Colleges prepare students for job placements. Nobody prepares them to know themselves first.</p>
     <div class="divider"></div>
   </div>
-
-  <div class="proof-grid fade-in">
-    <div class="proof-card">
-      <span class="proof-big-num">5.47</span>
-      <div class="proof-label">Average Confidence BEFORE</div>
-      <div class="proof-sublabel">Self-reported by 50 students</div>
+  <div class="problem-grid fade-in">
+    <div class="problem-card">
+      <span class="problem-icon">🎓</span>
+      <h3>"I know which job I want after graduation."</h3>
+      <p>She knows the syllabus. She knows the placement process.<br><br>But she doesn't know herself — whether she will be truly happy there, or just <strong>living on autopilot forever.</strong></p>
+      <span class="problem-italic">Employed. But not fulfilled. That is the gap.</span>
     </div>
-    <div class="proof-card">
-      <span class="proof-big-num">8.07</span>
-      <div class="proof-label">Average Confidence AFTER</div>
-      <div class="proof-sublabel">Same 50 students, same day</div>
+    <div class="problem-card">
+      <span class="problem-icon">🔄</span>
+      <h3>"I attend every lecture. I complete every assignment."</h3>
+      <p>Present in body.<br><strong>Absent in purpose.</strong><br><br>Going through every motion of college life — with no inner direction, no self-awareness, no answer to the question that matters most.</p>
+      <span class="problem-italic">Busy. But not growing. That is the crisis.</span>
     </div>
-    <div class="proof-card">
-      <span class="proof-big-num">+47.5%</span>
-      <div class="proof-label">Confidence Growth</div>
-      <div class="proof-sublabel">In just ONE day of AAKAR</div>
-    </div>
-  </div>
-
-  <div class="confidence-bar-section fade-in">
-    <div class="conf-title">📊 AAKAR — Confidence Transformation (50 Students)</div>
-    <div class="conf-row">
-      <div class="conf-row-label">
-        <span>Before AAKAR Workshop</span>
-        <span style="color:#E74C3C;">5.47 / 10</span>
-      </div>
-      <div class="conf-bar"><div class="conf-fill-before" style="width:54.7%;"></div></div>
-    </div>
-    <div class="conf-row">
-      <div class="conf-row-label">
-        <span>After AAKAR Workshop</span>
-        <span style="color:#2ecc71;">8.07 / 10</span>
-      </div>
-      <div class="conf-bar"><div class="conf-fill-after" style="width:80.7%;"></div></div>
-    </div>
-    <div class="conf-growth-badge">
-      <span>+47.5% Growth in Confidence — In One Day 📈</span>
-      <small>Faculty Rating: 4/5 · Student Workshop Rating: 8.07/10</small>
+    <div class="problem-card">
+      <span class="problem-icon">❓</span>
+      <h3>"Who are you?" — Most go silent.</h3>
+      <p>87 out of 100 students Namrata asked had <strong>no specific, clear answer.</strong><br><br>Not one word about who they truly are — beyond their roll number, their percentage, their syllabus.</p>
+      <span class="problem-italic">They know their subjects. They don't know themselves.</span>
     </div>
   </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- AUTHORITY TRIGGER -->
+<section id="authority">
+  <div class="section-header fade-in">
+    <span class="section-tag" style="background:rgba(230,126,34,0.18);color:#F0A050;">For College Authorities</span>
+    <h2 style="color:white;">One Question for Every Principal, HOD and Educator</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="authority-question-box fade-in">
+    <div class="authority-big-q">
+      "How many alumni of your college<br>
+      have come back and said —<br><br>
+      <span>'Thank you.<br>
+      Because of what your college gave me,<br>
+      I am not just employed.<br>
+      I am exactly where I am supposed to be.<br>
+      I am happy. I am fulfilled. <em>I am me.</em>'</span><br><br>
+      How many?"
+    </div>
+    <p class="authority-sub">
+      Most colleges can count those alumni on one hand.<br>
+      Not because they didn't teach well.<br>
+      But because <strong>nobody taught students to know themselves first.</strong><br>
+      A student who doesn't know who they are<br>
+      will never be truly satisfied — even after getting the job.
+    </p>
+    <div class="authority-answer">"Colleges provided many courses to get ready for job placements — but nobody gives students the direction to become self-aware first."</div>
+    <div class="authority-change-line">What If Your College Could Change That — <span>In One Day?</span></div>
+  </div>
+  <div class="authority-cols fade-in">
+    <div class="auth-col">
+      <span class="auth-col-icon">🏛️</span>
+      <h3>College Legacy</h3>
+      <p>Be known as the college that builds <strong>complete human beings</strong> — not just degree holders.<br><br>Your alumni will remember the degree. They will come back grateful for AAKAR.</p>
+    </div>
+    <div class="auth-col">
+      <span class="auth-col-icon">📋</span>
+      <h3>NEP 2020 Aligned</h3>
+      <p>AAKAR directly supports holistic education goals.<br><br>Qualify it under <strong>NSS / IQAC / Student Welfare budget.</strong> No extra syllabus. Zero disruption to your academic calendar.</p>
+    </div>
+    <div class="auth-col">
+      <span class="auth-col-icon">🎯</span>
+      <h3>Self-Aware Students</h3>
+      <p>A student who knows who they are <strong>chooses the right career</strong>, performs better in placements and represents your college with pride and purpose.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about">
   <div class="section-header fade-in">
     <span class="section-tag">My Story</span>
-    <h2>Why I Do What I Do</h2>
-    <p>Every mission begins with a moment of truth. Here is mine.</p>
+    <h2>Why a Teacher from Akola Walked Away<br>From a Secure Job to Build This Workshop</h2>
     <div class="divider"></div>
   </div>
   <div class="about-grid container fade-in">
-    <div class="about-image-box">
-      <img src="namrata.jpg" alt="Namrata Kedia" class="about-photo" onerror="this.style.display='none'"/>
-      <div class="about-cert-badge"><span>8+</span>Certifications</div>
+    <div class="about-img-wrap">
+      <img src="namrata.jpg" alt="Namrata Kedia" class="about-photo" onerror="this.style.display:'none'"/>
+      <div class="about-cert"><span>8+</span>Certifications</div>
     </div>
     <div class="about-text">
-      <span class="story-tag">✦ The Journey</span>
+      <span class="story-tag-inline">✦ The Journey</span>
       <h3>From Classroom Teacher<br>to Youth Transformer.</h3>
-
       <div class="story-block">
-        <span class="story-block-icon">👩‍🏫</span>
-        <p>I spent <strong>5+ years as a teacher</strong>. I watched brilliant educators around me lose their creativity, their energy, their joy — buried under daily repetitive tasks and autopilot living. No one was telling them there was a better way.</p>
+        <span class="story-icon">👩‍🏫</span>
+        <p>I spent years inside classrooms — first as a student, then as a teacher. And I kept seeing the same thing. Students studying. Scoring. Graduating. But when I asked them — <strong>'Who are you beyond your marks?'</strong> They went quiet. Because nobody had ever asked them that question. Not once. In years of education.</p>
       </div>
-
       <div class="story-block">
-        <span class="story-block-icon">💡</span>
-        <p>I tried to solve this by running <strong>workshops for teachers</strong>. But institutions were not ready to pay. Teachers were too busy. I hit a wall. So I pivoted — and discovered an even bigger crisis waiting: <strong>college students who had no idea who they were.</strong></p>
+        <span class="story-icon">💡</span>
+        <p>I know that silence personally. In my own academic journey, <strong>I felt no need to follow the crowd.</strong> I knew my potential. But under the weight of work pressure, daily routine, repeated tasks — I lost myself too. For years I was on autopilot. Doing. Not living. Working. Not growing. The day I recognized that — I made a decision.</p>
       </div>
-
       <div class="story-block">
-        <span class="story-block-icon">🚀</span>
-        <p>I asked 100+ students "Who Are You?" — and most went silent. That silence became my mission. I created <strong>AAKAR</strong> — a one-day, 100% activity-based workshop that helps students discover their identity, build confidence and set real goals. <strong>From Akola, Maharashtra — to every college that will listen.</strong></p>
+        <span class="story-icon">🚀</span>
+        <p>I created AAKAR — not to change who students are, but to <strong>show them who they already are.</strong> And give them the tools to live from that place. To make them better by only 1% every day. Because that 1%, compounded daily, is the most powerful way to become the best version of yourself. From Akola, Maharashtra. With complete conviction.</p>
       </div>
-
       <div class="about-mission">
         <p>🎯 "The goal is not to change who students are. The goal is to show them who they already are — and give them the tools to live from that place."</p>
       </div>
-
       <div class="about-highlights">
-        <div class="highlight-item"><i class="fas fa-certificate"></i>8 Velsoft Certifications</div>
-        <div class="highlight-item"><i class="fas fa-users"></i>225+ Learners Impacted</div>
-        <div class="highlight-item"><i class="fas fa-chart-line"></i>47.5% Confidence Growth</div>
-        <div class="highlight-item"><i class="fas fa-fire"></i>Zero Lecture. 100% Activity.</div>
+        <div class="hl-item"><i class="fas fa-certificate"></i>8 Velsoft Certifications</div>
+        <div class="hl-item"><i class="fas fa-users"></i>225+ Learners Impacted</div>
+        <div class="hl-item"><i class="fas fa-chart-line"></i>47.5% Confidence Growth</div>
+        <div class="hl-item"><i class="fas fa-fire"></i>Zero Lecture. 100% Activity.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section id="how-it-works">
-  <div class="section-header fade-in">
-    <span class="section-tag">Simple Process</span>
-    <h2>How to Book a Workshop</h2>
-    <p>From first message to transformation day — here is exactly what happens.</p>
-    <div class="divider"></div>
-  </div>
-  <div class="steps-grid container fade-in">
-    <div class="step-card">
-      <div class="step-num">1</div>
-      <h4>WhatsApp Me</h4>
-      <p>Send a message. Get a detailed proposal within 2 hours.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num">2</div>
-      <h4>Free 15-Min Call</h4>
-      <p>We discuss your students, goals and customize the workshop.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num">3</div>
-      <h4>Confirm & Book</h4>
-      <p>Choose a date. Pay 50% advance to lock the slot.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num">4</div>
-      <h4>Workshop Day</h4>
-      <p>100% activity-based. Zero lectures. Real transformation.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num">5</div>
-      <h4>Impact Report</h4>
-      <p>You receive a full before-after report with student data.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WORKSHOPS ===== -->
-<section id="workshops">
-  <div class="section-header fade-in">
-    <span class="section-tag">What I Offer</span>
-    <h2>Workshops That Create Real Change</h2>
-    <p>Practical. Activity-based. Designed for real rooms with real people.</p>
-    <div class="divider"></div>
-  </div>
-  <div class="workshops-grid">
-
-    <div class="workshop-card fade-in">
-      <div class="card-header">
-        <span class="card-icon">🌟</span>
-        <h3>AAKAR — Design Your Real Self</h3>
-        <p>"Know Yourself. Express Yourself. Rise."</p>
-        <div class="card-meta">
-          <span class="meta-pill">🎓 UG Students 17–22</span>
-          <span class="meta-pill">⏱️ Full Day — 9 Hours</span>
-          <span class="meta-pill">✅ Zero Lecture</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="objective-box">
-          <h4>📌 The Problem I Solve</h4>
-          <p>87% of college students cannot answer "Who Am I?" This workshop gives them that answer — through lived experience, not lectures.</p>
-        </div>
-        <div class="outcomes-title">✅ Students Leave With:</div>
-        <div class="outcome-item">Confidence to speak in front of any group</div>
-        <div class="outcome-item">A written 90-day goal with clear action plan</div>
-        <div class="outcome-item">Identified & broken personal limiting beliefs</div>
-        <div class="outcome-item">A personal manifesto they wrote themselves</div>
-        <div class="outcome-item">47.5% average confidence growth — measured</div>
-        <div class="price-tag">
-          <div class="price">₹8,000 – ₹15,000</div>
-          <div class="price-note">Per institution · 30–50 students · Includes all materials</div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20the%20AAKAR%20workshop!" target="_blank" class="book-btn">🚀 Book AAKAR Workshop</a>
-      </div>
-    </div>
-
-    <div class="workshop-card fade-in">
-      <div class="card-header">
-        <span class="card-icon">🗣️</span>
-        <h3>Effective Communication</h3>
-        <p>"From Hesitant to Heard"</p>
-        <div class="card-meta">
-          <span class="meta-pill">🎓 College Students</span>
-          <span class="meta-pill">🏫 Teachers</span>
-          <span class="meta-pill">⏱️ 2–4 Hours</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="objective-box">
-          <h4>📌 The Problem I Solve</h4>
-          <p>Students and professionals know what to say but not how to say it. This workshop changes that — with body language, vocal variety and real practice.</p>
-        </div>
-        <div class="outcomes-title">✅ Students Leave With:</div>
-        <div class="outcome-item">The 7-38-55 rule applied to real conversations</div>
-        <div class="outcome-item">Confident body language and open posture habits</div>
-        <div class="outcome-item">Power over their voice — tone, pace, pause</div>
-        <div class="outcome-item">5 negative phrases replaced with powerful words</div>
-        <div class="outcome-item">Ability to respond, not react, under pressure</div>
-        <div class="price-tag">
-          <div class="price">₹5,000 – ₹10,000</div>
-          <div class="price-note">Per institution · Half day format available</div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20the%20Communication%20workshop!" target="_blank" class="book-btn">📩 Book This Workshop</a>
-      </div>
-    </div>
-
-    <div class="workshop-card fade-in">
-      <div class="card-header">
-        <span class="card-icon">🤖</span>
-        <h3>AI Tools for Teachers</h3>
-        <p>"Work Smarter. Teach Better."</p>
-        <div class="card-meta">
-          <span class="meta-pill">🏫 School Teachers</span>
-          <span class="meta-pill">⏱️ Half Day / Full Day</span>
-          <span class="meta-pill">✅ NEP 2020 Aligned</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="objective-box">
-          <h4>📌 The Problem I Solve</h4>
-          <p>Teachers are buried in repetitive tasks. AI can save them 2–3 hours every day. This workshop makes AI accessible — even for non-tech teachers.</p>
-        </div>
-        <div class="outcomes-title">✅ Teachers Leave With:</div>
-        <div class="outcome-item">AI-generated lesson plans in under 5 minutes</div>
-        <div class="outcome-item">The RECIPE prompt method for any task</div>
-        <div class="outcome-item">Automated report card comments and circulars</div>
-        <div class="outcome-item">Mind maps built using NotebookLM</div>
-        <div class="outcome-item">More time, less stress — starting tomorrow</div>
-        <div class="price-tag">
-          <div class="price">₹6,000 – ₹12,000</div>
-          <div class="price-note">Per school · Includes hands-on practice session</div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20the%20AI%20Tools%20workshop!" target="_blank" class="book-btn">📩 Book This Workshop</a>
-      </div>
-    </div>
-
-    <div class="workshop-card fade-in">
-      <div class="card-header">
-        <span class="card-icon">😤</span>
-        <h3>Handling Angry Parents</h3>
-        <p>"Turn Conflict into Collaboration"</p>
-        <div class="card-meta">
-          <span class="meta-pill">🏫 School Teachers</span>
-          <span class="meta-pill">⏱️ Half Day</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="objective-box">
-          <h4>📌 The Problem I Solve</h4>
-          <p>Parent meetings are the most dreaded part of a teacher's job. This workshop gives teachers real tools to handle any parent — with calm and professionalism.</p>
-        </div>
-        <div class="outcomes-title">✅ Teachers Leave With:</div>
-        <div class="outcome-item">Calm, structured approach to any parent conflict</div>
-        <div class="outcome-item">De-escalation techniques that actually work</div>
-        <div class="outcome-item">PTM management done with full confidence</div>
-        <div class="outcome-item">Professional language for difficult situations</div>
-        <div class="outcome-item">Fear replaced with preparation and tools</div>
-        <div class="price-tag">
-          <div class="price">₹5,000 – ₹8,000</div>
-          <div class="price-note">Per school · Can combine with other workshops</div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20the%20Parent%20Management%20workshop!" target="_blank" class="book-btn">📩 Book This Workshop</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== WHO I TRAIN ===== -->
-<section id="audience">
-  <div class="section-header fade-in">
-    <span class="section-tag">Who I Work With</span>
-    <h2>I Train Three Types of People</h2>
-    <p>Each group has a different problem. I have a specific solution for each.</p>
-    <div class="divider"></div>
-  </div>
-  <div class="audience-grid container fade-in">
-    <div class="audience-card">
-      <span class="audience-icon">🎓</span>
-      <h3>College Students</h3>
-      <p>Lost, confused, living on autopilot — not knowing who they are or where they're going. AAKAR gives them clarity, confidence and direction in one day.</p>
-      <div class="best-time-box">
-        <div class="bt-label">📅 Best Times to Book</div>
-        <div class="bt-item">July–August — Freshers Orientation</div>
-        <div class="bt-item">November — Pre-Exam Motivation</div>
-        <div class="bt-item">February–March — Placement Season</div>
-        <div class="bt-item">Any Saturday — Full Day Workshop</div>
-      </div>
-    </div>
-    <div class="audience-card">
-      <span class="audience-icon">🏫</span>
-      <h3>School Teachers</h3>
-      <p>Brilliant educators stuck in autopilot — doing the same tasks daily, losing creativity, burning out quietly. I help them work smarter and rediscover their purpose.</p>
-      <div class="best-time-box">
-        <div class="bt-label">📅 Best Times to Book</div>
-        <div class="bt-item">April–May — Summer Vacation</div>
-        <div class="bt-item">June — New Academic Year</div>
-        <div class="bt-item">October — Festive Break</div>
-        <div class="bt-item">Every Saturday — Half Day Training</div>
-      </div>
-    </div>
-    <div class="audience-card">
-      <span class="audience-icon">💼</span>
-      <h3>Corporate Teams</h3>
-      <p>Professionals who need stronger communication, leadership presence and confidence in meetings, presentations and client interactions.</p>
-      <div class="best-time-box">
-        <div class="bt-label">📅 Best Times to Book</div>
-        <div class="bt-item">January–March — New FY Planning</div>
-        <div class="bt-item">July–September — Mid-Year Review</div>
-        <div class="bt-item">Weekdays 10am–4pm</div>
-        <div class="bt-item">Friday Afternoons — Team Sessions</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== COLLEGE SESSION ===== -->
-<section id="college">
-  <div class="section-header fade-in">
-    <span class="section-tag" style="background:rgba(230,126,34,0.2);color:#F0A050;">Live Session · 7 August 2026</span>
-    <h2 style="color:white;">Effective Communication Workshop</h2>
-    <p style="color:#8FA5BC;">Smt. Radhadeviji Goenka College for Women, Akola</p>
-    <div class="divider"></div>
-  </div>
-
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
-
-      <div style="background:linear-gradient(135deg,#E67E22,#CA6F1E);padding:24px 34px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
-        <div style="display:flex;align-items:center;gap:14px;">
-          <div style="width:52px;height:52px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;">🗣️</div>
-          <div>
-            <div style="color:rgba(255,255,255,0.8);font-size:0.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">2-Hour Workshop — Effective Communication</div>
-            <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.25rem;">Smt. Radhadeviji Goenka College for Women</h3>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <div style="background:rgba(255,255,255,0.2);padding:7px 16px;border-radius:20px;color:white;font-size:0.75rem;font-weight:600;">📅 7 August 2026</div>
-          <div style="background:rgba(255,255,255,0.2);padding:7px 16px;border-radius:20px;color:white;font-size:0.75rem;font-weight:600;">👥 50+ Students</div>
-          <div style="background:rgba(255,255,255,0.2);padding:7px 16px;border-radius:20px;color:white;font-size:0.75rem;font-weight:600;">⭐ 5/5 Engagement</div>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;" class="college-inner-grid">
-        <div style="padding:32px;border-right:1px solid rgba(255,255,255,0.06);">
-          <div style="margin-bottom:24px;">
-            <div style="color:#E67E22;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">📋 What Was Covered</div>
-            <div style="display:flex;flex-direction:column;gap:8px;">
-              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.83rem;">The 7-38-55 Rule — words, tone, body language</span></div>
-              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.83rem;">Power of Words & eliminating filler words</span></div>
-              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.83rem;">Confident body language and open posture</span></div>
-              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.83rem;">Voice tone, pace, pause and volume control</span></div>
-              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.83rem;">30-Second powerful self-introduction</span></div>
-              <div style="display:flex;gap:10px;"><span style="color:#E67E22;">✦</span><span style="color:#B8C6D4;font-size:0.83rem;">The 5-Point Confidence Check</span></div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-            <div style="background:rgba(230,126,34,0.1);border:1px solid rgba(230,126,34,0.2);border-radius:12px;padding:14px 10px;text-align:center;">
-              <div style="font-family:'Playfair Display',serif;font-size:1.7rem;color:#E67E22;font-weight:700;">5/5</div>
-              <div style="font-size:0.66rem;color:#8FA5BC;margin-top:3px;">Engagement</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px 10px;text-align:center;">
-              <div style="font-family:'Playfair Display',serif;font-size:1.7rem;color:white;font-weight:700;">100%</div>
-              <div style="font-size:0.66rem;color:#8FA5BC;margin-top:3px;">Recommend</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px 10px;text-align:center;">
-              <div style="font-family:'Playfair Display',serif;font-size:1.7rem;color:white;font-weight:700;">2hrs</div>
-              <div style="font-size:0.66rem;color:#8FA5BC;margin-top:3px;">Duration</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:32px;">
-          <div style="color:#E67E22;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">🎬 Session Recording</div>
-          <div>
-            <div style="background:#E67E22;padding:10px 15px;border-radius:12px 12px 0 0;">
-              <div style="color:white;font-size:0.76rem;font-weight:600;">🎬 Effective Communication — Live Session</div>
-              <div style="color:rgba(255,255,255,0.8);font-size:0.68rem;margin-top:2px;">B.Com Students · RDG College · 7 Aug 2026</div>
-            </div>
-            <div class="college-video-wrapper">
-              <iframe src="https://www.youtube.com/embed/5tEodvnh1pk" title="Effective Communication Session" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== AAKAR SECTION ===== -->
+<!-- AAKAR WORKSHOP -->
 <section id="aakar">
   <div class="section-header fade-in">
-    <span class="section-tag" style="background:rgba(46,204,113,0.12);color:#2ecc71;">Full Day Workshop · 27 August 2026</span>
-    <h2 style="color:white;">AAKAR (आकार) — Design Your Real Self</h2>
-    <p style="color:#8FA5BC;">50 Girls. 9 Hours. 47.5% Confidence Growth. One Day.</p>
+    <span class="section-tag" style="background:rgba(46,204,113,0.15);color:#2ecc71;">The Workshop</span>
+    <h2 style="color:white;">1 Day. Four Pillars.<br>A Student Who Knows Exactly Who They Are.</h2>
+    <p style="color:#8FA5BC;">100% activity-based. Zero lectures. Real transformation — measured and documented.</p>
     <div class="divider"></div>
   </div>
 
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="fade-in" style="background:#1A252F;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+  <div class="aakar-pillars fade-in">
+    <div class="pillar-card">
+      <span class="pillar-icon">🔍</span>
+      <div class="pillar-num">Pillar 1</div>
+      <div class="pillar-title">Know Yourself</div>
+      <div class="pillar-sub">Self-awareness, core values & breaking limiting beliefs</div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-icon">🗣️</span>
+      <div class="pillar-num">Pillar 2</div>
+      <div class="pillar-title">Express Yourself</div>
+      <div class="pillar-sub">Public speaking, active listening & assertiveness</div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-icon">🎯</span>
+      <div class="pillar-num">Pillar 3</div>
+      <div class="pillar-title">Direct Yourself</div>
+      <div class="pillar-sub">Goal setting, vision building & resilience</div>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-icon">🚀</span>
+      <div class="pillar-num">Pillar 4</div>
+      <div class="pillar-title">AAKAR — Rise</div>
+      <div class="pillar-sub">Action planning, peer celebration & personal manifesto</div>
+    </div>
+  </div>
 
-      <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71,#1a6b3a);padding:24px 34px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
-        <div style="display:flex;align-items:center;gap:14px;">
-          <div style="width:52px;height:52px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;">🌟</div>
-          <div>
-            <div style="color:rgba(255,255,255,0.85);font-size:0.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Personality Development — Full Day</div>
-            <h3 style="color:white;font-family:'Playfair Display',serif;font-size:1.25rem;">Smt. Radhadeviji Goenka College for Women</h3>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <div style="background:rgba(255,255,255,0.2);padding:7px 16px;border-radius:20px;color:white;font-size:0.75rem;font-weight:600;">📅 27 August 2026</div>
-          <div style="background:rgba(255,255,255,0.2);padding:7px 16px;border-radius:20px;color:white;font-size:0.75rem;font-weight:600;">⏱️ 9 Hours</div>
-          <div style="background:rgba(255,255,255,0.2);padding:7px 16px;border-radius:20px;color:white;font-size:0.75rem;font-weight:600;">👥 50 Girls</div>
-        </div>
+  <div class="aakar-details-strip fade-in">
+    <div class="detail-item"><span class="d-icon">⏱️</span><div class="d-label">Duration</div><div class="d-val">1 Full Day</div></div>
+    <div class="detail-item"><span class="d-icon">👥</span><div class="d-label">Batch Size</div><div class="d-val">30–50 Students</div></div>
+    <div class="detail-item"><span class="d-icon">✅</span><div class="d-label">Format</div><div class="d-val">Zero Lectures</div></div>
+    <div class="detail-item"><span class="d-icon">🎯</span><div class="d-label">Target</div><div class="d-val">UG Students 17–22</div></div>
+    <div class="detail-item"><span class="d-icon">📋</span><div class="d-label">Aligned With</div><div class="d-val">NEP 2020</div></div>
+    <div class="detail-item"><span class="d-icon">📊</span><div class="d-label">You Receive</div><div class="d-val">Impact Report</div></div>
+  </div>
+
+  <div class="before-after fade-in">
+    <div class="ba-header">
+      <span>Before AAKAR</span>
+      <span>→</span>
+      <span>After AAKAR</span>
+    </div>
+    <div class="ba-row">
+      <div class="ba-before">"I am afraid of taking the first step"</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-after">"I felt ready to take it"</div>
+    </div>
+    <div class="ba-row">
+      <div class="ba-before">"I feel like a stranger to myself"</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-after">"I feel known to myself"</div>
+    </div>
+    <div class="ba-row">
+      <div class="ba-before">"I was very insecure about myself"</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-after">"I feel I can do anything"</div>
+    </div>
+    <div class="ba-row">
+      <div class="ba-before">"I was in my comfort zone — no socializing"</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-after">"Confident enough to speak up"</div>
+    </div>
+    <div class="ba-row">
+      <div class="ba-before">"I had no clear direction"</div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-after">"I have a 90-day goal written"</div>
+    </div>
+    <div class="ba-conf-row">
+      <div class="ba-conf-before">
+        <span class="conf-label">Avg Confidence Before</span>
+        <span class="conf-val-before">5.47/10</span>
       </div>
-
-      <!-- Pillars -->
-      <div style="padding:26px 34px;border-bottom:1px solid rgba(255,255,255,0.06);">
-        <div style="color:#2ecc71;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;text-align:center;">🏛️ Four Pillars of AAKAR</div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;" class="aakar-pillars-grid">
-          <div style="background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.2);border-radius:12px;padding:15px;text-align:center;">
-            <div style="font-size:1.5rem;margin-bottom:6px;">🔍</div>
-            <div style="color:#2ecc71;font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Pillar 1</div>
-            <div style="color:white;font-size:0.8rem;font-weight:600;">Know Yourself</div>
-            <div style="color:#8FA5BC;font-size:0.68rem;margin-top:3px;">Self-awareness & core values</div>
-          </div>
-          <div style="background:rgba(230,126,34,0.08);border:1px solid rgba(230,126,34,0.2);border-radius:12px;padding:15px;text-align:center;">
-            <div style="font-size:1.5rem;margin-bottom:6px;">🗣️</div>
-            <div style="color:#E67E22;font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Pillar 2</div>
-            <div style="color:white;font-size:0.8rem;font-weight:600;">Express Yourself</div>
-            <div style="color:#8FA5BC;font-size:0.68rem;margin-top:3px;">Public speaking & assertiveness</div>
-          </div>
-          <div style="background:rgba(52,152,219,0.08);border:1px solid rgba(52,152,219,0.2);border-radius:12px;padding:15px;text-align:center;">
-            <div style="font-size:1.5rem;margin-bottom:6px;">🎯</div>
-            <div style="color:#3498DB;font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Pillar 3</div>
-            <div style="color:white;font-size:0.8rem;font-weight:600;">Direct Yourself</div>
-            <div style="color:#8FA5BC;font-size:0.68rem;margin-top:3px;">Goal setting & resilience</div>
-          </div>
-          <div style="background:rgba(155,89,182,0.08);border:1px solid rgba(155,89,182,0.2);border-radius:12px;padding:15px;text-align:center;">
-            <div style="font-size:1.5rem;margin-bottom:6px;">🚀</div>
-            <div style="color:#9B59B6;font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;">Pillar 4</div>
-            <div style="color:white;font-size:0.8rem;font-weight:600;">AAKAR — Rise</div>
-            <div style="color:#8FA5BC;font-size:0.68rem;margin-top:3px;">Action plan & manifesto</div>
-          </div>
-        </div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-conf-after">
+        <span class="conf-label">Avg Confidence After</span>
+        <span class="conf-val-after">8.07/10</span>
       </div>
+    </div>
+    <div class="ba-growth-badge">
+      <span>+47.5% Confidence Growth — In One Day 📈</span>
+      <small>Measured from 50 student feedback forms · AAKAR Workshop · RDG College for Women · August 2026</small>
+    </div>
+  </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;" class="aakar-inner-grid">
-        <div style="padding:32px;border-right:1px solid rgba(255,255,255,0.06);">
-          <!-- Ratings -->
-          <div style="margin-bottom:22px;">
-            <div style="color:#2ecc71;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">📊 Measured Results</div>
-            <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.15);border-radius:12px;padding:14px;margin-bottom:10px;">
-              <div style="color:#2ecc71;font-size:0.68rem;font-weight:600;margin-bottom:8px;">⭐ Faculty Rating — Anup Sharma Sir, Professor</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center;">
-                <div><div style="font-family:'Playfair Display',serif;font-size:1.7rem;color:#2ecc71;font-weight:700;">4/5</div><div style="color:#8FA5BC;font-size:0.63rem;">Workshop</div></div>
-                <div><div style="font-family:'Playfair Display',serif;font-size:1.7rem;color:#2ecc71;font-weight:700;">4/5</div><div style="color:#8FA5BC;font-size:0.63rem;">Trainer</div></div>
-              </div>
-            </div>
-            <div style="background:rgba(230,126,34,0.06);border:1px solid rgba(230,126,34,0.15);border-radius:12px;padding:14px;">
-              <div style="color:#E67E22;font-size:0.68rem;font-weight:600;margin-bottom:10px;">📊 Student Ratings — 50 Girls</div>
-              <div style="margin-bottom:8px;">
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="color:#8FA5BC;font-size:0.73rem;">Workshop Rating</span><span style="color:#E67E22;font-weight:700;font-size:0.8rem;">8.07/10</span></div>
-                <div style="width:100%;background:rgba(255,255,255,0.07);border-radius:10px;height:6px;"><div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div></div>
-              </div>
-              <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="color:#8FA5BC;font-size:0.73rem;">Namrata as Trainer</span><span style="color:#E67E22;font-weight:700;font-size:0.8rem;">8.07/10</span></div>
-                <div style="width:100%;background:rgba(255,255,255,0.07);border-radius:10px;height:6px;"><div style="width:80.7%;background:linear-gradient(90deg,#E67E22,#F39C12);border-radius:10px;height:6px;"></div></div>
-              </div>
-            </div>
-          </div>
-          <!-- Confidence -->
-          <div>
-            <div style="color:#2ecc71;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">📈 Confidence Growth</div>
-            <div style="background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.18);border-radius:12px;padding:16px;">
-              <div style="margin-bottom:9px;">
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="color:#8FA5BC;font-size:0.73rem;">Before Workshop</span><span style="color:#E74C3C;font-weight:700;font-size:0.8rem;">5.47/10</span></div>
-                <div style="width:100%;background:rgba(255,255,255,0.07);border-radius:10px;height:7px;"><div style="width:54.7%;background:linear-gradient(90deg,#E74C3C,#E67E22);border-radius:10px;height:7px;"></div></div>
-              </div>
-              <div style="margin-bottom:12px;">
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="color:#8FA5BC;font-size:0.73rem;">After Workshop</span><span style="color:#2ecc71;font-weight:700;font-size:0.8rem;">8.07/10</span></div>
-                <div style="width:100%;background:rgba(255,255,255,0.07);border-radius:10px;height:7px;"><div style="width:80.7%;background:linear-gradient(90deg,#2ecc71,#1abc9c);border-radius:10px;height:7px;"></div></div>
-              </div>
-              <div style="text-align:center;background:rgba(46,204,113,0.1);border-radius:8px;padding:8px;">
-                <span style="color:#2ecc71;font-weight:700;font-size:1.05rem;">+47.5% Confidence Growth 📈</span>
-                <div style="color:#8FA5BC;font-size:0.66rem;margin-top:2px;">Measured in one day</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:32px;">
-          <div style="color:#2ecc71;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">🎬 Workshop Reel</div>
-          <div>
-            <div style="background:linear-gradient(135deg,#1a6b3a,#2ecc71);padding:10px 15px;border-radius:12px 12px 0 0;">
-              <div style="color:white;font-size:0.75rem;font-weight:600;">🎬 AAKAR — Live Highlights</div>
-              <div style="color:rgba(255,255,255,0.8);font-size:0.67rem;margin-top:2px;">RDG College · 27 Aug 2026 · 50 Girls · 9 Hours</div>
-            </div>
-            <div class="aakar-reel-wrapper">
-              <iframe src="https://www.instagram.com/reel/DcsJzKxove2/embed" title="AAKAR Workshop Reel" allow="autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen scrolling="no" frameborder="0"></iframe>
-            </div>
-          </div>
-        </div>
+  <!-- VIDEOS -->
+  <div class="videos-label fade-in">
+    <span>🎬 Watch AAKAR in Action</span>
+  </div>
+  <div class="videos-grid fade-in">
+    <div class="video-card">
+      <div class="video-header">
+        <h4>Inside AAKAR — The Workshop Room</h4>
+        <p>Live workshop highlights · RDG College · Aug 2026</p>
       </div>
-
+      <div class="reel-wrap">
+        <iframe src="https://www.instagram.com/reel/DcsJzKxove2/embed" title="AAKAR Workshop" allow="autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen scrolling="no" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-header">
+        <h4>What Students Said After AAKAR</h4>
+        <p>Unscripted testimonials · Real voices · Real change</p>
+      </div>
+      <div class="reel-wrap">
+        <iframe src="https://www.instagram.com/reel/DdGu7AENxiP/embed" title="AAKAR Testimonials" allow="autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen scrolling="no" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-header">
+        <h4>Namrata in Action — Live Session</h4>
+        <p>Communication workshop · See the energy live</p>
+      </div>
+      <div class="reel-wrap">
+        <iframe src="https://www.instagram.com/reel/Db53ZRbtcFo/embed" title="Live Session" allow="autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen scrolling="no" frameborder="0"></iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials">
+<!-- DATA PROOF -->
+<section id="data-proof">
   <div class="section-header fade-in">
-    <span class="section-tag">Real Voices. Real Names. Real Feedback.</span>
-    <h2>What Students Actually Said</h2>
-    <p>Collected via Google Forms immediately after each workshop. Unedited. Unfiltered.</p>
+    <span class="section-tag">Real Data</span>
+    <h2>We Don't Ask You to Trust Us.<br>We Ask You to Look at the Numbers.</h2>
+    <p>Every number below comes from real student feedback forms — not estimates, not projections.</p>
     <div class="divider"></div>
   </div>
-
-  <div class="feedback-tabs fade-in">
-    <button class="tab-btn active" onclick="showTab('aakar-feedback')">🌟 AAKAR — Full Day Workshop (27 Aug 2026)</button>
-    <button class="tab-btn" onclick="showTab('comm-feedback')">🗣️ Communication Workshop (7 Aug 2026)</button>
-  </div>
-
-  <!-- AAKAR FEEDBACK TAB -->
-  <div id="aakar-feedback" class="tab-content active">
-    <div class="testi-layout container fade-in">
-      <div class="testi-video-col">
-        <div class="testi-video-wrap">
-          <div class="testi-video-badge">⭐ Video Testimonial</div>
-          <iframe src="https://www.youtube.com/embed/qL9n2Wzf2Ho" title="Student Testimonial" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="testi-video-caption">
-          <div class="testi-stars-big">★★★★★</div>
-          <p>Students from RDG College<br>sharing their honest experience.</p>
-        </div>
-        <div class="testi-impact-bar" style="margin-top:20px;">
-          <div><div class="tib-num">8.07</div><div class="tib-label">Avg Rating / 10</div></div>
-          <div><div class="tib-num">+47.5%</div><div class="tib-label">Confidence Growth</div></div>
-          <div><div class="tib-num">50</div><div class="tib-label">Girls Trained</div></div>
-        </div>
-      </div>
-
-      <div class="testi-cards-col">
-        <h3 class="testi-col-title">AAKAR Student Feedback — In Their Own Words</h3>
-        <p class="testi-col-sub">Written immediately after the 9-hour workshop · 27 August 2026 · RDG College for Women</p>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Tamanna Sandip Saiwal</div>
-              <div class="testi-role">B.Com 1st Year · RDG College for Women</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I was a bit tensed, not ready for the stage. I had a lot of errors in body language, tone and annotation. After attending AAKAR workshop I gained confidence and started to work on my errors. AAKAR shapes you into a better AAKAR.</p>
-          <div><span class="testi-tag">Workshop: 9/10</span><span class="testi-rating-badge">Trainer: 10/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Shraddha Ratnaparkhi</div>
-              <div class="testi-role">B.Com 1st Year · RDG Women College</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I was very insecure about myself and after AAKAR I gained a lot of confidence. I feel I can do anything if I try my best. If you do your best, you can achieve anything.</p>
-          <div><span class="testi-tag">Workshop: 10/10</span><span class="testi-rating-badge">Trainer: 10/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Kashish Rahul Agrawal</div>
-              <div class="testi-role">B.Com 1st Year · RDG Women's College</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR, I was afraid of taking the first step and after AAKAR, I felt ready to take it. AAKAR is a journey of self-discovery that helps you understand yourself, express yourself, and grow with confidence. Starting tomorrow I'll speak up more, trust myself, and stop hesitating when I get an opportunity to lead.</p>
-          <div><span class="testi-tag">Workshop: 9/10</span><span class="testi-rating-badge">Trainer: 10/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Samruddhi Shastri</div>
-              <div class="testi-role">B.Com 1st Year · Radhadevi Goenka College for Women</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I had a fear of how to face public, how to speak up, how to interact. After AAKAR the fear is gone — not fully, but I have the confidence to speak up for myself. AAKAR is a helping hand of motivation. I am going to join every college activity so I can build myself with the power of words.</p>
-          <div><span class="testi-tag">Workshop: 10/10</span><span class="testi-rating-badge">Trainer: 9/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Shivani Ishwarlal Arzare</div>
-              <div class="testi-role">B.Com 2nd Year · RDG College Akola</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>AAKAR is a workshop that helps us understand ourselves, build confidence, and move towards our goals. Starting tomorrow I will manage my time better, stay consistent with my studies, and take more confident steps towards my goals.</p>
-          <div><span class="testi-tag">Workshop: 10/10</span><span class="testi-rating-badge">Trainer: 10/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Ishika Manoj Shukla</div>
-              <div class="testi-role">B.Com 2nd Year · Radha Devi Goenka College for Women</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I was less confident and hesitant to express my thoughts. After AAKAR I feel more confident, positive, and comfortable expressing myself. The activities helped me understand myself better and motivated me to improve and grow every day.</p>
-          <div><span class="testi-tag">Workshop: 10/10</span><span class="testi-rating-badge">Trainer: 10/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Aachal Sanjay Jayshree More</div>
-              <div class="testi-role">B.Com 1st Year · Smt. RDG College for Women, Akola</div>
-            </div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I was excited, and after AAKAR I feel confident. The biggest lesson — we are not alone. I no longer feel alone in my struggles.</p>
-          <div><span class="testi-tag">Workshop: 10/10</span><span class="testi-rating-badge">Trainer: 10/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Sejal Chandramani Wahurwagh</div>
-              <div class="testi-role">B.Com 2nd Year · Smt. Radhadevi Goenka College for Women</div>
-            </div>
-            <div class="testi-stars">★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I was an introvert and after AAKAR I felt like an extrovert. It is the best way to shape yourself and let your inner strengths explore within society. Starting tomorrow — I will love myself more.</p>
-          <div><span class="testi-tag">Workshop: 7/10</span><span class="testi-rating-badge">Trainer: 9/10</span></div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-card-top">
-            <div>
-              <div class="testi-name">Shreya Raju Dagar</div>
-              <div class="testi-role">B.Com 1st Year · Radha Devi Goenka Women College</div>
-            </div>
-            <div class="testi-stars">★★★★</div>
-          </div>
-          <div class="testi-quote-mark">"</div>
-          <p>Before AAKAR I was a little shy. After AAKAR I feel confident. I will work on my weak points starting tomorrow. One thing is certain — improvement is possible.</p>
-          <div><span class="testi-tag">Workshop: 8/10</span><span class="testi-rating-badge">Trainer: 9/10</span></div>
-        </div>
-
-      </div>
+  <div class="proof-nums fade-in">
+    <div class="proof-num-card">
+      <span class="pn-num">47.5%</span>
+      <div class="pn-label">Confidence Growth</div>
+      <div class="pn-sub">5.47 → 8.07 in one day</div>
+    </div>
+    <div class="proof-num-card">
+      <span class="pn-num">8.07</span>
+      <div class="pn-label">Average Rating / 10</div>
+      <div class="pn-sub">From 50 student feedback forms</div>
+    </div>
+    <div class="proof-num-card">
+      <span class="pn-num">225+</span>
+      <div class="pn-label">Learners Impacted</div>
+      <div class="pn-sub">Across schools & colleges</div>
+    </div>
+    <div class="proof-num-card">
+      <span class="pn-num">100%</span>
+      <div class="pn-label">Positive Feedback</div>
+      <div class="pn-sub">Zero negative responses</div>
     </div>
   </div>
-
-  <!-- COMMUNICATION FEEDBACK TAB -->
-  <div id="comm-feedback" class="tab-content">
-    <div style="max-width:1100px;margin:0 auto;" class="container">
-      <div style="text-align:center;margin-bottom:28px;">
-        <p style="color:#7F8C8D;font-size:0.88rem;">Written feedback collected after 2-hour Effective Communication Workshop · 7 August 2026 · RDG College</p>
-      </div>
-      <div class="feedback-2h-grid">
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Tamanna Saiwal</div>
-              <div class="f2h-role">B.Com 1st Year · RDG College Akola</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 5/5</div>
-            <div class="f2h-rating-pill">Confidence: 4/5</div>
-          </div>
-          <div class="f2h-quote">"I really loved your session and I was really shocked about myself. I noticed a lot of things thanks to you. I would really appreciate another session with you again."</div>
-          <div class="f2h-conf-change">📈 Confidence: Neutral before → <strong>Noticeably more confident</strong> after · Would Recommend: Definitely Yes</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Anup Sharma</div>
-              <div class="f2h-role">Professor · Smt. RDG College for Women Akola</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 5/5</div>
-            <div class="f2h-rating-pill">Confidence: 5/5</div>
-          </div>
-          <div class="f2h-quote">"All the best." — Faculty evaluator who rated all parameters at highest score.</div>
-          <div class="f2h-conf-change">📈 Comfortable before → <strong>Excited to practice and improve</strong> after · Would Recommend: Yes</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Kashish Agrawal</div>
-              <div class="f2h-role">B.Com 1st Year · RDG Women's College</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 4/5</div>
-            <div class="f2h-rating-pill">Confidence: 4/5</div>
-          </div>
-          <div class="f2h-quote">"It was very informative and engaging. I learned how body language, facial expressions, eye contact and voice tone play an important role in communication. The session included practical tips I can use in my daily life. It motivated me to improve my communication skills and confidence."</div>
-          <div class="f2h-conf-change">📈 Neutral before → <strong>More comfortable</strong> after · Would Recommend: Definitely Yes</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Aachal Sanjay Jayshree More</div>
-              <div class="f2h-role">B.Com 1st Year · Smt. RDG Women's College Akola</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 5/5</div>
-            <div class="f2h-rating-pill">Confidence: 5/5</div>
-          </div>
-          <div class="f2h-quote">"Thank you so much dii. I was feeling like this is my own future self. I also want to be a motivational speaker, verbal communication and body language expert. I was very overwhelmed watching you. I personally want to attend, learn and grow from your sessions. THANK YOU THANK YOU THANK YOU SO MUCH DEE."</div>
-          <div class="f2h-conf-change">📈 Very comfortable before → <strong>Excited to practice and improve</strong> after · Would Recommend: Definitely Yes</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Anchal Kamble</div>
-              <div class="f2h-role">B.Com 1st Year · RDG College</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 5/5</div>
-            <div class="f2h-rating-pill">Confidence: 5/5</div>
-          </div>
-          <div class="f2h-quote">"Your energy and way of teaching is too much impressive."</div>
-          <div class="f2h-conf-change">📈 Comfortable before → <strong>Excited to practice and improve</strong> after · Would Recommend: Definitely Yes</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Chanchal Manish Kanojiya</div>
-              <div class="f2h-role">B.Com 1st Year · Smt. RDG College, Akola</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 5/5</div>
-            <div class="f2h-rating-pill">Confidence: 5/5</div>
-          </div>
-          <div class="f2h-quote">"Mam you are such a brilliant. I didn't know how to speak in front of others, and you guided that in only one session. You are such a good mam for us. Thank you so much mam."</div>
-          <div class="f2h-conf-change">📈 Comfortable before → <strong>Excited to practice</strong> after · Would Recommend: Yes</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Vedangi</div>
-              <div class="f2h-role">B.Com 1st Year · RDG College Akola</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 5/5</div>
-            <div class="f2h-rating-pill">Usefulness: 3/5</div>
-            <div class="f2h-rating-pill">Confidence: 4/5</div>
-          </div>
-          <div class="f2h-quote">"Went from uncomfortable and hesitant to noticeably more confident after just this one session."</div>
-          <div class="f2h-conf-change">📈 Uncomfortable before → <strong>Noticeably more confident</strong> after · Would Recommend: Maybe</div>
-        </div>
-
-        <div class="feedback-2h-card">
-          <div class="f2h-top">
-            <div>
-              <div class="f2h-name">Pratiksha Pramod Telgote</div>
-              <div class="f2h-role">B.Com 1st Year · RDG for Women's College Akola</div>
-            </div>
-          </div>
-          <div class="f2h-ratings">
-            <div class="f2h-rating-pill">Engagement: 3/5</div>
-            <div class="f2h-rating-pill">Usefulness: 3/5</div>
-            <div class="f2h-rating-pill">Confidence: 3/5</div>
-          </div>
-          <div class="f2h-quote">"Good teaching." — Left with more confidence than she came in with.</div>
-          <div class="f2h-conf-change">📈 Neutral before → <strong>Noticeably more confident</strong> after · Would Recommend: Yes</div>
-        </div>
-
-      </div>
-
-      <div style="max-width:700px;margin:40px auto 0;background:linear-gradient(135deg,#2C3E50,#3D5166);border-radius:16px;padding:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;">
-        <div><div class="tib-num">5/5</div><div class="tib-label">Avg Engagement Score</div></div>
-        <div><div class="tib-num">100%</div><div class="tib-label">Would Recommend</div></div>
-        <div><div class="tib-num">50+</div><div class="tib-label">Students in Session</div></div>
-      </div>
+  <div class="conf-visual fade-in">
+    <div class="conf-title-inner">📊 Confidence Transformation — 50 Students · AAKAR Workshop</div>
+    <div class="conf-row-item">
+      <div class="conf-row-top"><span>Before AAKAR Workshop</span><span style="color:#E74C3C;">5.47 / 10</span></div>
+      <div class="conf-bar-bg"><div class="conf-bar-fill fill-before"></div></div>
     </div>
+    <div class="conf-row-item">
+      <div class="conf-row-top"><span>After AAKAR Workshop</span><span style="color:#2ecc71;">8.07 / 10</span></div>
+      <div class="conf-bar-bg"><div class="conf-bar-fill fill-after"></div></div>
+    </div>
+    <div class="conf-growth-box">
+      <strong>+47.5% Growth in Confidence — In One Day 📈</strong>
+      <small>Self-reported by students before and after the workshop</small>
+    </div>
+  </div>
+  <div class="faculty-line fade-in" style="margin-top:20px;">
+    <strong>Faculty Evaluation — Prof. Anup Sharma, RDG College for Women:</strong><br>
+    Workshop Rating: 4/5 &nbsp;·&nbsp; Namrata as Trainer: 4/5
   </div>
 </section>
 
-<!-- ===== VIDEO GALLERY ===== -->
-<section id="videos">
+<!-- STUDENT VOICES -->
+<section id="voices">
   <div class="section-header fade-in">
-    <span class="section-tag">See It In Action</span>
-    <h2>Workshop Highlights</h2>
-    <p>Real sessions. Real rooms. Real transformation — watch it happen.</p>
+    <span class="section-tag">Real Voices</span>
+    <h2>In Their Own Words.<br>Unedited. Unfiltered. Real.</h2>
+    <p>Collected via feedback forms immediately after the workshop. Real names. Real students.</p>
     <div class="divider"></div>
   </div>
-  <div class="video-grid container fade-in">
-    <div class="video-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/zkYniukidYw" title="AI Tools Workshop" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+  <div class="voices-layout fade-in">
+    <div class="voices-video-col">
+      <div class="voices-video-wrap">
+        <div class="voices-video-badge">⭐ Live Testimonials</div>
+        <div class="voices-reel-wrap">
+          <iframe src="https://www.instagram.com/reel/Db_fqEbxq6U/embed" title="Student Testimonials" allow="autoplay;clipboard-write;encrypted-media;picture-in-picture" allowfullscreen scrolling="no" frameborder="0"></iframe>
+        </div>
       </div>
-      <div class="video-label">
-        <h4>AI Tools for Teachers</h4>
-        <div class="v-school">🏫 School Teacher Training</div>
-        <div class="v-meta">⚡ Full Session Highlight</div>
+      <div class="voices-video-caption">
+        <div class="voices-stars">★★★★★</div>
+        <p>Students from RDG College for Women<br>sharing their honest experience.</p>
       </div>
-    </div>
-    <div class="video-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/AUlY1umbORY" title="Effective Communication" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-label">
-        <h4>Effective Communication</h4>
-        <div class="v-school">🏫 Teacher Training Session</div>
-        <div class="v-meta">⚡ Live Workshop Clip</div>
+      <div class="voices-impact">
+        <div><div class="vi-num">8.07</div><div class="vi-label">Avg Rating / 10</div></div>
+        <div><div class="vi-num">+47.5%</div><div class="vi-label">Confidence Growth</div></div>
+        <div><div class="vi-num">50</div><div class="vi-label">Girls Trained</div></div>
       </div>
     </div>
-    <div class="video-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/ewePHs3Y-nk" title="Career Counselling" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+    <div class="voices-cards">
+      <h3 class="voices-col-title">What Students Wrote — Right After the Workshop</h3>
+      <p class="voices-col-sub">Written feedback collected immediately after AAKAR · 27 August 2026 · RDG College for Women, Akola</p>
+
+      <div class="testi-card">
+        <div class="testi-top">
+          <div><div class="testi-name">Kashish Rahul Agrawal</div><div class="testi-role">B.Com 1st Year · RDG Women's College</div></div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote">"</div>
+        <p>Before AAKAR I was afraid of taking the first step and after AAKAR I felt ready to take it. AAKAR is a journey of self-discovery that helps you understand yourself, express yourself, and grow with confidence.</p>
+        <span class="testi-pill">Workshop: 9/10</span><span class="testi-pill-green">Trainer: 10/10</span>
       </div>
-      <div class="video-label">
-        <h4>Career Counselling Session</h4>
-        <div class="v-school">🎓 College Workshop</div>
-        <div class="v-meta">🎬 Live Session</div>
+
+      <div class="testi-card">
+        <div class="testi-top">
+          <div><div class="testi-name">Shraddha Ratnaparkhi</div><div class="testi-role">B.Com 1st Year · RDG Women College</div></div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote">"</div>
+        <p>Before AAKAR I was very insecure about myself and after AAKAR I gained a lot of confidence. I feel I can do anything if I try my best. If you do your best, you can achieve anything.</p>
+        <span class="testi-pill">Workshop: 10/10</span><span class="testi-pill-green">Trainer: 10/10</span>
       </div>
+
+      <div class="testi-card">
+        <div class="testi-top">
+          <div><div class="testi-name">Ishika Manoj Shukla</div><div class="testi-role">B.Com 2nd Year · RDG College for Women, Akola</div></div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote">"</div>
+        <p>Before AAKAR I was less confident and hesitant to express my thoughts. After AAKAR I feel more confident, positive and comfortable expressing myself. The activities helped me understand myself better and motivated me to improve every day.</p>
+        <span class="testi-pill">Workshop: 10/10</span><span class="testi-pill-green">Trainer: 10/10</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-top">
+          <div><div class="testi-name">Aachal Sanjay Jayshree More</div><div class="testi-role">B.Com 1st Year · Smt. RDG College for Women, Akola</div></div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote">"</div>
+        <p>I was feeling like this is my own future self. I want to be a motivational speaker and body language expert. I was very overwhelmed watching Namrata. I personally want to attend and grow from every session.</p>
+        <span class="testi-pill">Engagement: 5/5</span><span class="testi-pill-green">Would Recommend: Definitely</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-top">
+          <div><div class="testi-name">Tamanna Sandip Saiwal</div><div class="testi-role">B.Com 1st Year · RDG College for Women</div></div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote">"</div>
+        <p>Before AAKAR I was a bit tensed, not ready for the stage. I had errors in body language and tone. After AAKAR I gained confidence and started to work on my errors. AAKAR shapes you into a better AAKAR.</p>
+        <span class="testi-pill">Workshop: 9/10</span><span class="testi-pill-green">Trainer: 10/10</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-top">
+          <div><div class="testi-name">Samruddhi Shastri</div><div class="testi-role">B.Com 1st Year · Radhadevi Goenka College for Women</div></div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-quote">"</div>
+        <p>Before AAKAR I had a fear of how to face public, how to speak up. After AAKAR the fear is gone — not fully, but I have the confidence to speak up for myself. AAKAR is a helping hand of motivation.</p>
+        <span class="testi-pill">Workshop: 10/10</span><span class="testi-pill-green">Trainer: 9/10</span>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== CERTIFICATES ===== -->
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-header fade-in">
+    <span class="section-tag">Simple Process</span>
+    <h2>Bringing AAKAR to Your College<br>Takes 5 Simple Steps</h2>
+    <p>You provide the room. We handle everything else.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="steps-wrap container fade-in">
+    <div class="step-item">
+      <div class="step-circle">1</div>
+      <h4>Fill the Enquiry Form</h4>
+      <p>2 minutes. Basic details only. We read every submission.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">2</div>
+      <h4>Free Discovery Call</h4>
+      <p>15 minutes. We understand your students' specific needs.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">3</div>
+      <h4>Custom Proposal</h4>
+      <p>Within 24 hours. Tailored to your college and students.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">4</div>
+      <h4>Workshop Day</h4>
+      <p>You provide the room. We deliver the transformation.</p>
+    </div>
+    <div class="step-item">
+      <div class="step-circle">5</div>
+      <h4>Impact Report</h4>
+      <p>Before-after data of your students. Shareable with management.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header fade-in">
+    <span class="section-tag">From the Workshop Room</span>
+    <h2>Real Rooms. Real Students. Real Moments.</h2>
+    <p>Every photo below is from an actual AAKAR workshop session.</p>
+    <div class="divider"></div>
+  </div>
+  <div class="gallery-grid container fade-in">
+    <div class="gallery-item">
+      <img src="AAKAR 1.jpg" alt="AAKAR Workshop — Activity Session" onerror="this.style.background='#2C3E50'"/>
+      <div class="gallery-overlay"><span>AAKAR Workshop · RDG College</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="AAKAR 2.jpg" alt="AAKAR Workshop — Group Activity" onerror="this.style.background='#2C3E50'"/>
+      <div class="gallery-overlay"><span>Group Activity · Self Discovery</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="AAKAR 3.jpg" alt="AAKAR Workshop — Students" onerror="this.style.background='#2C3E50'"/>
+      <div class="gallery-overlay"><span>50 Girls · 1 Day · Real Change</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="AAKAR 4.jpg" alt="AAKAR Workshop — Session" onerror="this.style.background='#2C3E50'"/>
+      <div class="gallery-overlay"><span>Namrata in Action · AAKAR</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="AAKAR 5.jpg" alt="AAKAR Workshop — Students Activity" onerror="this.style.background='#2C3E50'"/>
+      <div class="gallery-overlay"><span>Activity Based Learning · Zero Lectures</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="AAKAR 6.jpg" alt="AAKAR Workshop — Transformation" onerror="this.style.background='#2C3E50'"/>
+      <div class="gallery-overlay"><span>Purpose. Direction. Self-Awareness.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
 <section id="certificates">
   <div class="section-header fade-in">
     <span class="section-tag">Credentials</span>
     <h2>Certified. Qualified. Trusted.</h2>
-    <p>8 specialized certifications — each scored minimum 80%.</p>
+    <p>8 specialized certifications in training — each scored minimum 80%.</p>
     <div class="divider"></div>
   </div>
-  <div class="cert-total-badge fade-in">
-    <span>🏆 Train-The-Trainer Academy by Velsoft — 8 Certifications Completed</span>
+  <div class="cert-badge-top fade-in">
+    <span>🏆 Train-The-Trainer Academy by Velsoft — 8 Certifications</span>
   </div>
   <div class="cert-grid container">
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Implementing AI in Your Workplace</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Advanced Skills for the Practical Trainer</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Developing a Training Needs Analysis</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Facilitation Skills</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Mastering Adult Learning Methods</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Measuring Training Results</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Survival Skills for the New Trainer</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
-    <div class="cert-card fade-in"><div class="cert-icon-box"><i class="fas fa-award"></i></div><h4>Using Activities to Make Training Fun</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Implementing AI in Your Workplace</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Advanced Skills for the Practical Trainer</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Developing a Training Needs Analysis</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Facilitation Skills</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Mastering Adult Learning Methods</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Measuring Training Results</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Survival Skills for the New Trainer</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
+    <div class="cert-card fade-in"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Using Activities to Make Training Fun</h4><div class="cert-issuer">Train-The-Trainer Academy by Velsoft</div><div class="cert-date">📅 July 2026</div></div>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-header fade-in">
     <span class="section-tag">Let's Connect</span>
-    <h2>Ready to Transform Your Students?</h2>
-    <p>Principals, HODs, NSS Officers, HR Managers — I am one message away.</p>
+    <h2>Check Workshop Availability<br>for Your College</h2>
+    <p>Fill this in 2 minutes. We respond within 2 hours.</p>
     <div class="divider"></div>
   </div>
-  <div class="contact-grid container fade-in">
-    <div class="contact-info">
-      <h3>Book a Workshop Today</h3>
-      <p>Whether you need a 2-hour session or a full-day AAKAR experience — I customize every workshop to your students, your college and your goals.</p>
-      <a href="mailto:1percentbettereducator@gmail.com" class="contact-item">
-        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-        <div class="contact-item-text">1percentbettereducator@gmail.com<small>Email me anytime</small></div>
+  <div class="contact-wrap container fade-in">
+    <div class="contact-info-col">
+      <h3>Start the Conversation</h3>
+      <p>Whether you are a Principal, HOD, NSS Officer or IQAC Coordinator — one message is all it takes. We customize every workshop to your students, your college and your goals.</p>
+      <a href="mailto:1percentbettereducator@gmail.com" class="contact-link">
+        <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-link-text">1percentbettereducator@gmail.com<small>Email anytime</small></div>
       </a>
-      <a href="tel:+919022520611" class="contact-item">
-        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-        <div class="contact-item-text">+91 90225 20611<small>Call or WhatsApp</small></div>
+      <a href="tel:+919022520611" class="contact-link">
+        <div class="contact-link-icon"><i class="fas fa-phone"></i></div>
+        <div class="contact-link-text">+91 90225 20611<small>Call or WhatsApp</small></div>
       </a>
-      <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20a%20workshop%20for%20my%20institution!" target="_blank" class="contact-item">
-        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-        <div class="contact-item-text">Chat on WhatsApp<small>Get a proposal in 2 hours ⚡</small></div>
+      <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20bring%20AAKAR%20to%20my%20college!" target="_blank" class="contact-link">
+        <div class="contact-link-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="contact-link-text">WhatsApp — Direct Message<small>Fastest response ⚡</small></div>
       </a>
-      <a href="https://www.instagram.com/1percent_better_educator/" target="_blank" class="contact-item">
-        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-        <div class="contact-item-text">@1percent_better_educator<small>Workshop reels & student stories 📸</small></div>
+      <a href="https://www.instagram.com/1percent_better_educator/" target="_blank" class="contact-link">
+        <div class="contact-link-icon"><i class="fab fa-instagram"></i></div>
+        <div class="contact-link-text">@1percent_better_educator<small>Workshop reels & student stories</small></div>
       </a>
-      <a href="https://www.linkedin.com/in/-namrata-kedia" target="_blank" class="contact-item">
-        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-        <div class="contact-item-text">LinkedIn — Namrata Kedia<small>Connect with me professionally 💼</small></div>
+      <a href="https://www.linkedin.com/in/-namrata-kedia" target="_blank" class="contact-link">
+        <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
+        <div class="contact-link-text">LinkedIn — Namrata Kedia<small>Connect professionally</small></div>
       </a>
-      <a href="https://www.youtube.com/@1percentBetterEducator" target="_blank" class="contact-item">
-        <div class="contact-icon"><i class="fab fa-youtube"></i></div>
-        <div class="contact-item-text">YouTube — 1% Better Educator<small>Watch real workshop sessions 🎥</small></div>
+      <a href="https://www.youtube.com/@1percentBetterEducator" target="_blank" class="contact-link">
+        <div class="contact-link-icon"><i class="fab fa-youtube"></i></div>
+        <div class="contact-link-text">YouTube — 1% Better Educator<small>Watch real workshop sessions</small></div>
       </a>
     </div>
-    <div class="contact-cta">
-      <h4>Book a Workshop for<br>Your Institution</h4>
-      <p>Schools · Colleges · Corporates<br><br>Activity-based. Zero passive lectures.<br>Measurable results delivered with an impact report.<br><br>Aligned with NSS, IQAC & NEP 2020 frameworks.</p>
-      <div class="slots-badge">
-        <span>🔥 Only 3 Workshop Slots Left — August to October 2026</span>
-      </div>
-      <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20book%20a%20workshop%20for%20my%20institution!" target="_blank" class="btn-primary" style="display:block;text-align:center;">🚀 Book on WhatsApp Now</a>
+
+    <div class="contact-form-col">
+      <h4>Workshop Enquiry Form</h4>
+      <p>Tell us about your college and students. We will respond within 2 hours.</p>
+      <form action="https://formspree.io/f/myeylrzl" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>YOUR NAME *</label>
+            <input type="text" name="name" placeholder="Your full name" required/>
+          </div>
+          <div class="form-group">
+            <label>YOUR ROLE *</label>
+            <select name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option>Principal</option>
+              <option>Vice Principal</option>
+              <option>HOD</option>
+              <option>NSS Officer</option>
+              <option>IQAC Coordinator</option>
+              <option>Student Welfare Officer</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>INSTITUTION NAME *</label>
+          <input type="text" name="institution" placeholder="Full name of your college or school" required/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>CITY *</label>
+            <input type="text" name="city" placeholder="Your city" required/>
+          </div>
+          <div class="form-group">
+            <label>STUDENT COUNT *</label>
+            <select name="students" required>
+              <option value="" disabled selected>Approx. students</option>
+              <option>20–30 Students</option>
+              <option>30–50 Students</option>
+              <option>50–100 Students</option>
+              <option>100+ Students</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>WHAT ARE YOUR STUDENTS CURRENTLY STRUGGLING WITH? *</label>
+          <textarea name="struggles" placeholder="Tell us what you observe in your students — confidence, direction, communication, purpose..." required></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>YOUR PHONE NUMBER *</label>
+            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/>
+          </div>
+          <div class="form-group">
+            <label>PREFERRED MONTH</label>
+            <select name="month">
+              <option value="" disabled selected>Preferred month</option>
+              <option>July 2026</option>
+              <option>August 2026</option>
+              <option>September 2026</option>
+              <option>October 2026</option>
+              <option>November 2026</option>
+              <option>December 2026</option>
+              <option>Early 2027</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-submit-wrap">
+          <button type="submit" class="btn-form-submit">Submit Enquiry — We Respond in 2 Hours →</button>
+          <a href="https://wa.me/919022520611?text=Hi%20Namrata,%20I%20want%20to%20bring%20AAKAR%20workshop%20to%20my%20college!" target="_blank" class="btn-wa-alt"><i class="fab fa-whatsapp"></i> Or WhatsApp Me Directly</a>
+        </div>
+      </form>
     </div>
   </div>
-  <div class="tagline-final container">
-    <strong>"Real Impact. Real Classrooms. Real Change."</strong><br>
-    — Namrata Kedia &nbsp;·&nbsp; 1% Better Educator &nbsp;·&nbsp; Akola, Maharashtra
+  <div class="contact-footer-line container">
+    <strong>"Your college gives them a degree.<br>AAKAR gives them a direction.<br>Together — you give them everything."</strong><br>
+    — Namrata Kedia · Founder, AAKAR Workshop · Akola, Maharashtra
   </div>
 </section>
 
 <footer>
-  <p>© 2026 <span>Namrata Kedia</span> · Youth Transformation Trainer · Founder of AAKAR Workshop · Made with <span>❤️</span> from Akola, Maharashtra</p>
+  <p>© 2026 <span>Namrata Kedia</span> · Founder of AAKAR Workshop · Youth Transformation Trainer · Akola, Maharashtra · Made with <span>❤️</span> and complete conviction.</p>
 </footer>
 
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
@@ -1361,45 +1073,21 @@
 </button>
 
 <script>
-  // Scroll top button
   window.addEventListener('scroll',()=>{
-    const btn=document.getElementById('scrollTop');
-    btn.style.display=window.scrollY>300?'flex':'none';
+    const b=document.getElementById('scrollTop');
+    b.style.display=window.scrollY>300?'flex':'none';
   });
-
-  // Fade in observer
-  const observer=new IntersectionObserver((entries)=>{
-    entries.forEach(el=>{
-      if(el.isIntersecting)el.target.classList.add('visible');
-    });
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
   },{threshold:0.08});
-  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
-
-  // Hamburger menu
-  function toggleMenu(){
-    document.getElementById('navLinks').classList.toggle('open');
-  }
-  function closeMenu(){
-    document.getElementById('navLinks').classList.remove('open');
-  }
-
-  // Tab switching
-  function showTab(tabId){
-    document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
-  }
-
-  // Close menu on outside click
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+  function closeMenu(){document.getElementById('navLinks').classList.remove('open');}
   document.addEventListener('click',(e)=>{
-    const nav=document.getElementById('navLinks');
-    const hamburger=document.getElementById('hamburger');
-    if(nav.classList.contains('open')&&!nav.contains(e.target)&&!hamburger.contains(e.target)){
-      nav.classList.remove('open');
-    }
+    const n=document.getElementById('navLinks');
+    const h=document.getElementById('hamburger');
+    if(n.classList.contains('open')&&!n.contains(e.target)&&!h.contains(e.target)){n.classList.remove('open');}
   });
 </script>
-
 </body>
 </html>
